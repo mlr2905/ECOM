@@ -28,20 +28,23 @@
         <p><input type="color" id="avorite color" name="avorite color" required></p>
 
         <label for="name"><b>Favorite file-type: </b> </label><br/>
-        <input type="radio" id="html" name="fav_language" value="HTML">
-        <label for="html">HTML</label><br>
-        <input type="radio" id="css" name="fav_language" value="CSS">
-        <label for="css">CSS</label><br>
-        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-        <label for="javascript">JavaScript</label><br/><br/>
-       
+        <label for="cars">Choose a car:</label>
+
+        <select name="fav_language" id="fav_language"  required="required">
+        <option value="">Please choose</option>
+        <option value="fav_language">html</option>
+        <option value="fav_language">ccs</option>
+        <option value="fav_language">JavaScript</option>
+        </select>
+
         <label for="name"><b>you loved:? </b> </label>
-        <p><input type="checkbox" id="checkbox" name="checkbox" required>yes</p>
+        <p><input type="checkbox" id="checkbox" name="checkbox" required="required">yes </p>
+        <p><input type="checkbox" id="checkbox" name="checkbox" >no</p>
 
         <label for="name"><b>fav animal </b> </label>
-        <input type="radio" value="Dog">Dog
-        <input type="radio" value="Cat">Cat
-        <input type="radio" value="Fish">Fish
+        <input type="radio" value="animal" required="required">Dog
+        <input type="radio" value="animal">Cat
+        <input type="radio" value="animal">Fish
         <br/>
 
         <br/><input type="submit" value="Submit">
