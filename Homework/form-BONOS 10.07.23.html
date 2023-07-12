@@ -52,14 +52,14 @@
               <span class="padding-bottom--15"><B>Create an Account</B></span>
               <form id="stripe-login">
                 <div class="field padding-bottom--24">
-                  <label for="email"><B>Email:</B> </label>
-                  <input type="email" name="email" required>
+                  <label  for="email"><B>Email:</B> </label>
+                  <input id="01" type="email" name="email" required>
                 </div>
                 <div class="field padding-bottom--24">
                   <div class="grid--50-50">
                     <label for="password"><B>Password:</B></label>
                     <div class="reset-pass">
-                      <a href="#">Forgot your password?</a>
+                      <a href="#01" title="The email does not exist! Registration must be done first">Forgot your password?</a>
                     </div>
                   </div>
                   <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
