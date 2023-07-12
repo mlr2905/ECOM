@@ -48,7 +48,7 @@ display: none;
   font-size: 14px;
   line-height: 1.75;
   color: #333;
-  background-color: #ffffff;
+  background-color: #ffffffcd;
   background-image: none;
   border: 1px solid #e3e8ee;
   -ms-word-break: normal;
@@ -58,6 +58,7 @@ display: none;
 }
 
  #textarea {order: 1px solid #cccccc;
+  background-color: #ffffffcd;
   font-family: Arial,Bold ,Italic;
 font-size: 14px;
   display: #333;
@@ -72,7 +73,7 @@ font-size: 14px;
   padding: 30px;
   font-size: 12px;
   white-space: pre;
-
+  
   
 }
 #m77{
@@ -86,7 +87,7 @@ font-size: 14px;
 
 body {
       min-height: 100%;
-      background-color: #F0F8FF
+      background-color: #ffffff
 
       ;
   }
@@ -143,19 +144,19 @@ body {
       transform: rotate(-12deg) skew(-12deg);
   }
   .box-divider--light-all-2 {
-      box-shadow: inset 0 0 0 2px #e3e8ee;
+      box-shadow: inset 0 0 0 2px #B0E0E6;
   }
   .box-background--blue {
       background-color: #5469d4;
   }
   .box-background--white {
-    background-color: #ffffff; 
+    background-color: #FFF5EE; 
   }
   .box-background--blue800 {
       background-color: #212d63;
   }
   .box-background--gray100 {
-      background-color: #e3e8ee;
+      background-color:#B0E0E6;
   }
   .box-background--cyan200 {
       background-color: #7fd3ed;
@@ -169,11 +170,12 @@ body {
   .padding-top--48 {
     padding-top: 48px;
   }
+
   .padding-bottom--24 {
     padding-bottom: 24px;
+    
+    
   }
-  
- 
   .padding-horizontal--48 {
     padding: 48px;
   }
@@ -191,7 +193,7 @@ body {
       margin: 0px auto;
       width: 100%;
       max-width: 448px;
-      background: white;
+      background: rgba(236, 164, 164, 0.648);
       border-radius: 4px;
       box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
   }
@@ -228,7 +230,7 @@ body {
       border: unset;
       border-radius: 4px;
       outline-color: rgb(84 105 212 / 0.5);
-      background-color: rgb(255, 255, 255);
+      background-color: #ffffffcd;
       box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
                   rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
                   rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
