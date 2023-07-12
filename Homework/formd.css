@@ -86,7 +86,9 @@ font-size: 14px;
 
 body {
       min-height: 100%;
-      background-color: #ffffff;
+      background-color: #F0F8FF
+
+      ;
   }
   h1 {
       letter-spacing: -1px;
