@@ -59,20 +59,20 @@ display: none;
 
  #textarea {order: 1px solid #cccccc;
   font-family: Arial,Bold ,Italic;
-font-size: 10px;
+font-size: 14px;
   display: #333;
   float: left;
   white-space: 20px;
   border-radius: 8px;
   outline-color: rgb(84 105 212 / 0.5);
   border: 1px solid #e3e8ee;
-  
-
 }
 .input-txt::placeholder  {
   font-family: Impact, sans-serif;
   padding: 30px;
   font-size: 12px;
+  white-space: pre;
+
   
 }
 #m77{
@@ -133,7 +133,7 @@ body {
       display: grid;
       -ms-grid-columns: [start] 1fr [left-gutter] (86.6px)[16] [left-gutter] 1fr [end];
       grid-template-columns: [start] 1fr [left-gutter] repeat(16,86.6px) [left-gutter] 1fr [end];
-      -ms-grid-rows: [top] 1fr [top-gutter] (64px)[8] [bottom-gutter] 1fr [bottom];
+      -ms-grid-rows [top] 1fr [top-gutter] (64px)[8] [bottom-gutter] 1fr [bottom];
       grid-template-rows: [top] 1fr [top-gutter] repeat(8,64px) [bottom-gutter] 1fr [bottom];
       justify-content: center;
       margin: 0 -2%;
