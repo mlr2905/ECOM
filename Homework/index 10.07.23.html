@@ -12,11 +12,11 @@
      <label for="email"><b>Email: </b> </label><br/>
      <input type="email" id="email" name="email" required><br/><br/>
 
-     <label for="psw">Password</label><br/>
+     <label for="psw"><b>Password</b></label><br/>
     <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
     title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br/><br/>
 
-     <label for="age"><b>Age: </b> </label><br/>
+     <label for="age" id="age"><b>Age: </b> </label><br/>
      <select name="age" id="age" required="required">
      <option value="">select Age</option>
      <option value="Under 18">Under 18</option>
@@ -26,12 +26,12 @@
      </select><br/><br/>
 
 
-     <label for="textarea"><b>Tell us a little about yourself: </b> </label ><br/>
-        <textarea maxlength="500" minlength="10" placeholder="Please specify here (Minimum 10 characters)"value="Check" rows="7" cols="80" title=" about yourself" required></textarea><br/><br/>
+     <label for="textarea" ><b>Tell us a little about yourself: </b> </label ><br/>
+        <textarea  id="textarea"  maxlength="500" minlength="10" placeholder="Please specify here (Minimum 10 characters)"value="Check" rows="7" cols="80" title=" about yourself" required></textarea><br/><br/>
         
         <label for="name"></label>
         <input type="checkbox" id="checkbox" name="checkbox" required><b>I agree to the</b>
-        <a href="agreement 10.07.23.html">terms of servuce</a><br/><br/>
+        <a href="agreement 10.07.23.html" target='_blank'>terms of servuce</a><br/><br/>
        
         <input type="submit" value="Sign up" >
 

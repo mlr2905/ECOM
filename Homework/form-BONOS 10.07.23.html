@@ -49,34 +49,51 @@
         <div class="formbg-outer">
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
-              <span class="padding-bottom--15">Sign Up:</span>
+              <span class="padding-bottom--15"><B>Create an Account</B></span>
               <form id="stripe-login">
                 <div class="field padding-bottom--24">
-                  <label for="email">Email</label>
-                  <input type="email" name="email">
+                  <label for="email"><B>Email</B> </label>
+                  <input type="email" name="email" required>
                 </div>
                 <div class="field padding-bottom--24">
                   <div class="grid--50-50">
-                    <label for="password">Password</label>
+                    <label for="password"><B>Password</B></label>
                     <div class="reset-pass">
                       <a href="#">Forgot your password?</a>
                     </div>
                   </div>
-                  <input type="password" name="password">
-                </div>
-                  <div class="field padding-bottom--24">
-                    <div class="grid--50-50">
-                      <label for="password">User name</label>
-                    </div>
-                    <input type="password" name="password">
-                  </div>                                  
-                <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
-                  <label for="checkbox">
-                    <input type="checkbox" name="checkbox"> Stay signed in for a week
-                  </label>
-                </div>
+                  <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                 title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+              <p><b>Age</b></p>
+             <div class="selectdiv">
+                <label>
+                  <select name="age" id="age" required="required">
+                    <option value="">Select Age</option>
+                    <option value="Under 18">Under 18</option>
+                    <option value="18-35">18-35</option>
+                    <option value="35-46">35-46</option>
+                    <option value="46+">46+</option>
+                    </select>
+               </label>
+             </div><br/><br/>
+             <div id="m77">
+             </div>
+             <b dir="ltr" id="M77" >Tell us a little about yourself: </b>
+             <label for="textarea" id="textarea">
+             </label >
+              <textarea class="input-txt" id="textarea" maxlength="500" minlength="10" placeholder="Please specify here (Minimum 10 characters)"value="Check" rows="7" cols="45" title=" about yourself" required></textarea><br/><br/>
+            </div>
+            <div id="m77">
+            </div>
+            <div id="m77">
+            </div>
+             <div>
+             <label for="name"></label>
+             <input type="checkbox" id="checkbox" name="checkbox" required><b>I agree to the</b>
+             <a href="agreement 10.07.23.html" target='_blank'>terms of servuce</a><br/><br/>
+            </div>
                 <div class="field padding-bottom--24">
-                  <input type="submit" name="submit" value="Continue">
+                  <input type="submit" name="submit" value="Sign up">
                 </div>
 
               </form>
