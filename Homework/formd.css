@@ -193,7 +193,7 @@ body {
       margin: 0px auto;
       width: 100%;
       max-width: 448px;
-      background: rgba(236, 164, 164, 0.648);
+      background: #dcdcdcc3;
       border-radius: 4px;
       box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
   }
