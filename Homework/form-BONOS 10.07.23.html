@@ -3,6 +3,7 @@
   <meta charset="utf-8">
   <title>Create an Account</title>
   <link rel="stylesheet" type="text/css" href="formd.css">
+  
 </head>
 
 <body>
@@ -94,7 +95,9 @@
              <a href="agreement 10.07.23.html" target='_blank'>terms of service</a><br/><br/>
             </div>
                 <div class="field padding-bottom--24">
-                  <input type="submit" name="submit" value="Sign up">
+
+                  <input class="button" type="submit" name="submit"  value="Sign up"  id="submitBtn" >
+                  
                 </div>
 
               </form>
@@ -111,6 +114,11 @@
       </div>
     </div>
   </div>
+  <script> 
+  document.getElementById("submitBtn").addEventListener("click", myFunction);  
+    function myFunction() {  
+      window.location.href="http://programminghead.com";  
+    }
 </body>
 
 </html>

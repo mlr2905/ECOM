@@ -83,6 +83,7 @@ font-size: 14px;
   white-space: pre;
 
 }
+
 body {
       min-height: 100%;
       background-color: #ffffff;
@@ -247,6 +248,34 @@ body {
       color: #fff;
       font-weight: 600;
       cursor: pointer;
+  }
+  .button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(84, 105, 212);
+    border: none;
+    border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                    rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                    rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
+                    rgb(84, 105, 212) 0px 0px 0px 1px, 
+                    rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                    rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                    rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
+      }
+  
+  .button:hover {background-color: rgb(84 105 212 / 0.5)}
+  
+  .button:active {
+    background-color: rgb(84 105 212 / 0.5);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
   }
   .field-checkbox input {
       width: 20px;
