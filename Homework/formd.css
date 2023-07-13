@@ -75,10 +75,18 @@ font-size: 14px;
   padding: 40px;
   font-size: 12px;
   white-space: pre;
-  float: right;
+}
 
-  
+::placeholder {
+  color: rgb(44, 37, 41);
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
 
+}
+input.placeholder {
+  text-align: center;
 }
 #m77{
   white-space: pre;
