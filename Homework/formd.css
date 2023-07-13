@@ -264,8 +264,11 @@ body {
       color: #fff;
       font-weight: 600;
       cursor: pointer;
+      background-image: url('https://gfycat.com/login?redirectUri=%2Fstickers%2Fsearch%2Fconnecting');
+
   }
   .button {
+
     display: inline-block;
     padding: 15px 25px;
     font-size: 24px;
