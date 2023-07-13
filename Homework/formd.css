@@ -1,6 +1,5 @@
 * * {
   padding: 0;
-  margin: 0;
   color: #1a1f36;
   box-sizing: border-box;
   word-wrap: break-word;
@@ -37,6 +36,10 @@ display: none;
   
   position: absolute;
   pointer-events: none;
+}
+#password{
+  white-space: pre;
+
 }
 
 .selectdiv select {
