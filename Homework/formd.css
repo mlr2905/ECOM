@@ -68,14 +68,17 @@ font-size: 14px;
   outline-color: rgb(84 105 212 / 0.5);
   border: 1px solid #e3e8ee;
   
+  
 }
 .input-txt::  {
   font-family: Impact, sans-serif;
   padding: 40px;
   font-size: 12px;
   white-space: pre;
+  float: right;
+
   
-  
+
 }
 #m77{
   white-space: pre;
