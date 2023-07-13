@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <title>CSS demo 1</title>
+</head>
+<style>
+    /* per type  */
+    body {
+        margin-left: 20px;
+    }
+    h3 {
+        color: blue
+    }
+    /* class  */
+    .blue-headline { 
+        color: blue
+    }
+    .green-headline { 
+        color: green
+    }    
+    /* id */
+    #welcome-headline { 
+        color: red
+    } 
+    /* type + attribute */
+    h3[name=nice-welcome] {
+        color: rgb(255, 238, 192)
+    }
+    input[type=text] {
+        width: 300px;
+    }
+    h3.orange {
+        color:orange
+    }
+    h3.orange:hover {
+        color:red
+    }    
+</style>
+<body>
+    <h3>Welcome to CSS</h3>
+    <h3>Welcome to CSS again</h3>
+    <h4 class="blue-headline">Welcome green</h4>
+    <h3 class="green-headline">Welcome to CSS again</h3>
+    <h3 id="welcome-headline">Welcome to my page!</h3>
+    <h3 name="nice-welcome">You are so nice!</h3>
+    <p class="blue-headline">NAME: <input type="text"></p>
+    <p class="blue-headline">AGE: <input type="number"></p>
+    <h3 class="orange">Apple</h3>
+    <h4 class="orange">Apple - why not orange?</h4>
+</body>
+</html>
