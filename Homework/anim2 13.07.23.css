@@ -1,0 +1,44 @@
+@import "compass/css3";
+
+body{
+    background-image: url(s.jpg);
+    background-repeat: no-repeat;
+            background-size: 100%;
+}
+
+
+
+       
+.circle {
+    background-image: url(sf.png); 
+            background-size: 500px;
+            border:;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    border-radius:100%;
+    overflow: hidden;
+    
+    
+  }
+  
+  
+  
+  .circle {
+    -webkit-animation:grow 5s infinite;
+  
+  }
+  
+  @-webkit-keyframes grow {
+   30% {
+  -webkit-transform: scale( 0 );-moz-transform: scale( 0 );-o-transform: scale( 0 );-ms-transform: scale( 0 );transform: scale( 0 );
+    }
+    
+    80% {
+    -webkit-transform: scale( 0.1 );-moz-transform: scale( 0.1 );-o-transform: scale( 0.1 );-ms-transform: scale( 0.1 );transform: scale( 0.1 );
+    }
+    
+    100% {
+    -webkit-transform: scale( 0 );-moz-transform: scale( 0 );-o-transform: scale( 0 );-ms-transform: scale( 0 );transform: scale( 0 );
+    }
+  }
