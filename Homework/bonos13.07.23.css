@@ -1,0 +1,34 @@
+body{
+    background-color: #a8aba7
+    ;
+}
+div{
+    top: 80%;
+}
+img.B{
+    width: 1520PX;
+    height: 420PX;
+}
+
+img.A{
+   -moz-animation-duration: 7s;
+   -webkit-animation-duration: 18s;
+   -moz-animation-name: slidein;
+   -webkit-animation-name: slidein;
+}
+@-moz-keyframes slidein {
+   from {
+      margin-left:90%;
+   }
+   to {
+      margin-left:0%;
+   }
+}
+@-webkit-keyframes slidein {
+   from {
+      margin-left:90%;
+   }
+   to {
+      margin-left:-15%;
+   }
+}
