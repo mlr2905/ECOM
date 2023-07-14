@@ -2,12 +2,12 @@ body{
     background-color: #a8aba7
     ;
 }
-div{
-    top: 80%;
-}
+
 img.B{
-    width: 1520PX;
-    height: 430PX;
+    width: 101%;
+    height: 562PX;
+    background-color: #a8aba74b
+
 }
 
 img.A{
@@ -15,6 +15,8 @@ img.A{
    -webkit-animation-duration: 18s;
    -moz-animation-name: slidein;
    -webkit-animation-name: slidein;
+   background-color: #a8aba74b
+
 }
 @-moz-keyframes slidein {
    from {
