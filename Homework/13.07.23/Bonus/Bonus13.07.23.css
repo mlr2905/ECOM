@@ -22,7 +22,7 @@ img.A{
       margin-left:90%;
    }
    to {
-      margin-left:0%;
+      margin-left:-15%;
    }
 }
 @-webkit-keyframes slidein {
