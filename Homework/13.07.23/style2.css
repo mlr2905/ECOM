@@ -1,0 +1,31 @@
+div.a,.b,.c{
+    margin: 20px;
+    border:1px black solid;
+}
+div.a{
+    background-color: yellow;
+    width: 100px;
+    height: 150px;
+    float:left   
+}
+div.b{
+    background-color: yellow;
+    width: 100px;
+    height: 150px;
+    float:left
+    
+    
+}
+div.c{
+    background-color: yellow;
+    width: 100px;
+    height: 150px;
+    float:left
+    
+}
+ul{
+    border:3px red solid;
+    background-color:#0026f5;
+    margin-top: 0px;
+}
+

@@ -4,17 +4,18 @@ div{
     border-right: 4px dashed green;
     border-top : 4px dashed red;
     border-block-end: 4px dashed blue;
-    padding: 1px;
+    padding:  1px;
     background: white;
     width: 65%;
-}
+    
+   }
   table{
     width: 100%;
-    background-clip: padding-box;
     border-collapse: collapse;
-}
+    background-clip: padding-box;
+   }
+   
    tr{
-     
      background-color: orange;
      color: wheat
    }
