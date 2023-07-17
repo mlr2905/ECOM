@@ -1,0 +1,46 @@
+div,p{
+    margin: 0px;
+
+}
+div.a{
+    border-top : 4px dashed red;
+    border-left : 4px dashed purple;
+    border-right: 4px dashed green;
+    border-block-end: 4px dashed blue;
+    background: white;
+    width: 50%;
+    border-collapse: collapse;
+    padding:  3px;
+    border-radius: 15px;
+    Background-clip: padding-box
+
+
+
+
+
+   }
+   p.b{
+       background-color: #b6d6e3;
+        color: #3f7b1c ;
+        text-align: left;
+        font-size: 30px;
+        border-collapse: collapse;
+        white-space: pre;
+        Background-clip: padding-box
+        
+
+
+
+
+
+        
+
+   }
+   div.c{
+    background-color: #ee6c52;
+     color: #fec769
+   }
+   p{
+    border-collapse: collapse;
+
+   }
