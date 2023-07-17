@@ -1,6 +1,5 @@
 div,p,h1{
     margin: 0px;
-
 }
 div.a{
     border-top : 4px dashed red;
@@ -13,12 +12,8 @@ div.a{
     padding:  3px;
     border-radius: 15px;
     Background-clip: padding-box
-
-
-
-
-
    }
+
    h1.b{
        background-color: #b6d6e3;
         color: #3f7b1c ;
@@ -26,15 +21,7 @@ div.a{
         font-size: 30px;
         border-collapse: collapse;
         white-space: pre;
-        Background-clip: padding-box
-        
-
-
-
-
-
-        
-
+        Background-clip: padding-box   
    }
    div.c{
     background-color: #ee6c52;
@@ -42,5 +29,4 @@ div.a{
    }
    p{
     border-collapse: collapse;
-
    }
