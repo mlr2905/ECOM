@@ -46,3 +46,10 @@ div.a {
    70%  {top:300px;}
    100% {top:100px;}
  }
+ 
+ @keyframes example { 
+   60% { 
+       -webkit-transform: rotate(180deg); 
+       transform:rotate(90deg); 
+   } 
+}
