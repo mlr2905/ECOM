@@ -1,0 +1,23 @@
+.border {
+    width: 70px;
+    height: 70px;
+    margin: 8px;
+    text-align: center;
+    background-color: #808080;
+    margin-left: 30px;
+  }
+  div.rounded-circle {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+ }
+ img{
+        width: 70px;
+       height: 70px;
+       margin-left: 10px;
+       border: 2px solid rgba(225, 225, 49, 0.8);
+
+
+    }
