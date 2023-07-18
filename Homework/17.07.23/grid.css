@@ -24,13 +24,6 @@
     grid-column: 1 / span 3;
     grid-row: 1;
     text-align: center 
-
-  }
-  
-  .item1 {
-    margin: 10px;
-
-
   }
   .item2 {
     grid-column: 1/ span 2;
