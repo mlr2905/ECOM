@@ -19,6 +19,7 @@
     margin: 15px;
     text-align: center;
     padding: 20px;
+    width: 60%;
 
   }
   .item1 {
@@ -47,8 +48,7 @@
   .item5 {
     grid-column: 2;
     grid-row: 5;
-    width: 100%;
-    margin: 20px;
+    
 
 
   }
