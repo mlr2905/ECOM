@@ -1,20 +1,9 @@
 @media only screen and (max-width: 600px) {
 
-        .grid-container2 {
-            display: grid;
-            
-            grid-template-columns: 35%  35%  30% ;
-            grid-template-rows: auto auto auto auto;
-        }
-        
+     
   .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    font-size: 12px;
-    border: 2px solid rgba(0, 0, 0, 0.8);
-    margin: 10px;
-    text-align: center;
-    margin-right: 40%;
+    grid-template-columns: 20%  20% 20% 20% 20% ;
+    grid-template-rows: 20%  20% 20% 20% 20%;
   }
   }
 
