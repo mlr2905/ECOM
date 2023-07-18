@@ -54,14 +54,14 @@
   .item4 {
     grid-column: 1;
     grid-row: 5; 
-    width: 210px;
+    width: 200px;
     margin: 10px;
 
   }
   .item5 {
     grid-column: 2;
     grid-row: 5;
-    width: 210px;
+    width: 200px;
     margin: 10px;
 
 
@@ -69,8 +69,8 @@
   .item6 {
     grid-column: 3;
     grid-row: 5; 
-    width: 210px;
-    margin: 20px;
+    width: 200px;
+    margin: 10px;
 
   }
   .item7 {
