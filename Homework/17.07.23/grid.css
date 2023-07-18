@@ -1,3 +1,15 @@
+@media only screen and (max-width: 600px) {
+
+        .grid-container2 {
+            display: grid;
+            padding: 10px;
+            margin: 3;
+            grid-template-columns: auto  auto minmax(  300px, 300px) ;
+            grid-template-rows: auto auto auto auto;
+            margin:0
+              }
+  }
+
 .grid-container2 {
     display: grid;
     padding: 10px;
