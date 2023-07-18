@@ -76,5 +76,7 @@
   .item7 {
     grid-column: 1 / span 3;
     grid-row: 6;
-    text-align: center
+    text-align: center;
+    width: 745PX;
+
   }
