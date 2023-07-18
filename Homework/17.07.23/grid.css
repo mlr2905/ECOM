@@ -24,8 +24,7 @@
   .item1 {
     grid-column: 1 / span 3;
     grid-row: 1;
-    text-align: center;
-    height: 60px;
+    text-align: center top;
 
   }
   .item2 {
