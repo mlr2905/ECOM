@@ -40,14 +40,14 @@
   .item4 {
     grid-column: 1;
     grid-row: 5; 
-    width: 80%;
+    width: 50%;
     margin: 20px;
 
   }
   .item5 {
     grid-column: 2;
     grid-row: 5;
-    width: 80%;
+    width: 25%;
     margin: 20px;
 
 
@@ -55,7 +55,7 @@
   .item6 {
     grid-column: 3;
     grid-row: 5; 
-    width: 80%;
+    width: 25%;
     margin: 20px;
 
   }
