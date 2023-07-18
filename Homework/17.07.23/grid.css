@@ -1,12 +1,10 @@
 @media only screen and (max-width: 600px) {
 
         .grid-container2 {
-            display: none;
-            padding: 10px;
-            grid-template-columns: auto  auto  auto ;
+            display: grid;
+            
+            grid-template-columns: 35%  35%  30% ;
             grid-template-rows: auto auto auto auto;
-            margin-right:  70%;
-            background-color: rgb(255, 174, 0) ;
         }
         
   .grid-item {
