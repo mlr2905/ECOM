@@ -40,7 +40,7 @@
   .item4 {
     grid-column: 1;
     grid-row: 5; 
-    width: 50%;
+    width: 150px;
     margin: 20px;
 
   }
