@@ -8,6 +8,10 @@
     grid-template-rows: auto auto auto auto;
     margin-left: 20%;
   }
+  b{
+    font-size: 26px;
+
+  }
   .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px;
