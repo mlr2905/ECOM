@@ -17,14 +17,14 @@
     padding: 10px;
     font-size: 16px;
     border: 2px solid rgba(0, 0, 0, 0.8);
-    margin: 20px;
+    margin: 30%;
     text-align: center;
   }
   .item1 {
     grid-column: 1 / span 3;
     grid-row: 1;
     text-align: center 
-    padding: 20px;
+    margin: 20px;
 
   }
   .item2 {
