@@ -25,9 +25,8 @@
     grid-column: 1 / span 3;
     grid-row: 1;
     text-align: center;
-    height: 50px;
-    top: 20%;
- 
+    height: 60px;
+
   }
   .item2 {
     grid-column: 1/ span 2;
