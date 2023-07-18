@@ -47,7 +47,7 @@
   .item5 {
     grid-column: 2;
     grid-row: 5;
-    width: 25%;
+    width: 250px;
     margin: 20px;
 
 
@@ -55,7 +55,7 @@
   .item6 {
     grid-column: 3;
     grid-row: 5; 
-    width: 25%;
+    width: 250px;
     margin: 20px;
 
   }
