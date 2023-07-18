@@ -26,7 +26,7 @@
     grid-row: 1;
     text-align: center ;
     margin: 5px;
-    width: 730PX;
+    width: 740PX;
 
 
 
@@ -77,6 +77,6 @@
     grid-column: 1 / span 3;
     grid-row: 6;
     text-align: center;
-    width: 730PX;
+    width: 740PX;
 
   }
