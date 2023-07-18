@@ -2,7 +2,7 @@
 
 .grid-container2 {
     display: grid;
-    padding: 60px;
+    padding: 58px;
     margin: 3;
     grid-template-columns: auto auto  auto minmax(  300px, 300px) ;
     grid-template-rows: auto auto auto auto;
