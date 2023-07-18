@@ -40,7 +40,7 @@
   .item4 {
     grid-column: 1;
     grid-row: 5; 
-    content: 30px;
+    content: 50px;
   }
   .item5 {
     grid-column: 2;
