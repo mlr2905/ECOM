@@ -18,6 +18,8 @@
     border: 2px solid rgba(0, 0, 0, 0.8);
     margin: 15px;
     text-align: center;
+    padding: 30px;
+
   }
   .item1 {
     grid-column: 1 / span 3;
@@ -38,19 +40,16 @@
   .item4 {
     grid-column: 1;
     grid-row: 5; 
-    padding: 40px;
 
   }
   .item5 {
     grid-column: 2;
     grid-row: 5;
-    padding: 30px;
 
   }
   .item6 {
     grid-column: 3;
     grid-row: 5; 
-    padding: 40px;
 
   }
   .item7 {
