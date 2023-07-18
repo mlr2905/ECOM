@@ -19,7 +19,6 @@
     margin: 15px;
     text-align: center;
     padding: 20px;
-    width: 50%;
 
   }
   .item1 {
@@ -48,14 +47,16 @@
   .item5 {
     grid-column: 2;
     grid-row: 5;
-    
+    width: 80%;
+    margin: 20px;
 
 
   }
   .item6 {
     grid-column: 3;
     grid-row: 5; 
-    width: 60%;
+    width: 80%;
+    margin: 20px;
 
   }
   .item7 {
