@@ -1,7 +1,7 @@
 .border {
-    width: 70px;
-    height: 70px;
-    margin: 8px;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
     text-align: center;
     background-color: #808080;
     margin-left: 30px;
@@ -13,9 +13,10 @@
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.8);
  }
+
  img{
-        width: 70px;
-       height: 70px;
+        width: 60px;
+       height: 60px;
        margin-left: 10px;
        border: 2px solid rgba(225, 225, 49, 0.8);
 
