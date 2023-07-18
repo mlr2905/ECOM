@@ -52,14 +52,14 @@
     grid-column: 1;
     grid-row: 5; 
     width: 200px;
-    margin: 20px;
+    margin: 30px;
 
   }
   .item5 {
     grid-column: 2;
     grid-row: 5;
     width: 250px;
-    margin: 20px;
+    margin: 30px;
 
 
   }
@@ -67,7 +67,7 @@
     grid-column: 3;
     grid-row: 5; 
     width: 250px;
-    margin: 20px;
+    margin: 30px;
 
   }
   .item7 {
