@@ -4,17 +4,28 @@
     height: 70px;
     margin: 15px;
     background-color: #808080;
-    margin-left: 30px;
+    margin-left: 30px; 
     
   }
-  #b.border {
-    margin-left: 19px;
+  .bbb {
     padding: 23px;
-    text-decoration: underline
-    
+    width: 70px;
+    height: 70px;
+    margin: 15px;
+    margin-left: 18px; 
 
-
+    background-color: #808080;
   }
+  sup{
+    vertical-align: text-top;
+    top: -10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration:underline;
+    padding: 3px;
+  }
+  
+
   div.rounded-circle {
     display: inline-block;
     width: 7px;
@@ -29,7 +40,4 @@
        height: 70px;
        margin-left: 10px;
        border: 2px solid rgba(225, 225, 49, 0.8);
-    }
-    span{
-      top: 50;
     }
