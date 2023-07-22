@@ -13,21 +13,6 @@
          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script> 
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script> 
  </head> 
- <style> 
-         .a{ 
-             color: green; 
-         } 
-         .b1{ 
-             color: red; 
-         } 
-         .c{ 
-             color: orange; 
-         } 
-         .d{ 
-             color: blue; 
-         } 
-  
- </style> 
  <body m-5> 
   <div class="p3 m-4 border border-dark">
  <script> 
@@ -41,11 +26,19 @@
   g =  parseInt(prompt("How old will you be this year?: ")) 
   h= 2023 - g 
   
- document.write("<p><b>First name: </b><b class='a'>", a,"</b></p>") 
- document.write("<p><b>Last name:</b><b class='b1'> ", b,"</b></p>") 
- document.write("<p><b>Address:</b><b class='c'> ", c,'-',d,"-",e ,"-",f,"</b></p>") 
- document.write("<p><b>year of birth:</b><b class='d'> ", h,"</b></p>") 
-  
+ document.write("<p><b>First name: </b><b id='a1'>", a,"</b></p>") 
+ document.write("<p><b>Last name:</b><b id='b1'> ", b,"</b></p>") 
+ document.write("<p><b>Address:</b><b id='c1'> ", c,'-',d,"-",e ,"-",f,"</b></p>") 
+ document.write("<p><b>year of birth:</b><b id='d1'> ", h,"</b></p>") 
+
+document.getElementById('a1').style.color = 'green';  
+
+document.getElementById('b1').style.color = 'red';  
+
+document.getElementById('c1').style.color = 'orange';  
+
+document.getElementById('d1').style.color = 'blue';  
+
  </script> 
  </div>
  </body> 
