@@ -16,20 +16,23 @@
     <form class="w-75 m-5 p-5 was-validated">  
         <H5>Craete new account</H5>
         <div class="form-group row">       
-        <div class="col-pt-2">
+        <div class="co5-pt-2">
         <label for="name">Fist name</label>
           <input type="text"  class="form-control " name="name" placeholder="Fist name" pattern="(?=.[a-z]).{3,}" required>
           <div class="valid-feedback">
             Looks good!
           </div>
-          <div class="col-pt-2" >
+          <div class="form-group row">
+          <div class="col5" >
           <label for="name">Last name</label>
           <input type="text" class="form-control"  name="name" placeholder="Last name" aria-describedby="inputGroupPrepend3" pattern="(?=.[a-z]).{3,}" required>
          <div class="valid-feedback">
             Looks good!
           </div>
           </div>
-          <div class="col-pt-2" >
+          </div>
+          
+          <div class="col" >
       <fieldset class="form-group">
       <div class="row">
       <legend class="col-form-label col-sm-8 pt-2">How do you know about us?</legend>
@@ -91,7 +94,7 @@
 
                   <div class="form-group row">       
                     <label for="name">Emil address</label>
-                      <input type="email"  class="form-control " name="name" placeholder="Enter email" pattern="(?=.[a-z]).{2,}" required>
+                      <input type="email"  class="form-control " name="email" placeholder="Enter email"  required>
                       We'll never share your email with anyone else.
                       <div class="valid-feedback">
                         Looks good!
@@ -108,14 +111,20 @@
                           </div>
                         </div>
                       </div>
+                        <br/>
+                        <div class="col-pt-2" >
+                        <div class="form-group row">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1"required>
                             <label class="custom-control-label" for="customCheck1">I agree to the policy</label>
                           </div>
+                          <div class="col-pt-2" >
+                          <div class="form-group row">
                           <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                            <label class="custom-control-label" for="customCheck1">Send me all the news</label></div> 
+                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                            <label class="custom-control-label" for="customCheck2">Send me all the news</label></div> 
                   </div>
+                        </div></div>
                   <br/>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
