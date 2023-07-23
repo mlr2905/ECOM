@@ -1,49 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to java script</title>
-</head>
-<style>
+<!DOCTYPE html>  
+  <html lang="en">  
+  <head>  
+      <meta charset="UTF-8">  
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+      <title>Bonos-js</title> 
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"   
+          rel="stylesheet"  
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"   
+          crossorigin="anonymous">  
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">  
+          
+  </head>  
+  <body m-5> 
 
-        h3{
-            color: rgb(154, 54, 191);
-        }
-        .a{
-            color: green;
-        }
-        .b1{
-            color: red;
-        }
-        .c{
-            color: orange;
-        }
-        .d{
-            color: blue;
-        }
-    
-</style>
-<body>
+   <div class="p-3 m-4 border border-dark"> 
+  <script>  
+     var a ,b , c , d, e, f, g, h,l ,j
+   a = prompt("What is your First name?: ")  
+   b = prompt("what is your last name: ")  
+   c = prompt("Which city do you live in ")  
+   d = prompt("What street do you live on?: ")  
+   e =parseInt(prompt("What is the number of the building you live in?: "))  
+   f =parseInt( prompt("What is the number of the apartment you live in?: "))  
+   g =  parseInt(prompt("How old will you be this year?: "))  
+   h= 2023 - g  
+   j= "here is what you wrote down:"
+  document.write("<h4 id='f1'>", j,"</h4>")   
+  document.write("<p><b>First name: </b><b id='a1'>", a,"</b></p>")  
+  document.write("<p><b>Last name:</b><b id='b1'> ", b,"</b></p>")  
+  document.write("<p><b>Address:</b><b id='c1'> ", c,',',d,",",e ,"/",f,"</b></p>")  
+  document.write("<p><b>Year of birth:</b><b id='d1'> ", h,"</b></p>")  
+  
+ document.getElementById('a1').style.color = 'green';   
+  
+ document.getElementById('b1').style.color = 'red';   
+  
+ document.getElementById('c1').style.color = 'orange';   
+  
+ document.getElementById('d1').style.color = 'blue'; 
+  
+  document.getElementById('f1').style.color = 'purple';   
 
-<script >
-   var a ,b , c , d, e,f,g,h
- a = prompt("What is your First name?: ")
- b = prompt("what is your last name: ")
- c =prompt("Which city do you live in ")
- d =prompt("What street do you live on?: ")
- e =parseInt(prompt("What is the number of the building you live in?: "))
- f =parseInt( prompt("What is the number of the apartment you live in?: "))
- g =  parseInt(prompt("How old will you be this year?: "))
- h= 2023 - g
-
-document.write("<p>First name: <b class='a'>", a,"</b></p>")
-document.write("<p>Last name:<b class='b1'> ", b,"</b></p>")
-document.write("<p>Address:<b class='c'> ", c,'-',d,"-",e ,"-",f,"</b></p>")
-document.write("<p>year of birth:<b class='d'> ", h,"</b></p>")
-
-
-
-</script>
-</body>
-</html>
+  </script>  
+  </div> 
+  </body>  
+  </html>
