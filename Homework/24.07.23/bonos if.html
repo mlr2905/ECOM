@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+
+<script>
+
+    var a = parseInt(prompt("enter a number [A]"));
+    var b = parseInt(prompt("enter a number [B]"));
+    var c = parseInt(prompt("enter a number [C]"));
+    
+    if (a=b && a==c) {
+        document.write("<p style='color: green;'>All entries with the same number</b>:","This is A:",a,".","This is B:",b,".","This is C:",c,"</p>")
+    }
+    if (c>a && c>b) {
+        document.write("<p style='color: green;'>the value of <b>C</b>",c,"</p>")
+    }
+    if (b>a && b>c) {
+        document.write("<p style='color: green;'>the value of <b>B</b>:",b,"</p>")
+    }
+    if (a>b && a>c) {
+        document.write("<p style='color: green;'>the value of <b>A</b>:",a,"</p>")
+    }
+    if (b>=a && b<c) {
+        document.write("<p style='color: orange;'>the value of <b>B</b>:",b,"</p>")
+    }
+    if (b>=c && b<a) {
+        document.write("<p style='color: orange;'>the value of <b>B</b>:",b,"</p>")
+    }
+    if (c>=a && c<b) {
+        document.write("<p style='color: orange;'>the value of <b>C</b>:",c,"</p>")
+    }
+    if (c>=b && c<a) {
+        document.write("<p style='color: orange;'>the value of <b>C</b>:",c,"</p>")
+    }
+    if (a>=b && a<c) {
+        document.write("<p style='color: orange;'>the value of <b>A</b>:",a,"</p>")
+    }
+    if (a>=c && a<b) {
+        document.write("<p style='color: orange;'>the value of <b>A</b>:",a,"</p>")
+    }
+    if (a<b && a<c) {
+        document.write("<p style='color: pink;'>the value of <b>A</b>:",a,"</p>")
+    } if (b<a && b<c) {
+        document.write("<p style='color: pink;'>the value of <b>B</b>:",b,"</p>")
+    } if (c<b && c<a) {
+        document.write("<p style='color: pink;'>the value of <b>C</b>:",c,"</p>")
+    }
+
+</script>
+</body>
+</html>
