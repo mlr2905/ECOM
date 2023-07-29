@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body >
+
+<script>
+
+    var a = parseInt(prompt("enter a number [A]"));
+    var b = parseInt(prompt("enter a number [B]"));
+    var c = parseInt(prompt("enter a number [C]"));
+
+    document.write("<p>value of <b>A:"," ",a,".","</b></p><p>value of <b>B:"," ",b,".","</b></p><p> value of <b>C:"," ",c,".","</b></p>")
+    
+    if (c ==a+b) {
+        document.write("</p><p>A+B is equal to the value of <b>C</b>",". ","</p>")
+    }
+    else if (b ==a+c) {
+        document.write("<P>A+C is equal to the value of <b>B</b>",", ","<P/>")
+    }
+    else if (a ==b+c)  {
+        document.write("<P>b+C is equal to the value of <b>A</b>",", ","<P/>")
+    }
+
+    else  {
+        document.write("<b style='color: red;'>There is no pair of values ​​that is equal to one value taken out of three values ​​taken</b>")
+    }
+
+</script>
+</body>
+</html>
