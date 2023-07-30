@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Bonus if</title>
 </head>
-<body>
+<body style="font: 14px">
 
 <script>
 
@@ -15,8 +15,17 @@
     if (a==b && a==c) {
         document.write("<p style='color: green;'>All entries with the same number</b>:","This is A:",a,".","This is B:",b,".","This is C:",c,"</p>")
     }
+    if (c == a && c > b) {
+      document.write("<p style='color: green;'>the values of <b>C</b>:", c," and A", a,"</p>")
+    }
+    if (b == a && b > c) {
+      document.write("<p style='color: green;'>the values of <b>B</b>:", b, " and A", a, "</p>")
+    }
+    if (c == b && c > a) {
+      document.write("<p style='color: green;'>the value of <b>C</b>:", c, "</p>")
+    }
     if (c>a && c>b) {
-        document.write("<p style='color: green;'>the value of <b>C</b>",c,"</p>")
+        document.write("<p style='color: green;'>the value of <b>C</b>:",c,"</p>")
     }
     if (b>a && b>c) {
         document.write("<p style='color: green;'>the value of <b>B</b>:",b,"</p>")
@@ -24,31 +33,23 @@
     if (a>b && a>c) {
         document.write("<p style='color: green;'>the value of <b>A</b>:",a,"</p>")
     }
-    if (b>=a && b<c) {
+    if (b>a && b<c) {
         document.write("<p style='color: orange;'>the value of <b>B</b>:",b,"</p>")
     }
-    if (b>=c && b<a) {
+    if (b>c && b<a) {
         document.write("<p style='color: orange;'>the value of <b>B</b>:",b,"</p>")
     }
-    if (c>=a && c<b) {
+    if (c>a && c<b) {
         document.write("<p style='color: orange;'>the value of <b>C</b>:",c,"</p>")
     }
-    if (c>=b && c<a) {
+    if (c>b && c<a) {
         document.write("<p style='color: orange;'>the value of <b>C</b>:",c,"</p>")
     }
 
-    if (c>=b && c>a) {
-        document.write("<p style='color: orange;'>the value of <b>C</b>:",c,"</p>")
-    }    if (a>=b && a<c) {
-        document.write("<p style='color: orange;'>the value of <b>A</b>:",a,"</p>")
-    }
 
-    if (a>=b && a>c) {
+    if (a>b && a<c) {
         document.write("<p style='color: orange;'>the value of <b>A</b>:",a,"</p>")
-    }    if (a>=c && a<b) {
-        document.write("<p style='color: orange;'>the value of <b>A</b>:",a,"</p>")
-    }
-    if (a>=c && a>b) {
+    }    if (a>c && a<b) {
         document.write("<p style='color: orange;'>the value of <b>A</b>:",a,"</p>")
     }
     if (a<b && a<c) {
