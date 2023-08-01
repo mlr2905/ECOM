@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Write a number below 10</title>
+    <title>Printing even numbers</title>
 </head>
 <body>
     <script>
 
-     var i= parseInt(prompt("Please enter a number below 10: [ i ]" ))
-     while(i<=10){
-        document.write(+i+"<br>")
-        i++
+     var i= parseInt(prompt("Please enter a number: [ i ]" ))
+     var n=i
+     for (var i = 0; i <= n; i += 2) {
+        document.write(i+"<br>")
      }
+    
+
     </script>
      
 
