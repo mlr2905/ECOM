@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>switch-between-2-14</title>
+</head>
+<body>
+    <script>
+        var i = parseInt(prompt(" Please enter a number between 2 -14: [ i ]"))
+        
+        switch (i) {
+            case 2:document.write('<img src="https://publicdomainvectors.org/photos/nicubunu_Ornamental_deck_2_of_spades.png" alt=" שתים " width="368px" height="500px">')
+            break;
+            case 3:document.write('<img src="https://publicdomainvectors.org/photos/nicubunu_Ornamental_deck_3_of_spades.png" alt=" שלוש " width="368px" height="500px">') 
+            break;                     
+            case 4:document.write('<img src="https://publicdomainvectors.org/photos/nicubunu_Ornamental_deck_4_of_spades.png" alt=" ארבע " width="368px" height="500px"')
+            break;
+            case 5:document.write('<img src="https://publicdomainvectors.org/photos/nicubunu_Ornamental_deck_5_of_spades.png" alt=" חמש " width="368px" height="500px">')
+            break;
+            case 6:document.write('<img src="https://publicdomainvectors.org/photos/nicubunu_Ornamental_deck_6_of_spades.png" alt=" שש " width="368px" height="500px">')
+            break;
+            case 7:document.write('<img src="https://publicdomainvectors.org/photos/nicubunu_Ornamental_deck_7_of_spades.png" alt=" שבעה " width="368px" height="500px">')
+            break;
+            case 8:document.write('<img src="https://publicdomainvectors.org/photos/nicubunu_Ornamental_deck_8_of_spades.png" alt=" שמונה " width="368px" height="500px">')
+            break;
+            case 9:document.write('<img src="https://publicdomainvectors.org/photos/nicubunu_Ornamental_deck_9_of_spades.png" alt=" תשע " width="368px" height="500px">')
+            break;
+            case 10:document.write('<img src="https://publicdomainvectors.org/photos/nicubunu_Ornamental_deck_10_of_spades.png" alt=" עשר " width="368px" height="500px"> ')
+            break;
+            case 11:document.write('<img src="https://publicdomainvectors.org/photos/nicubunu_Ornamental_deck_Jack_of_spades.png" alt="נסיך" width="368px" height="500px" > ')
+            break;
+            case 12:document.write('<img src="https://publicdomainvectors.org/photos/nicubunu_Ornamental_deck_Queen_of_spades.png" alt=" מלכת " width="368px" height="500px">')
+            break;
+            case 13:document.write('<img src="https://publicdomainvectors.org/photos/nicubunu_Ornamental_deck_King_of_clubs.png" alt=" מלך " width="368px" height="500px">')
+            break;
+            case 14:document.write('<img src="https://publicdomainvectors.org/photos/nicubunu_Ornamental_deck_Ace_of_spades.png" alt=" אס " width="368px" height="500px" >')
+            break;
+            default:document.write(' <p>You did not choose a number between 2 and 14 to show you a joker</P><img src="https://publicdomainvectors.org/photos/nicubunu_Ornamental_deck_Black_Joker.png" alt="גוקר"  width="368px" height="500px" class="vec_veliki">');
+        }
+
+
+
+    </script>
+</body>
+</html>
