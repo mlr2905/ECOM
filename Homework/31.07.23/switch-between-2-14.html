@@ -16,6 +16,33 @@ img:hover {
     transform: rotate(360deg);
     transition: transform 1s linear;
 }
+ img:hover { 
+     transform: rotate(360deg); 
+     transition: transform 1s linear; 
+ } 
+ 
+img { 
+  
+    position: relative; 
+    animation-name:slidein;
+    animation-duration: 15s; 
+  
+  } 
+ @-moz-keyframes slidein { 
+    from { 
+       margin-left:200%; 
+    } 
+    to { 
+       margin-left:0%; 
+    } 
+ } 
+ @-webkit-keyframes slidein { 
+    from { 
+       margin-left:200%; 
+    } 
+    to { 
+       margin-left:0%; 
+    } 
    </style>
 <body >
     <script>
