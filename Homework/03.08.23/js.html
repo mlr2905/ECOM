@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+var a;
+var b = 0;
+var average = 0 ;
+var sum = 0;
+
+a = parseInt(prompt("Please enter your grade, enter -1 to exit"));
+for(var a = 1; a <= 3; a++) 
+{
+while(a != -1)
+{
+sum +=a;         
+b++;
+average = sum / b;      
+
+a = parseInt(prompt("Please enter a number, enter -1 to exit"));
+
+}
+document.write(" average = " + average);
+while(a != -2)
+{
+sum +=a;         
+b++;
+average = sum / b;      
+
+a = parseInt(prompt("Please enter a number, enter -1 to exit"));
+
+}
+document.write(" average = " + average);
+while(a != -3)
+{
+sum +=a;         
+b++;
+average = sum / b;      
+
+a = parseInt(prompt("Please enter a number, enter -1 to exit"));
+
+}
+document.write(" average = " + average);
+
+} 
+        
+        </script>
+        
+</body>
+</html>
