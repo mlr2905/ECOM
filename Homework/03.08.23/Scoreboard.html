@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>randoms</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+</head>
+
+</head>
+<style>
+    body{
+    background-image: url('https://e2e85xpajrr.exactdn.com/wp-content/uploads/2022/09/03152756/shutterstock_2190840355-scaled.jpg?strip=all&lossy=1&w=1920&ssl=1');
+    background-repeat: no-repeat;
+            background-size: 100%;
+            margin: 3%;
+            margin-left: 30%;
+            text-align: center;
+}
+th{
+    text-align: center;
+
+}
+</style>
+<body>
+    <script>
+
+        for(var i = 1; i <= 1; i++) {
+            var a = Math.floor ( Math.random() *3 ) + 1
+            var b = Math.floor ( Math.random() *3 ) + 1
+            var c = Math.floor ( Math.random() *3 ) + 1
+            var d = Math.floor ( Math.random() *3 ) + 1
+
+
+
+            document.write(` 
+        <table class="table table-dark w-75 mt-5 ml-5 table-hover table-bordered">
+        <thead>
+          <tr>
+            <th scope="col"><b>The name of the group</b></th>
+            <th scope="col"><b>Results</b></th>
+            <th scope="col"><b>The name of the group</></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <tbody class="css-2anrf5">
+                <td><b>אייאקס</b></td>
+                <td><b>${a}</b><!-- -->:<!-- --><b>${b}</b><img src="https://www.livegames.co.il/images/1_active.gif" alt="כדורגל" align="top" style="padding-top: 4px;" width="16" height="16"></th>
+                    <td><b>בורוסיה דורטמונד</b></td>
+                    </td>
+          </tr>
+          <tr>
+            <td><b>אתלטיק בילבאו</b></td>
+                <td>${b}<!-- -->:<!-- -->${d}<img src="https://www.livegames.co.il/images/1_active.gif" alt="כדורגל" align="top" style="padding-top: 4px;" width="16" height="16"></th>
+                <td><b>מנצ'סטר יונייטד</b></td>
+                </td>
+          </tr>
+          <tr>
+            <td><b>לוזאן</b></td>
+            <td>${c}<!-- -->:<!-- -->${b}<img src="https://www.livegames.co.il/images/1_active.gif" alt="כדורגל" align="top" style="padding-top: 4px;" width="16" height="16"></th>
+            <td><b>לוצרן</b></td>
+            </td>
+             </tr>
+             <tr>
+               <td><b>היברניאן</b></td>
+                <td>${c}<!-- -->:<!-- -->${a}<img src="https://www.livegames.co.il/images/1_active.gif" alt="כדורגל" align="top" style="padding-top: 4px;" width="16" height="16"></th>
+                <td><b>סט. מירן</b></td>
+                </td>
+             </tr>     
+             
+             
+             `)
+        }
+        </script>
+</body>
+</html>
