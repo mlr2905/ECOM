@@ -34,7 +34,13 @@
                     </div><br/><h2>Greetings creating a rectangle &#128513;</h2>`)
                }
                else{
-                document.write(`<h1>Must enter numbers!!! &#128545; </h1><h2 style="color: red;">Page will refresh now!!</h2><p><img src="https://icon-library.com/images/waiting-icon-gif/waiting-icon-gif-1.jpg "style="width="50" height="50"><p>`)
+                //הוספתי הדפסה שחייב  לרשום ערכים ועם סמיילי כועס
+                document.write(`
+                <h1>Must enter numbers!!! &#128545; </h1>
+                <h2 style="color: red;">Page will refresh now!!</h2>
+                <p><img src="https://icon-library.com/images/waiting-icon-gif/waiting-icon-gif-1.jpg "style="width="50" height="50"></p>`)
+               
+                //הוספתי רענון אוטומטי לדף במידה ולא הוזן ערכים
                 window.setTimeout( function() {
                 window.location.reload();
                 }, 2000);
