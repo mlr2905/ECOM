@@ -19,19 +19,17 @@
         
         
             <script>
-              
-               var a = parseInt(prompt("Choose a number for the width of the rectangle: I recommend choosing a number greater than 150: [ a ]"))
-               var b = parseInt(prompt("Select the height of the rectangle. I recommend choosing a number smaller than 30! [ b ]"))
+              I
+               var a = parseInt(prompt("Choose a number for the width of the rectangle: must be greater than 200: [ a ]"))
+               var b = parseInt(prompt("Select the height of the rectangle: Must be less than 100! [ b ]"))
         
-              while (a < 150 || b > 30) {
-                var a = parseInt(prompt("a must be greater than b!!:try again [ a ]"))
-                var b = parseInt(prompt("b must be less than a: try again [ b ]"))  
-             
+              while (a < 200 || b > 100) {
+                var a = parseInt(prompt("[a] must be greater than 200 !!: try again [ a ]"))
+                var b = parseInt(prompt("[b] must be less than 100 !!: try again [ b ]"))  
               }
               if(a > 0 && b > 0 ){
                 document.write(`<div class="col border bg-dark text-light" style="border: solid magenta; width: ${a}px ; height: ${b}px; margin: auto;">
-                    </div><br/><h2>Greetings creating a rectangle &#128513;</h2><br/><br/><div style="border: solid magenta; width: ${a}px ; height: ${b}px; margin: auto;"></div>`)
-
+                    </div><br/><h2>Greetings creating a rectangle &#128513;</h2>`)
                }
                else{
                 document.write(`<h1 style="color: red;">Must enter numbers!!! &#128545;</h1>`)
@@ -39,11 +37,6 @@
                 window.location.reload();
                 }, 2000);
                }
-
-            
-              
-            
-              
             </script>
         </body>
         
