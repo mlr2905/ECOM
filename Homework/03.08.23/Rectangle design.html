@@ -23,15 +23,28 @@
                var a = parseInt(prompt("Choose a number for the width of the rectangle: I recommend choosing a number greater than 150: [ a ]"))
                var b = parseInt(prompt("Select the height of the rectangle. I recommend choosing a number smaller than 30! [ b ]"))
         
-              
-        
-              while (a <b) {
-                 a = parseInt(prompt("a must be greater than b!!:try again [ a ]"))
-                b = parseInt(prompt("b must be less than a: try again [ b ]"))
-        
+              while (a < 150 || b > 30) {
+                var a = parseInt(prompt("a must be greater than b!!:try again [ a ]"))
+                var b = parseInt(prompt("b must be less than a: try again [ b ]"))  
+             
               }
+              if(a > 0 && b > 0 ){
+                document.write(`<div class="col border bg-dark text-light" style="border: solid magenta; width: ${a}px ; height: ${b}px; margin: auto;"></div><br/>Greetings creating a rectangle<div style="border: solid magenta; width: ${a}px ; height: ${b}px; margin: auto;"></div>`)
+
+               }
+               else{
+                document.write("<p>Must enter numbers</p>")
+                window.setTimeout( function() {
+  window.location.reload();
+}, 1500);
+
+                
         
-              document.write(`<div class="col border bg-dark text-light" style="border: solid magenta; width: ${a}px ; height: ${b}px; margin: auto;"></div><br/>Greetings creating a rectangle<div style="border: solid magenta; width: ${a}px ; height: ${b}px; margin: auto;"></div>`)
+               }
+
+            
+              
+            
               
             </script>
         </body>
