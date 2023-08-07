@@ -1,36 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
-    rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
-    crossorigin="anonymous">
-    <title>Rectangle design</title>
-</head>
-<style> 
-     body{ 
-
-             text-align: center; 
- }
-</style>
-<body >
-    <div class="container mt-5 ">
-              
-    
-    <script>
-          var a = 1
-          var b = 31
-          
-          while (  a < 150 && b > 30 ) {
-          var a = parseInt(prompt("Choose a number for the width of the rectangle: must be greater than 150: [ a ]"))
-          var b = parseInt(prompt("Select the height of the rectangle. Must be less than 30! [ b ]"))
-
-        }
+        <html lang="en">
         
-        document.write(`<div class="col border bg-dark text-light" style="border: solid magenta; width: ${a}px ; height: ${b}px; margin: auto;"></div>`)
-        document.write(`<br/>Greetings creating a rectangle<div style="border: solid magenta; width: ${a}px ; height: ${b}px; margin: auto;"></div>`)
-       </script>
-</body>
-</html>
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+          <title>Rectangle design</title>
+        </head>
+        <style>
+          body {
+        
+            text-align: center;
+          }
+        </style>
+        
+        <body>
+          <div class="container mt-5 ">
+        
+        
+            <script>
+              
+               var a = parseInt(prompt("Choose a number for the width of the rectangle: must be greater than 150: [ a ]"))
+               var b = parseInt(prompt("Select the height of the rectangle. Must be less than 30! [ b ]"))
+        
+              
+        
+              while (a <b &&  b > a) {
+                 a = parseInt(prompt("a must be greater than b!!:try again [ a ]"))
+                b = parseInt(prompt("b must be less than a: try again [ b ]"))
+        
+              }
+        
+              document.write(`<div class="col border bg-dark text-light" style="border: solid magenta; width: ${a}px ; height: ${b}px; margin: auto;"></div>`)
+              document.write(`<br/>Greetings creating a rectangle<div style="border: solid magenta; width: ${a}px ; height: ${b}px; margin: auto;"></div>`)
+            </script>
+        </body>
+        
+        </html>
