@@ -14,7 +14,7 @@
           }
         </style>
         
-        <body>
+        <body >
           <div class="container mt-5 ">
         
         
@@ -29,14 +29,15 @@
              
               }
               if(a > 0 && b > 0 ){
-                document.write(`<div class="col border bg-dark text-light" style="border: solid magenta; width: ${a}px ; height: ${b}px; margin: auto;"></div><br/>Greetings creating a rectangle<div style="border: solid magenta; width: ${a}px ; height: ${b}px; margin: auto;"></div>`)
+                document.write(`<div class="col border bg-dark text-light" style="border: solid magenta; width: ${a}px ; height: ${b}px; margin: auto;">
+                    </div><br/><h2>Greetings creating a rectangle &#128513;</h2><br/><br/><div style="border: solid magenta; width: ${a}px ; height: ${b}px; margin: auto;"></div>`)
 
                }
                else{
-                document.write("<p>Must enter numbers</p>")
+                document.write(`<h1 style="color: red;">Must enter numbers!!! &#128545;</h1>`)
                 window.setTimeout( function() {
   window.location.reload();
-}, 1500);
+}, 2000);
 
                 
         
