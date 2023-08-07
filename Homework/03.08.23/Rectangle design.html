@@ -14,17 +14,17 @@
               
     
     <script>
-         var a = parseInt(prompt("Choose a number for the width of the rectangle: must be greater than 150: [ a ]"))
+          var a = parseInt(prompt("Choose a number for the width of the rectangle: must be greater than 150: [ a ]"))
           var b = parseInt(prompt("Select the height of the rectangle. Must be less than 30! [ b ]"))
-
-          while (  a < 150 && b > 30 ) {
-            var a = parseInt(prompt("Choose a number for the width of the rectangle: must be greater than 150: [ a ]"))
+            while ( a<150 && b>30 )
+          
+ {
+          var a = parseInt(prompt("Choose a number for the width of the rectangle: must be greater than 150: [ a ]"))
           var b = parseInt(prompt("Select the height of the rectangle. Must be less than 30! [ b ]"))
 
         }
-        
         document.write(`<div class="col border bg-dark text-light" style="border: solid magenta; width: ${a}px ; height: ${b}px; margin: auto;">Greetings creating a rectangle</div>`)
-
+        document.write(`<br/><div style="border: solid magenta; width: ${a}px ; height: ${b}px; margin: auto;">Greetings creating a rectangle</div>`)
        </script>
 </body>
 </html>
