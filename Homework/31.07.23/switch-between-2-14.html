@@ -12,9 +12,18 @@ body {
     font-family: aeial,sans-serif;
   }
 
-img:hover {
+p {
+  animation: rotate 7s infinite;
+}
+
+@keyframes rotate {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+
+  50% {
     transform: rotate(360deg);
-    transition: transform 1s linear;
+  }
 }
  
  
@@ -46,7 +55,7 @@ img {
         var i = parseInt(prompt(" Please enter a number between 2 -14: [ i ]"))
 
         switch (i) {
-            case 2:document.write("<h2><b>This is the number received: </b><b style='color: green;'>"," ",i,".","</b></h2><img src='imgs/2.png' alt='שתים' width='368px' height='500px'>")
+            case 2:document.write("<h2><b>This is the number received: </b><b style='color: green;'>"," ",i,".","</b></h2><p><img src='imgs/2.png' alt='שתים' width='368px' height='500px'></p>")
             break;
             case 3:document.write("<h2><b>This is the number received: </b><b style='color: green;'>"," ",i,".","</b></h2><img src='imgs/3.png' alt='שלוש' width='368px' height='500px'>") 
             break;                     
