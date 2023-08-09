@@ -1,0 +1,38 @@
+<h1>1. עד 1,000</h1>
+    <body>
+        <button onclick="CountNumbers()">הכנס מספר</button>
+        <div id="result" style="display:none;">
+            <p id="numCount"></p>
+            <p id="maxNumber"></p>
+            <button onclick="reset()">חזרה</button>
+        </div>
+        
+        <script>
+            function CountNumbers() {
+                let totalSum = 0;
+                let numCount = 0;
+                let maxNumber = Number.NEGATIVE_INFINITY;
+    
+                while (totalSum <= 1000) {
+                    const num = parseInt(prompt("נא הזן מספר עד שהסכום שלהם יגיעה ל אלף ומעלה:"));
+                    totalSum += num;
+                    numCount++;
+    
+                    if (num > maxNumber) {
+                        maxNumber = num;
+                    }
+                }
+    
+                document.getElementById("numCount").innerHTML = "סך המספרים שנקלט: " + numCount;
+                document.getElementById("maxNumber").innerHTML = "המספר הגדול ביותר: " + maxNumber;
+                document.getElementById("result").style.display = "block"; // הצגת תוצאת החישובים
+            }
+    
+            function reset() {
+                document.getElementById("numCount").innerHTML = "";
+                document.getElementById("maxNumber").innerHTML = "";
+                document.getElementById("result").style.display = "none"; // הסתרת התוצאה
+            }
+        </script>
+    </body>
+    </html>
