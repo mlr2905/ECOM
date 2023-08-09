@@ -7,11 +7,13 @@
 </head>
 <body>
    <script>
+    var b = 0;
+
     var max= -Infinity;
 
     while(true){
-var n = parseInt(prompt("Enter a number: "));
-    
+var n = parseInt(prompt("Please enter a number, enter -1 to exit "));
+    b++
   if (n===-1) {
     break;
   }
@@ -20,7 +22,7 @@ var n = parseInt(prompt("Enter a number: "));
 max=n; 
  }
 }
-document.write("The largest number is " +max);
+document.write('<p>The largest number is </p>' ,max+"<p>Amount of numbers received</p>"+b);
    </script> 
 </body>
 </html>
