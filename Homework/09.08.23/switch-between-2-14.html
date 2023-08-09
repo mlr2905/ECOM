@@ -20,13 +20,23 @@ body {
     font-family: aeial,sans-serif;
   }
 
-img:hover {
+  h3.as {
+  animation: rotate 7s infinite;
+}
+
+@keyframes rotate {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+ 
+}
+img { 
     transform: rotate(360deg);
     transition: transform 1s linear;
-}
- 
- 
-img { 
     width:368px;
     height:500px;
     position: relative; 
@@ -34,15 +44,8 @@ img {
     animation-duration: 10s; 
   
 }
-.gpt { 
-    width:368px;
-    height:500px;
-    position: relative; 
-    animation-name:g;
-    animation-duration: 10s; 
-  
 
-}
+
 body{
     background-image: url('https://cdn.w600.comps.canstockphoto.co.il/%D7%A9%D7%95%D7%9C%D7%97%D7%9F-%D7%A4%D7%95%D7%A7%D7%A8-%D7%94%D7%A8%D7%92%D7%A9-%D7%A8%D7%A7%D7%A2-%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%9E%D7%A0%D7%99%D7%95%D7%AA_csp20525202.jpg');
     background-repeat: no-repeat;
@@ -69,21 +72,23 @@ th{
           </thead> <tbody>
               <tbody class="css-2anrf5">
          
-    <script >
+    <script>
             
    for(var i = 1; i <= 1; i++) {
     var b = Math.floor ( Math.random() *12 )+2
-            var a = parseInt(prompt(" Please enter a number between 2 -14: [ i ]"))
-            document.write(`           
+    var a = Math.floor ( Math.random() *12 )+2
+           
+   
+               if(a > b ){
+                document.write(`           
              <tr >
-            <td><h3><img src="imgs/${a}.png"></h3></td>
+            <td><h3  class="as"><img src="imgs/${a}.png"></h3></td>
             <td> </td>
             <td><h3><img src="imgs/${b}.png"></h3></td>
             </tr>
 
             `)
-   
-               if(a > b ){
+            
                 document.write(`<th><h3>you won</h3></th>`)
                 document.write(`<th><h3>תוצאות</h3></th>`)
                 document.write(`<th><h3>you lost</h3></th>`)
@@ -91,12 +96,28 @@ th{
                }
                
                if(a === b ){
+                document.write(`           
+             <tr >
+            <td><h3  class="as"><img src="imgs/${a}.png"></h3></td>
+            <td> </td>
+            <td><h3  class="as"><img src="imgs/${b}.png"></h3></td>
+            </tr>
+
+            `)
                 document.write(`<th><h3>that you won</h3></th>`)
                 document.write(`<th><h3>תוצאות</h3></th>`)
                 document.write(`<th><h3>that you won</h3</th>`)
                }
                if(a<b)
                {
+                document.write(`           
+             <tr >
+            <td><h3><img src="imgs/${a}.png"></h3></td>
+            <td> </td>
+            <td><h3  class="as"><img src="imgs/${b}.png"></h3></td>
+            </tr>
+
+            `)
                 document.write(`<th><h3>you lost</h3></th>`)
                 document.write(`<th><h3>תוצאות</h3></th>`)
                 document.write(`<th><h3>you won</h3></th>`)
