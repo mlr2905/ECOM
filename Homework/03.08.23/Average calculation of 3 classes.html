@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Average calculation of 3 classes</title>
 </head>
 <body>
     
@@ -19,34 +19,32 @@ while(a != -1)
 {
 sum +=a;         
 b++;
-average = sum / b;      
-
+average =Math.floor ( sum/b ) + 1 
 a = parseInt(prompt("Please enter a number, enter -1 to exit"));
 
 }
-document.write(" average = " + average);
+document.write("<br/>average = " + average);
 
         
 while(a != -2)
 {
 sum +=a;         
 b++;
-average = sum / b;      
-
+average = Math.floor ( sum/b ) + 1
 a = parseInt(prompt("Please enter a number, enter -2 to exit"));
 
 }
-document.write(" average = " + average);
+document.write("<br/>average = " + average);
 while(a != -3)
 {
 sum +=a;         
 b++;
-average = sum / b;      
+average = Math.floor ( sum/b ) + 1     
 
 a = parseInt(prompt("Please enter a number, enter -3 to exit"));
 
 }
-document.write(" average = " + average);
+document.write("<br/> average = " + average);
 
 
 
