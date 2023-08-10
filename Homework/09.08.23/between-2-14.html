@@ -66,24 +66,33 @@ th{
               <tbody class="css-2anrf5">
          
     <script>
-          
+      var c =0;
+      var d =0;
+    
+      
+      
    for(var i = 1; i <= 3; i++) {
+    
     var b = Math.floor ( Math.random() *12 )+2;
     var a = Math.floor ( Math.random() *12 )+2;
-        
+    
                if(a > b ){
+                alert("a")
+
+                c++
                 document.write(` 
               <tr >
             <td><h6 class="as"><img src="imgs/${a}.png"></h6></td>
             <td> </td>
             <td><h6><img src="imgs/${b}.png"></h6></td>
             </tr>
-            `)
-                document.write(`<td><b> won</b></td>`)
-                document.write(`<td><b>תוצאות</b></td>`)
-                document.write(`<td><b> lost</td>`)
-               }
+            `)}
+            
                if(a === b ){
+                alert("a&b")
+
+                c++
+                d++
                 document.write(`
             <tr >
             <td><h6  class="as"><img src="imgs/${a}.png"></h6></td>
@@ -91,12 +100,12 @@ th{
             <td><h6  class="as"><img src="imgs/${b}.png"></h6></td>
             </tr>
 
-            `)
-                document.write(`<td><b>  won</b></td>`)
-                document.write(`<td><b>תוצאות</b></td>`)
-                document.write(`<td><b>  won</b</td>`)
-               }
+            `) }
+            
                if(a<b){
+                alert("b")
+
+                d++
                 document.write(`           
             <tr >
             <td><h6><img src="imgs/${a}.png"></h6></td>
@@ -105,13 +114,23 @@ th{
             </tr>
 
             `)
-                document.write(`<td><b> lost</b></td>`)
-                document.write(`<td><b>תוצאות</b></td>`)
-                document.write(`<td><b> won</b></td>`)
-
                }
                
               }
+              if(true){
+                
+               
+                document.write(`
+                <tr>
+                <td><b> ${c}</b></td>
+                <td><b>תוצאות</b></td>
+                <td><b> ${d}</b></td>
+                </tr>
+                `)
+               }
+
+              
+
 
     </script>
     </table>
