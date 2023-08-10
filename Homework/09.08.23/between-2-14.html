@@ -20,11 +20,11 @@ body {
     background-image: url('https://cdn.w600.comps.canstockphoto.co.il/%D7%A9%D7%95%D7%9C%D7%97%D7%9F-%D7%A4%D7%95%D7%A7%D7%A8-%D7%94%D7%A8%D7%92%D7%A9-%D7%A8%D7%A7%D7%A2-%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%9E%D7%A0%D7%99%D7%95%D7%AA_csp20525202.jpg');
     background-repeat: no-repeat;
             background-size: 100%;
-            margin-left: 15%;
+            margin-left: 20%;
             text-align: center;
   }
 
-  h3.as {
+  h6.as {
   animation: rotate 7s linear;
 }
 
@@ -40,8 +40,8 @@ body {
 }
 img { 
     
-    width:400px;
-    height:500px; 
+    width:100px;
+    height:150px; 
 }
 
 
@@ -50,96 +50,69 @@ th{
     text-align: center;
 
 }
-.p1,
-.p2 {
-  float: left;
-  width: 300px;
-  height: 600px;
-  box-sizing: border-box;
-  border: 1px solid #ddd;
-  text-align: center;
-}
 
-button {
-  margin-right: 20%;
-
-  width: 400px;
-  font-size: 16px;
-  color: white;
-  background-color: #0040ff;
-  border: 1px solid #7878ff;
-  cursor: pointer;
-}
    </style>
 <body>
-
-  <div class="play">
-    <button onClick="play()">PLAY</button>
-  
-  </div>
-  <br/>
+  <div id="output"></div>
+  <div id="outpus"></div>
     <table class="table table-dark w-75  table-hover table-bordered">
         <thead>
             <tr>
-              <th  scope="col"><h3>קלף שלך</h3></th>
-              <th scope="col"><h3>קלפים</h3></th>
-              <th  scope="col"><h3>קלף של המחשב</h3></th>
+              <th scope="col"><h6>קלף שלך</h6></th>
+              <th scope="col"><h6>קלפים</h6></th>
+              <th scope="col"><h6>קלף של המחשב</h6></th>
             </tr>
-            <tr>
-              <td class="card-holder" id="card1"><h3 class=></h3></td>
-              <td></td>
-              <td class="card-holder" id="card2"></td>
-            </tr>
-            
           </thead> <tbody>
               <tbody class="css-2anrf5">
          
     <script>
-      function play() {
+          
+   for(var i = 1; i <= 3; i++) {
+    var b = Math.floor ( Math.random() *12 )+2;
+    var a = Math.floor ( Math.random() *12 )+2;
+        
+               if(a > b ){
+                document.write(` 
+              <tr >
+            <td><h6 class="as"><img src="imgs/${a}.png"></h6></td>
+            <td> </td>
+            <td><h6><img src="imgs/${b}.png"></h6></td>
+            </tr>
+            `)
+                document.write(`<td><b> won</b></td>`)
+                document.write(`<td><b>תוצאות</b></td>`)
+                document.write(`<td><b> lost</td>`)
+               }
+               if(a === b ){
+                document.write(`
+            <tr >
+            <td><h6  class="as"><img src="imgs/${a}.png"></h6></td>
+            <td> </td>
+            <td><h6  class="as"><img src="imgs/${b}.png"></h6></td>
+            </tr>
 
-  
-  var b = Math.floor ( Math.random() *12 )+2;
-  var a = Math.floor ( Math.random() *12 )+2;
-  var cards = [`imgs/${a}.png`]
-  var card = [`imgs/${b}.png`]
-  var img1 = document.createElement('img');
-  var img2 = document.createElement('img');
- 
-  // set image source to be same as selected card
-  img1.src = cards;
-  img2.src = card;
-  
+            `)
+                document.write(`<td><b>  won</b></td>`)
+                document.write(`<td><b>תוצאות</b></td>`)
+                document.write(`<td><b>  won</b</td>`)
+               }
+               if(a<b){
+                document.write(`           
+            <tr >
+            <td><h6><img src="imgs/${a}.png"></h6></td>
+            <td> </td>
+            <td><h6  class="as"><img src="imgs/${b}.png"></h6></td>
+            </tr>
 
-  // select cards holding elements
-  var holder1 = document.getElementById('card1');
-  var holder2 = document.getElementById('card2');
-   // clear images from previous game
-  holder1.innerHTML = "";
-  holder2.innerHTML = "";
+            `)
+                document.write(`<td><b> lost</b></td>`)
+                document.write(`<td><b>תוצאות</b></td>`)
+                document.write(`<td><b> won</b></td>`)
 
-  // add images to it's holders
-  holder1.appendChild(img1);
-  holder2.appendChild(img2);
+               }
+               
+              }
 
-  // game logic. Compare array key to see who wins
-  if(a > b ){
-    
-
-    alert('you  is winner!');
-    
-  } else if (a < b) {
-    
-    alert('Player 2 is winner!');
-    
-  
-  } else if (a == b){
-    
-    alert('No winner!');
-    
-  }
-    
-      }
-         
     </script>
     </table>
 </body>
