@@ -15,12 +15,16 @@
 
 body {
     margin: auto;
-    width: 30%;
-    padding: 8%;
+    padding: 5px;
     font-family: aeial,sans-serif;
+    background-image: url('https://cdn.w600.comps.canstockphoto.co.il/%D7%A9%D7%95%D7%9C%D7%97%D7%9F-%D7%A4%D7%95%D7%A7%D7%A8-%D7%94%D7%A8%D7%92%D7%A9-%D7%A8%D7%A7%D7%A2-%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%9E%D7%A0%D7%99%D7%95%D7%AA_csp20525202.jpg');
+    background-repeat: no-repeat;
+            background-size: 100%;
+            margin-left: 20%;
+            text-align: center;
   }
 
-  h3.as {
+  h6.as {
   animation: rotate 7s linear;
 }
 
@@ -36,19 +40,12 @@ body {
 }
 img { 
     
-    width:368px;
-    height:500px; 
+    width:100px;
+    height:150px; 
 }
 
 
-body{
-    background-image: url('https://cdn.w600.comps.canstockphoto.co.il/%D7%A9%D7%95%D7%9C%D7%97%D7%9F-%D7%A4%D7%95%D7%A7%D7%A8-%D7%94%D7%A8%D7%92%D7%A9-%D7%A8%D7%A7%D7%A2-%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%9E%D7%A0%D7%99%D7%95%D7%AA_csp20525202.jpg');
-    background-repeat: no-repeat;
-            background-size: 100%;
-            margin: 10px;
-            margin-left: 13%;
-            text-align: center;
-}
+
 th{
     text-align: center;
 
@@ -56,72 +53,65 @@ th{
 
    </style>
 <body>
-    
-    <table class="table table-dark w-75 mt-5 ml-5 table-hover table-bordered">
+  <div id="output"></div>
+  <div id="outpus"></div>
+    <table class="table table-dark w-75  table-hover table-bordered">
         <thead>
             <tr>
-              <th scope="col"><h3>קלף שלך</h3></th>
-              <th scope="col"><h3>קלפים</h3></th>
-              <th scope="col"><h3>קלף של המחשב</h3></th>
+              <th scope="col"><h6>קלף שלך</h6></th>
+              <th scope="col"><h6>קלפים</h6></th>
+              <th scope="col"><h6>קלף של המחשב</h6></th>
             </tr>
           </thead> <tbody>
               <tbody class="css-2anrf5">
          
     <script>
-            
-   for(var i = 1; i <= 1; i++) {
-    var b = Math.floor ( Math.random() *12 )+2
-    var a = Math.floor ( Math.random() *12 )+2
-           
-   
+          
+   for(var i = 1; i <= 3; i++) {
+    var b = Math.floor ( Math.random() *12 )+2;
+    var a = Math.floor ( Math.random() *12 )+2;
+        
                if(a > b ){
-                document.write(`           
-             <tr >
-            <td><h3  class="as"><img src="imgs/${a}.png"></h3></td>
+                document.write(` 
+              <tr >
+            <td><h6 class="as"><img src="imgs/${a}.png"></h6></td>
             <td> </td>
-            <td><h3><img src="imgs/${b}.png"></h3></td>
+            <td><h6><img src="imgs/${b}.png"></h6></td>
             </tr>
-
             `)
-            
-                document.write(`<th><h3>you won</h3></th>`)
-                document.write(`<th><h3>תוצאות</h3></th>`)
-                document.write(`<th><h3>you lost</h3></th>`)
-
+                document.write(`<td><b> won</b></td>`)
+                document.write(`<td><b>תוצאות</b></td>`)
+                document.write(`<td><b> lost</td>`)
                }
-               
                if(a === b ){
-                document.write(`           
-             <tr >
-            <td><h3  class="as"><img src="imgs/${a}.png"></h3></td>
+                document.write(`
+            <tr >
+            <td><h6  class="as"><img src="imgs/${a}.png"></h6></td>
             <td> </td>
-            <td><h3  class="as"><img src="imgs/${b}.png"></h3></td>
+            <td><h6  class="as"><img src="imgs/${b}.png"></h6></td>
             </tr>
 
             `)
-                document.write(`<th><h3>that you won</h3></th>`)
-                document.write(`<th><h3>תוצאות</h3></th>`)
-                document.write(`<th><h3>that you won</h3</th>`)
+                document.write(`<td><b>  won</b></td>`)
+                document.write(`<td><b>תוצאות</b></td>`)
+                document.write(`<td><b>  won</b</td>`)
                }
-               if(a<b)
-               {
+               if(a<b){
                 document.write(`           
-             <tr >
-            <td><h3><img src="imgs/${a}.png"></h3></td>
+            <tr >
+            <td><h6><img src="imgs/${a}.png"></h6></td>
             <td> </td>
-            <td><h3  class="as"><img src="imgs/${b}.png"></h3></td>
+            <td><h6  class="as"><img src="imgs/${b}.png"></h6></td>
             </tr>
 
             `)
-                document.write(`<th><h3>you lost</h3></th>`)
-                document.write(`<th><h3>תוצאות</h3></th>`)
-                document.write(`<th><h3>you won</h3></th>`)
+                document.write(`<td><b> lost</b></td>`)
+                document.write(`<td><b>תוצאות</b></td>`)
+                document.write(`<td><b> won</b></td>`)
 
                }
                
-
-               }
-               
+              }
 
     </script>
     </table>
