@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = parseInt(prompt("Enter a number: "));
+        var b = Math.floor ( Math.random() *999 ) + 1
+
+  while (a <b) {
+    alert("Your number is small random")
+    a = parseInt(prompt("Enter a number: 1 "));
+  }while(b <a){
+    alert("Your number is bigger")
+    a = parseInt(prompt("Enter a number: 2 "));
+  }
+  if(a==b){
+    document.write(+a,"-",+b)
+  }
+    </script>
+</body>
+</html>
