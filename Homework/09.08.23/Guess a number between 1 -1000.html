@@ -1,35 +1,39 @@
-<html lang="en">  
-  <head>  
-      <meta charset="UTF-8">  
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-      <title>Guess a number between 1 -100</title>  
-  </head>  
-  <body>  
-      <script>  
-          var a = parseInt(prompt("Enter a number: "));  
-          var b = Math.floor ( Math.random() *99 ) + 1  
-    while(a!==b){
-    if (a < b) {  
-      alert("Your number is small ")  
-      a = parseInt(prompt("Enter a number:  ")); } 
-    
-    if (a > b){  
-      alert("Your number is bigger")  
-      a = parseInt(prompt("Enter a number: "));  
-    }  
+<html lang="en">   
+   <head>   
+       <meta charset="UTF-8">   
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+       <title>Guess a number between 1 -100</title>   
+   </head>   
+   <body>   
+       <script>   
+           var a = parseInt(prompt("Enter a number: "));   
+           var b = Math.floor ( Math.random() *99 ) + 1   
+     while(a!==b && a!=101){ 
+     if (a < b) {   
+       alert("Your number is small - to exit: 101 ")   
+       a = parseInt(prompt("Enter a number:  ")); }  
   
-     else {
-      alert("Try to guess again ")
-      a = parseInt(prompt("Enter a number: "));
-    }
-     
-    }
-document.write(+a,"-",+b)  ; 
- 
-    
-
-    
-    
-      </script>  
-  </body>  
-  </html>
+     if (a > b){   
+       alert("Your number is bigger - to exit: 101")   
+       a = parseInt(prompt("Enter a number: "));   
+     }   
+  
+      else { 
+       alert("Try to guess again -to exit: 101 ") 
+       a = parseInt(prompt("Enter a number: ")); 
+     } 
+  
+     }
+     if (a===101){
+document.write("Goodbye")  ;  
+     }
+     else
+ document.write(+a,"-",+b)  ;  
+  
+  
+  
+  
+  
+       </script>   
+   </body>   
+   </html
