@@ -11,7 +11,7 @@
         var b = Math.floor ( Math.random() *99 ) + 1
 
   while (a <b) {
-    alert("Your number is small random")
+    alert("Your number is small ")
     a = parseInt(prompt("Enter a number:  "));
   }while(b <a){
     alert("Your number is bigger")
@@ -20,6 +20,11 @@
   if(a==b){
     document.write(+a,"-",+b)
   }
+  if(a<0) {
+    alert("Must select a number")
+    a = parseInt(prompt("Enter a number: "));
+  }
+
     </script>
 </body>
 </html>
