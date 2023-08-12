@@ -1,30 +1,35 @@
-<html lang="en"> 
- <head> 
-     <meta charset="UTF-8"> 
-     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-     <title>Guess a number between 1 -100</title> 
- </head> 
- <body> 
-     <script> 
-         var a = parseInt(prompt("Enter a number: ")); 
-         var b = Math.floor ( Math.random() *99 ) + 1 
-  while(true){
-   if (a <b) { 
-     alert("Your number is small ") 
-     a = parseInt(prompt("Enter a number:  ")); 
-   }if(b <a){ 
-     alert("Your number is bigger") 
-     a = parseInt(prompt("Enter a number: ")); 
-   } 
+<html lang="en">  
+  <head>  
+      <meta charset="UTF-8">  
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+      <title>Guess a number between 1 -100</title>  
+  </head>  
+  <body>  
+      <script>  
+          var a = parseInt(prompt("Enter a number: "));  
+          var b = Math.floor ( Math.random() *99 ) + 1  
+    while(a!==b){
+    if (a < b) {  
+      alert("Your number is small ")  
+      a = parseInt(prompt("Enter a number:  ")); } 
+    
+    if (a > b){  
+      alert("Your number is bigger")  
+      a = parseInt(prompt("Enter a number: "));  
+    }  
   
-   if(a==b){ 
-     document.write("You guessed the number:"+a,"-",+b) 
-   } 
-  else{
-alert("Must select a number")
-a = parseInt(prompt("Enter a number: "));
-}
-}
-     </script> 
- </body> 
- </html>
+     else {
+      alert("Must choose a number greater than 0")
+      a = parseInt(prompt("Enter a number: "));
+    }
+     
+    }
+document.write(+a,"-",+b)  ; 
+ 
+    
+
+    
+    
+      </script>  
+  </body>  
+  </html>
