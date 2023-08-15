@@ -1,0 +1,95 @@
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>tablecolor</title>
+  <link rel="stylesheet" type="text/css" href="formd.css">
+  
+</head>
+
+<body>
+  <link rel="stylesheet" href="library/styles/base.css" media="screen" />
+  <div class="login-root">
+
+  
+      <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+        <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+        </div>
+        <div class="formbg-outer">
+          <div class="formbg">
+            <div class="formbg-inner padding-horizontal--48">
+              <span class="padding-bottom--15"><B>tablecolor</B></span>
+              <form id="stripe-login">
+                <div class="field padding-bottom--24">
+                  <label  for="rows"><B>Enter number for rows:</B> </label>
+                  <input id="rows" type="number" name="rows" required>
+                </div>
+                <div class="field padding-bottom--24">
+                  <div class="grid--50-50">
+                    <label for="cols"><B>Enter number for cols:</B></label>
+                    <div class="reset-pass" >
+                    </div>
+                  </div>
+                  <div>
+                    <input id="cols" type="number" name="cols" required>
+                </div>
+
+             </label >
+            </div>
+         
+             <div>
+             <label for="name"></label>
+            </div>
+                <div class="field padding-bottom--24">
+
+                  <input class="button" type="submit"  onclick="tablecolor()" name="submit"  value="Print number" >
+                  
+
+
+                </div>
+
+              </form>
+            </div>
+          </div>
+          <div class="footer-link padding-top--24">
+            <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+             
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function colorize(el) {
+      var r = ('0'+(Math.random()*255|0).toString(16)).slice(-2),
+         g = ('0'+(Math.random()*255|0).toString(16)).slice(-2),
+         b = ('0'+(Math.random()*255|0).toString(16)).slice(-2);
+        el.style.backgroundColor = '#' +r+g+b;
+   }
+ 
+   </script>
+  <script>
+      
+      function tablecolor() {
+     
+     var rows = parseInt(document.getElementById('rows').value);
+     var cols =  parseInt(document.getElementById('cols').value);
+     document.write(`<table style="margin-top: 10%; margin-left: 10%;margin: 1px rgb(#CCC); border-spacing: 6px;">`);
+       document.write("<tbody>");
+   for(var r=0;r<rows;r++){
+     document.write("<tr>");
+ 
+     for(var c=0;c<cols;c++){
+       document.write(`<td onMouseEnter='colorize(this);' style="width:  20px; height:  20px; border: 1px solid black; cursor: pointer;"></td>`); 
+     }
+     document.write("</tr>");
+   }
+   document.write("</tbody>");
+ 
+   document.write("</table>");
+ 
+ }
+  </script>
+</body>
+
+</html>
