@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <title>CSS demo 1</title>
+    <!-- <link rel="stylesheet" href="mystyle.css"> -->
+</head>
+<style>
+    /*
+    targil:
+        0. open a new HTML file
+        1. define that span is in color color1
+        2. define a new class , call it: my-class, inside it define a color2 of your choice
+        3. define a span.class-name, inside it define a color3 of your choice
+        4. define a span:hover, inside it define a color4 of your choice
+        5. define a span with name attribute, inside it define a color5 of your choice
+        6. define a span with id #, inside it define a color6 of your choice
+        -- color1 , color2, color3, color4, color5, color6 must be DIFFERENT
+        7. define HTML elements in the page that will show the color from 1-6
+        8. move all definitions to a css file and reference it from the HTML file
+    */
+    /* per type  */
+    body {
+        margin-left: 20px;
+    }
+    h3 {
+        color: blue
+    }
+    /* class  */
+    .blue-headline { 
+        color: blue
+    }
+    .green-headline { 
+        color: green
+    }    
+    /* id */
+    #welcome-headline { 
+        color: red
+    } 
+    /* type + attribute */
+    h3[name=nice-welcome] {
+        color: rgb(255, 238, 192)
+    }
+    input[type=text] {
+        width: 300px;
+    }
+    h3.orange {
+        color:orange
+    }
+    h3.orange:hover {
+        color:red
+    }    
+    span em {
+        color: red;
+        text-decoration: underline;
+    }
+    p span {
+        color: red;
+    }
+    p.my-green {
+        color: green
+    }
+    p.center {
+        text-decoration: underline;
+        text-align: center;
+    }
+    a:link {color: #000000}
+   a:visited {color: #91bc91}
+   a:hover {color: #FFCC00}
+   a:active {color: #FF00CC}
+</style>
+<body>
+    <h3>Welcome to CSS</h3>
+    <h3>Welcome to CSS again</h3>
+    <h4 class="blue-headline">Welcome green</h4>
+    <h3 class="green-headline">Welcome to CSS again</h3>
+    <h3 id="welcome-headline">Welcome to my page!</h3>
+    <h3 name="nice-welcome">You are so nice!</h3>
+    <p class="blue-headline">NAME: <input type="text"></p>
+    <p class="blue-headline">AGE: <input type="number"></p>
+    <h3 class="orange">Apple</h3>
+    <span>hi1<em>hi</em></span>
+    <h4 class="orange">Apple - why not orange?</h4>
+    <p>not red <span>red</span></p>
+    <p class="center my-green">Center green </p>
+    <a href="https://www.yad2.co.il">ynet </a>
+</body>
+</html>

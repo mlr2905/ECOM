@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HW7</title>
+</head>
+<body >
+    <script>
+        var number = parseInt(prompt("enter card number [2-14]: "))
+
+        // input number until in range
+        // option 1
+        // while (number < 2 || number > 14) {
+        //     number = parseInt(prompt("enter card number [2-14]: "))
+        // }
+        // // option 2
+        // while (!(number >= 2 && number <= 14)) {
+        //     number = parseInt(prompt("enter card number [2-14]: "))
+        // }
+
+        switch (number) {
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+                document.write(`<img src='./imgs/${number}.png' />`)
+                break;
+            case 11:
+                document.write(`<img src='./imgs/J.png' />`)
+                break;
+            case 12:
+                document.write(`<img src='./imgs/Q.png' />`)
+                break;
+            case 13:
+                document.write(`<img src='./imgs/K.png' />`)
+                break;
+            case 14:
+                document.write(`<img src='./imgs/A.png' />`)
+                break;
+            default:
+                document.write(`<img src='./imgs/x.png' />`)
+        }
+    </script>
+</body>
+</html>

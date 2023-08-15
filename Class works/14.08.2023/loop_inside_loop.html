@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.write(`<table border=15 style="border:15px">`)
+        document.write("<tr>")
+            document.write("<th>1</th>")
+            document.write("<th>2</th>")
+            document.write("<th>3</th>")
+            document.write("<th>4</th>")
+            document.write("<th>5</th>")
+        document.write("</tr>")
+
+        debugger;
+        for (let rows = 0; rows <= 10; rows++) {
+            document.write("<tr>")
+                for (let col = 0; col < 5; col++) {
+                    document.write("<td>")
+                    document.write(`row = ${rows} col = ${col}`)
+                    document.write("</td>")
+                }
+            document.write("</tr>")
+        }
+        document.write("</table>")
+
+       
+    </script>
+
+
+</body>
+</html>

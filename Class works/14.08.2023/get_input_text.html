@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <p>Enter number 1: <input type="number" id="number1" /></p>
+        <p>Enter number 2: <input type="number" id="number2" /></p>
+        <p><button onclick="print_sum()">Print number</button></p>
+        <div id="result"></div>
+    </div>
+    <script>
+
+        // 2. create another button which when clicking it will display the multiply
+        // 3. create another button which when clicking it will display the minus
+        // 4. create another button which when clicking it will display the divide
+
+        function print_sum() {
+            // 1. write into document or into console the sum of these 2 numbers
+            console.log(`clicked button!`);
+            const x = parseInt(document.getElementById('number1').value)
+            const y = parseInt(document.getElementById('number2').value)
+            const sum = x + y
+            //document.write(`<h2>${number1} + ${number2} = ${sum}</h2>`)
+
+            document.getElementById('result').innerHTML += `<p>${x} + ${y} = ${sum}</p>`
+        }
+    </script>
+</body>
+</html>

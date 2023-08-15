@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>console log</title>
+</head>
+<body>
+    <script>
+
+        console.clear()
+
+        var a, b, c
+        a = parseInt(prompt("please enter a: "))
+        b = parseInt(prompt("please enter b: "))
+        c = parseInt(prompt("please enter c: "))
+
+        if (a + b == c) {
+            console.log(a + " + " + b + " = " + c)
+        }
+        else if (a + c == b) {
+            console.log(a + " + " + c + " = " + b)
+        }
+        else if (b + c == a) {
+            console.log(b + " + " + c + " = " + a)
+        }        
+        else {
+            console.error(b + " , " + c + " , " +  a + " are different")
+        }
+    </script>
+</body>
+</html>

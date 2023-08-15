@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  
+        var width, height, color
+
+        width = parseInt(prompt("Enter width: "))
+        height = parseInt(prompt("Enter width: "))
+
+        while (width < 0 || height < 0) {
+            width = parseInt(prompt("Enter width [must be positive]: "))
+            height = parseInt(prompt("Enter width [must be positive]: "))
+        }
+
+        color = prompt("color please: ");
+
+        document.write(`<div style="width:${width}px; height:${height}px; background-color: ${color}; 
+                         border: 5px; border-color: blue; "/>`)
+    </script>
+</body>
+</html>

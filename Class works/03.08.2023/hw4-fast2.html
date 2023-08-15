@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HW2 fast-2</title>
+</head>
+<body>
+    <script>
+        var a, b, small, bigger
+        a = parseInt(prompt("enter number: "))
+        b = parseInt(prompt("enter number: "))
+
+        // if (a < b) {
+        //     small = a
+        //     bigger = b
+        //     //[small, bigger] = [a, b]
+        // } 
+        // else {
+        //     small = b
+        //     bigger = a
+        //     //[bigger, small] = [a, b]
+        // }
+        small = a < b ? 
+                    a : 
+                    b
+        bigger = a < b ? 
+                    b : 
+                    a
+        // [small, bigger] = [a < b ? a : b, a < b ? b : a]
+
+        while (small <= bigger) {
+                document.write(`<p> ${small} </p>`)
+                small++
+            }
+
+        // for (;small <= bigger; small++) {
+        //         document.write(`<p> ${small} </p>`)
+        // }
+
+        // print smaller
+        console.log(a < b ? `${a} < ${b}` : 
+                            `${a} >= ${b}`);
+    </script>
+</body>
+</html>

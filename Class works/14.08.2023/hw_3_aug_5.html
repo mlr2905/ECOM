@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // sum = 0
+        // x run from 1 -> 10 
+        //       sum = sum + x
+
+        for (let i = 1; i <= 3; i++) {
+            prompt("Starting new class: ")
+
+            let sum = 0
+            let grade = parseInt(prompt("Enter a grade [minus to exit]"))
+            let count = 0
+
+                while (grade >= 0) {
+                    count++
+                    sum = sum + grade;
+                    grade = parseInt(prompt("Enter a grade [minus to exit]"))
+                }
+
+            avg = sum / count
+            console.log(`This class has ${count} students. the avg is ${avg}`)
+        }
+
+        console.log('finished');
+    </script>
+</body>
+</html>

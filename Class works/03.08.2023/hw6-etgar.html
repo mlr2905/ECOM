@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HW6-etgar</title>
+</head>
+<body>
+    <script>
+        var number = parseInt(prompt("enter number [-99 to exit]: "))
+        var sum = 0
+        var count = 0
+
+        while (number != -99) {
+            sum += number
+            count++
+            number = parseInt(prompt("enter number [-99 to exit]: "))
+        }
+
+        document.write(`The sum is : ${sum}`)
+        document.write(`you entered ${count} numbers which are not -99`)
+
+        document.write('finish')
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  
+        document.write(`<h1 style="color:green">Welcome to the best card game!</h1>`)
+        
+        let player_card = Math.floor(Math.random() * 13) + 2
+        let computer_card = Math.floor(Math.random() * 13) + 2
+
+        document.write(`<h4>Player's card:</h4>`)
+        document.write(`<img src="imgs/${player_card}.png" />`)
+
+        document.write(`<h4>Computer's card:</h4>`)
+        document.write(`<img src="imgs/${computer_card}.png" />`)        
+
+        document.write(`<hr />`)
+
+        if (player_card > computer_card) {
+            document.write(`<h4 style="color:green">Player's Won!</h4>`)
+        }
+        else if (player_card == computer_card) {
+            document.write(`<h4 style="color:pink">Tie</h4>`)
+        }
+        else {
+            document.write(`<h4 style="color:red">Computer's Won!</h4>`)
+        }
+
+        document.write(`<hr />`)
+
+    </script>
+</body>
+</html>

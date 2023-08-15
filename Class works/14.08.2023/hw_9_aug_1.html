@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let sum = 0
+        let max = 0
+
+        debugger
+        while (sum < 1000) {
+            let number = parseInt(prompt("Enter a positive number: "))
+            if (number > max) {
+                max = number
+            }
+            sum = sum + number;
+        }
+        document.write(`<h1>The highest positive number is : ${max} </h1>`)
+        console.log('finished');
+
+    </script>
+</body>
+</html>

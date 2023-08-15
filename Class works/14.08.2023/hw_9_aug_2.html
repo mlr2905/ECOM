@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  
+        let number = parseInt(prompt("Enter number [greater equal zero]: "))
+
+        while (number < 0) {
+            number = parseInt(prompt("Enter number [greater equal zero]: "))
+        }
+
+        document.write(`<h1>${number}</h1>`)
+        
+        //document.write(`<p>7</p>`)
+
+        for (let i = 7; i <= number + 7; i = i + 7) {
+            document.write(`<p>${i}</p>`)
+        }
+
+        // let i = 7
+        // //debugger
+        // while (i <= number) {
+        //     i = i + 7
+        //     document.write(`<p>${i}</p>`)
+        // }
+
+    </script>
+</body>
+</html>

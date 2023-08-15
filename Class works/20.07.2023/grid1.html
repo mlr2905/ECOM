@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+  <style>
+    .grid-container {
+        display: grid;
+      width:50%;
+        gap: 20px;
+        background-color: #000000;
+        padding: 20px;      
+    }
+.grid-container > div {
+  background-color: rgba(155, 100, 250, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}    
+    .item0 {
+      grid-column: 1/ 4
+    }
+    
+    .item1 {
+      grid-column: 3 / 1
+    }
+    
+    .item2 {
+      grid-column: auto;
+      --grid-row:span 2;
+    }    
+    .item6 {
+      grid-column:1/ 4
+    }
+  </style>  
+  <body>
+      <div class="grid-container">
+    <div class="item0"><h1>0 What is Lorem Ipsum?</h1></div>
+    <div class="item1"><h4>1 sactihon haeder</h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+      but also the leap into electronic typesetting, remaining essentially unchanged.
+      It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+      and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
+    <div class="item2"><h4>2 sactihon haeder</h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+      but also the leap into electronic typesetting, remaining essentially unchanged.
+      It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+      and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
+    <div class="item3"><h4>3 sactihon haeder</h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+      but also the leap into electronic typesetting, remaining essentially unchanged.
+     </div>
+    <div class="item4"><h4>4 sactihon haeder</h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+      but also the leap into electronic typesetting, remaining essentially unchanged.
+    </div>
+    <div class="item5"><h4>5 sactihon haeder</h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+      but also the leap into electronic typesetting, remaining essentially unchanged.
+     </div>
+    <div class="item6">6 copright @ 2023</div>        
+    </div>
+   
+</body>
+</html>        

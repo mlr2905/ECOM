@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+</head>
+<!--
+http://127.0.0.1:5500/form_solution.html ? 
+fname=itay & 
+lname=hau &
+email=itay%40itay.com &
+password=1234 &
+grade=3 &
+birthdate=2023-07-11 &
+color=%23f27373 &
+filetype=JS &
+vegan=on &
+animal=fish
+-->
+
+<body style="margin-left: 50px; ">
+  <h2 style="color:blue">Registration Form</h2>
+  <form>
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" required 
+            placeholder="Your first name"><br>
+    <br />
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname" required><br>
+    <br />
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required autofocus
+        value="itayhau@gmail.com"><br>
+    <br />
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+    <br />
+    <label for="grade">Grade:</label>
+    <input type="number" id="grade" name="grade" min="1" max="100" required><br>
+    <br />
+    <label for="birthdate">Birth Date:</label>
+    <input type="date" id="birthdate" name="birthdate" required><br>
+    <br />
+    <label for="color">Favorite Color:</label>
+    <input type="color" id="color" name="color" required><br>
+    <br />
+    <label for="filetype">Favorite File Type:</label>
+    <select id="filetype" name="filetype" style="width:120px" required>
+      <option value="">Please select</option>
+      <option value="HTML">HTML</option>
+      <option value="JS">JavaScript</option>
+      <option value="CSS">CSS</option>
+    </select>
+    <br />
+    <br />
+    
+    <input type="checkbox" id="vegan" name="vegan" checked>
+    <label for="vegan">Vegan?</label>
+    <br />
+    <br />
+
+    <label for="animal">Favorite Animal:</label><br>
+    <input type="radio" id="dog" name="animal" value="dog" required="required">
+    <label for="dog">Dog</label><br>
+    <input type="radio" id="cat" name="animal" value="cat" >
+    <label for="cat">Sweet Cat</label><br>
+    <input type="radio" id="fish" name="animal" value="fish">
+    <label for="fish">Fish</label><br>
+    <br />
+    <br />
+    <label for="range1">Bass:</label><br>
+    <input type="range" id="range1" name="range1" value="90" >
+    
+    <br />
+    <br />
+    <label for="text1">Resume:</label><br>
+    <textarea id="text1" name="text1">
+
+    </textarea>
+    <br />  
+    <br />  
+    <input type="submit" value="Submit">
+    <input type="reset" value="Clear">
+  </form>
+
+    <div id="div1">
+        <h2>Goodbye! <span>span-text</span></h2>
+        <h3>See you soon : 5 &gt; 3 </h3>
+    </div>
+</body>
+</html>

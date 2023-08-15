@@ -1,0 +1,31 @@
+
+1.
+write a flowchart which does nothing
+
+2.
+write a flowchart which writes "hello world!"
+
+3.
+write a flowchart which:
+store the number 4 in memory-cell called "number1"
+store the number 5 in memory-cell called "number2"
+store the sum of them in a memory-call called sum
+print the memory-cell sum
+
+4.
+write a flowchart which:
+store the number 1.75 in memory-cell called "a"
+store the number 2.18 in memory-cell called "b"
+store the multiply of them in a memory-call called multiply
+print the memory-cell multiply
+
+5.
+write a flowchart which:
+input a number from the user and store in memory-cell called "a"
+input a number from the user and store in memory-cell called "b"
+store the multiply of them in a memory-call called multiply
+print the memory-cell multiply
+
+
+
+

@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  
+        alert('Welcome to the guessing game!');
+
+        const lucky_number = Math.floor(Math.random() * 100) + 1 
+
+        let guess = parseInt(prompt("Enter number [1-100]: ")) 
+        let count = 1;
+
+        while (guess != lucky_number) {
+            count++;
+            if (guess > lucky_number) {
+                guess = parseInt(prompt(`Guess lower than ${guess}: `))
+            } 
+            else {
+                guess = parseInt(prompt(`Guess higher than ${guess}: `))
+            }
+
+            // short and sweet
+            // guess = parseInt(prompt(`Guess ${guess > lucky_number ? 'lower' : 'higher'} than ${guess}: `))
+        }
+
+        document.write(`<h1>You guessed correct! it took you ${count} times!</h1>`)
+       
+
+    </script>
+</body>
+</html>

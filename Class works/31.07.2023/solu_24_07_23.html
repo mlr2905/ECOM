@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Solution</title>
+</head>
+<body>
+    <script>
+        var a, b, c
+        a = parseInt(prompt("please enter a: "))
+        b = parseInt(prompt("please enter b: "))
+        c = parseInt(prompt("please enter c: "))
+
+        if (a + b == c) {
+            document.write('<p style="color:green">',a, " + ", b, " = ", c, "<p>")
+        }
+        else if (a + c == b) {
+            document.write('<p style="color:green">',a, " + ", c, " = ", b, "<p>")
+        }
+        else if (b + c == a) {
+            document.write('<p style="color:green">',b, " + ", c, " = ", a, "<p>")
+        }        
+        else {
+            document.write('<p style="color:red">',b, " , ", c, " , ", a, " are different<p>")
+        }
+    </script>
+    <p style="color:red"></p>
+</body>
+</html>
