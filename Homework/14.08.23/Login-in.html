@@ -40,7 +40,7 @@
                 <br/>
                 <div class="field padding-bottom--24">
 
-                  <input  onClick="web()" class="button" type="submit"  name="submit"  value="Print number" >
+                  <input   class="button" type="submit"  name="submit"  value="Print number" onClick="web()">
                 </div>
 
               </form>
@@ -55,17 +55,23 @@
     </div>
   </div>
     <script>
-      function web() {
-        var a = parseInt(document.getElementById('username').value);
-        var b = parseInt(document.getElementById('password').value);
-
+              
+        function web() {
+          const apps = {
+  Android: 'https://github.com/fullstack290623',
+  iOS: 'https://github.com/fullstack290623',
+};
+          var a = parseInt(document.getElementById('username').value);
+          var b = parseInt(document.getElementById('password').value);
         if(a===1 && b===123456 ){
-           
-         window.location.href = "https://www.geeksforgeeks.org/";
+alert("a")
+location.replace(apps);
         }
                 
         else{
             alert("The username or password is incorrect, try again!")
+        
+
         }
       }
  </script>
