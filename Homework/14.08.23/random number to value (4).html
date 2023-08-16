@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random number to value (hw4)</title>
+    <link rel="stylesheet" type="text/css" href="formd.css">
+
+</head>
+
+<body>
+    <div class="login-root"> 
+  
+  
+        <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;"> 
+          <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center"> 
+          </div> 
+          <div class="formbg-outer"> 
+            <div class="formbg"> 
+              <div class="formbg-inner padding-horizontal--48"> 
+                <span class="padding-bottom--15"><h2>random number to value</h2></span> 
+   
+                  <div class="a padding-bottom--24"> 
+                    <label  for="number"><h3>Field 1:</h3><p>(Click the button for a random number for field 1 and 2)</p></label> 
+                    <input id="number1" type="text" name="number" required> 
+                  </div> 
+   
+                  <div class="field padding-bottom--24"> 
+                      <div class="grid--50-50"> 
+                        <div class="reset-pass" > 
+                        </div> 
+                      </div> 
+                      <div>
+           </div> 
+                  </div> 
+                  
+                  <div class="a padding-bottom--24"> 
+                    <label  for="number"><h3>Field 2:</h3></label> 
+                    <input id="number2" type="text" name="number" required> 
+                  </div> 
+   
+                  <div class="field padding-bottom--24"> 
+                      <div class="grid--50-50"> 
+                        <div class="reset-pass" > 
+                        </div> 
+                      </div> 
+                      <div> 
+           </div> 
+                  </div> 
+                  <br/>
+                  <div class="field padding-bottom--24"> 
+   
+                    <input class="button" type="button"  name="button"  value="Click me" onclick="randomnumber()"> 
+                  </div>  
+                  <div class="a padding-bottom--24"> 
+                    <label  for="number"><h3>Field 3: Enter a number:</h3><p>(Enter a number equal to the 1+2 field )</p></label> 
+                    <input id="number3" type="text" name="number" required> 
+                  </div> 
+   
+                  <div class="field padding-bottom--24"> 
+                      <div class="grid--50-50"> 
+                        <div class="reset-pass" > 
+                        </div> 
+                      </div> 
+                      <div> 
+           </div> 
+                  </div> 
+                  <br/> 
+                  <div class="field padding-bottom--24"> 
+   
+                    <input class="button" type="button"  name="button"  value="Check" onclick="check()"> 
+                  </div> 
+   
+                </form> 
+              </div> 
+            </div> 
+            <div class="footer-link padding-top--24"> 
+              <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center"> 
+   
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+            
+      <script>
+               function randomnumber() { 
+
+             const a = document.getElementById('number1').value =Math.floor ( Math.random() *100 ) + 1
+             const b = document.getElementById('number2').value =Math.floor ( Math.random() *100 ) + 1
+
+               }
+               function check(){
+                const c =parseInt(document.getElementById('number1').value);
+                const d =parseInt(document.getElementById('number2').value);
+                const e =parseInt(document.getElementById('number3').value);
+                const f = +c+d;
+                if(e===f){
+                 alert(`You calculated correctly: field 1 ${c} +field 2 ${d}  = field 3 ${e}`)
+                }
+                else{
+                  alert(`You did not calculate correctly!  field 3 = ${f}  no ${e} try again`)
+
+                }
+              }
+      </script>
+</body>
+</html>
