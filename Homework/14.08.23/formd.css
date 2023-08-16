@@ -112,7 +112,7 @@ body {
                   rgba(0, 0, 0, 0) 0px 0px 0px 0px;
   }
   
-  input[type="submit"] {
+  input[type="button"] {
       background-color: rgb(84, 195, 212);
       box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
                   rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
