@@ -20,7 +20,7 @@
             <div class="formbg-inner padding-horizontal--48">
               <span class="padding-bottom--15"><h2>Sign in</h2></span>
               
-              <form id="stripe-login">
+              <form onClick="web()" id="stripe-login">
                 
                 <div class="field padding-bottom--24">
                   <label  for="username"><h3>Username:</h3> </label>
@@ -40,7 +40,7 @@
                 <br/>
                 <div class="field padding-bottom--24">
 
-                  <input  onClick="web()" class="button" type="submit"  name="submit"  value="Print number" >
+                  <input class="button" type="submit"  name="submit"  value="Print number" >
                 </div>
 
               </form>
@@ -56,10 +56,10 @@
   </div>
     <script>
       function web() {
-        var a = parseInt(document.getElementById('username').value);
-        var b = parseInt(document.getElementById('password').value);
+        var a = document.getElementById('username').value;
+        var b = document.getElementById('password').value;
 
-        if(a===1 && b===123456 ){
+        if(a=="michael" && b==="Aa123456" ){
            
          window.location.href = "https://www.geeksforgeeks.org/";
         }
