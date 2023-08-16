@@ -1,0 +1,75 @@
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Login in</title>
+  <link rel="stylesheet" type="text/css" href="formd.css">
+  
+</head>
+
+<body>
+  <link rel="stylesheet" href="library/styles/base.css" media="screen" />
+  <div class="login-root">
+
+  
+      <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+        <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+        </div>
+        <div class="formbg-outer">
+          <div class="formbg">
+            <div class="formbg-inner padding-horizontal--48">
+              <span class="padding-bottom--15"><h2>Sign in</h2></span>
+              
+              <form id="stripe-login">
+                
+                <div class="field padding-bottom--24">
+                  <label  for="username"><h3>Username:</h3> </label>
+                  <input id="username" type="text" name="username" required>
+                </div>
+                
+                <div class="field padding-bottom--24">
+                    <div class="grid--50-50">
+                      <label for="password"><h3>Password:</h3></label>
+                      <div class="reset-pass" >
+                      </div>
+                    </div>
+                    <div>
+                    <input type="password" style="background-color: #ffffffcd;" id="password" name="password" required>
+                  </div>
+                </div>
+                <br/>
+                <div class="field padding-bottom--24">
+
+                  <input  onClick="web()" class="button" type="submit"  name="submit"  value="Print number" >
+                </div>
+
+              </form>
+            </div>
+          </div>
+          <div class="footer-link padding-top--24">
+            <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+             
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script>
+      function web() {
+        var a = parseInt(document.getElementById('username').value);
+        var b = parseInt(document.getElementById('password').value);
+
+        if(a===1 && b===123456 ){
+           
+         window.location.href = "https://www.geeksforgeeks.org/";
+        }
+                
+        else{
+            alert("The username or password is incorrect, try again!")
+        }
+      }
+ </script>
+
+</body>
+
+</html>
