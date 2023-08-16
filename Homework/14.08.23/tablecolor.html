@@ -78,7 +78,7 @@
      var rows = parseInt(document.getElementById('rows').value);
      var cols =  parseInt(document.getElementById('cols').value);
      document.write("<h2>Color the cells with a mouse</h2>");
-
+       document.write("<div>");
      document.write(`<table style="margin-top: 10%; margin-left: 3%;margin: 1px rgb(#CCC); border-spacing: 6px;">`);
        document.write("<tbody>");
    for(var r=0;r<rows;r++){
@@ -91,7 +91,8 @@
    }
    document.write("</tbody>");
   }
-  
+         document.write("</div>");
+
   </script>
 </body>
 

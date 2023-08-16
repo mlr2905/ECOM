@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random number to value</title>
+    <link rel="stylesheet" type="text/css" href="formd.css">
+
+</head>
+
+<body>
+    <div class="login-root"> 
+  
+  
+        <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;"> 
+          <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center"> 
+          </div> 
+          <div class="formbg-outer"> 
+            <div class="formbg"> 
+              <div class="formbg-inner padding-horizontal--48"> 
+                <span class="padding-bottom--15"><h2>random number to value</h2></span> 
+   
+   
+                  <div class="a padding-bottom--24"> 
+                    <label  for="number"><h3>Enter a number:</h3><p>(Click the button for a random number)</p></label> 
+                    <input id="number" type="text" name="number" required> 
+                  </div> 
+   
+                  <div class="field padding-bottom--24"> 
+                      <div class="grid--50-50"> 
+                        <div class="reset-pass" > 
+                        </div> 
+                      </div> 
+                      <div> 
+           </div> 
+                  </div> 
+                  <br/> 
+                  <div class="field padding-bottom--24"> 
+   
+                    <input class="button" type="button"  name="button"  value="Click me" onclick="randomnumber()"> 
+                  </div> 
+   
+                </form> 
+              </div> 
+            </div> 
+            <div class="footer-link padding-top--24"> 
+              <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center"> 
+   
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+            
+      <script>
+               function randomnumber() { 
+
+             var a = document.getElementById('number').value =Math.floor ( Math.random() *999999 ) + 111111
+               }
+      </script>
+</body>
+</html>

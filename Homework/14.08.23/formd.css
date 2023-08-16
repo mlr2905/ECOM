@@ -95,6 +95,24 @@ body {
       display: block;
   }
   
+  .a input {
+    font-size: 16px;
+    line-height: 28px;
+    padding: 8px 16px;
+    width: 83%;
+    min-height: 44px;
+    border: unset;
+    border-radius: 4px;
+    outline-color: rgba(29, 119, 245, 0.5);
+    background-color: #ffffffcd;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+}
 
   .field input {
       font-size: 16px;
