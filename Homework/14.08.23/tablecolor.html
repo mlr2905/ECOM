@@ -65,7 +65,10 @@
          g = ('0'+(Math.random()*255|0).toString(16)).slice(-2),
          b = ('0'+(Math.random()*255|0).toString(16)).slice(-2);
         el.style.backgroundColor = '#' +r+g+b;
+       
    }
+   
+ 
  
    </script>
   <script>
@@ -74,6 +77,8 @@
      
      var rows = parseInt(document.getElementById('rows').value);
      var cols =  parseInt(document.getElementById('cols').value);
+     document.write("<h2>Color the cells with a mouse</h2>");
+
      document.write(`<table style="margin-top: 10%; margin-left: 3%;margin: 1px rgb(#CCC); border-spacing: 6px;">`);
        document.write("<tbody>");
    for(var r=0;r<rows;r++){
@@ -85,10 +90,8 @@
      document.write("</tr>");
    }
    document.write("</tbody>");
- 
-   document.write("</table>");
- 
- }
+  }
+  
   </script>
 </body>
 
