@@ -11,12 +11,13 @@
 var a;
 var b = 0;
 var average = 0 ;
-var sum = 0;
+let sum =0;
 
 a = parseInt(prompt("Please enter your grade, enter -1 to exit"));
        
 while(a != -1)
 {
+
 sum +=a;         
 b++;
 average =Math.floor ( sum/b ) + 1 
@@ -24,8 +25,9 @@ a = parseInt(prompt("Please enter a number, enter -1 to exit"));
 
 }
 document.write("<br/>average = " + average);
+sum =0;
+a = parseInt(prompt("Please enter a number, enter -2 to exit"));
 
-        
 while(a != -2)
 {
 sum +=a;         
@@ -35,13 +37,16 @@ a = parseInt(prompt("Please enter a number, enter -2 to exit"));
 
 }
 document.write("<br/>average = " + average);
+ sum =0;
+ a = parseInt(prompt("Please enter a number, enter -3 to exit"));
+
 while(a != -3)
 {
 sum +=a;         
 b++;
 average = Math.floor ( sum/b ) + 1     
-
 a = parseInt(prompt("Please enter a number, enter -3 to exit"));
+
 
 }
 document.write("<br/> average = " + average);
