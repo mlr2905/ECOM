@@ -3,29 +3,7 @@ body,h3{
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
 
 }
-         *body { 
-   background-color: rgb(255, 0, 0); 
-   -webkit-animation: change-color 2s infinite linear; 
-   animation: change-color 2s infinite linear; 
- } 
-  
- @-webkit-keyframes change-color { 
-   0% { 
-     background-color: rgb(255, 0, 0); 
-   } 
-   100% { 
-     background-color: rgb(0, 0, 255); 
-   } 
- } 
-  
- @keyframes change-color { 
-   0% { 
-     background-color: rgb(255, 0, 0); 
-   } 
-   100% { 
-     background-color: rgb(0, 0, 255); 
-   } 
- }
+         
 
 .input-txt{
   font-family: Impact, sans-serif;
