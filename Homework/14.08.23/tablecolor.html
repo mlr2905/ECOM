@@ -5,12 +5,13 @@
     <title>tablecolor</title>  
     <link rel="stylesheet" type="text/css" href="formd.css">  
   </head>  
+  
   <body>  
     <link rel="stylesheet" href="library/styles/base.css" media="screen" />  
     <div class="login-root">  
   
-          <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">  
-          </div>  
+               <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+                   <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
           <div class="formbg-outer">  
             <div class="formbg">  
               <div class="formbg-inner padding-horizontal--48">  
@@ -50,6 +51,7 @@
         </div>  
       </div>  
     </div>  
+    
     <script>  
      function colorize(el) { 
        var r = ('0' + (Math.random() * 255 | 0).toString(16)).slice(-2), 
@@ -66,12 +68,11 @@
          } 
   
         function tablecolor() {  
-  
        var rows = parseInt(document.getElementById('rows').value);  
        var cols =  parseInt(document.getElementById('cols').value);  
-       document.write("<h2>A random deer table that changes</h2>");  
+       document.write("<h2 >A random deer table that changes</h2>");  
          document.write("<div>");  
-       document.write(`<table style="margin-top: 10%; margin-left: 3%;margin: 1px rgb(#CCC); border-spacing: 6px;">`);  
+       document.write(`<table style="margin-top: 10%; margin-left:auto; margin-right:auto; margin: 1px rgb(#CCC); border-spacing: 6px;">`);  
          document.write("<tbody>");  
      for(var r=0;r<rows;r++){  
        document.write("<tr>");  
@@ -98,18 +99,23 @@
         } 
   
         setInterval(changeColor, 100); 
-        
-        
-       
-       
-          changeColors()
-         function changeColors() {
+          bodyColor()
+         function bodyColor() {
            var body = document.querySelector("body");
            body.style.backgroundColor = "rgb(" + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ")";
          }
-setInterval(changeColors, 250); 
-        
+setInterval(bodyColor, 250);
+
+
+fadeText()
+
+function fadeText() {
+var p = document.querySelector("p");
+p.style.opacity = p.style.opacity === "0.5" ? 1 : 0.5;
+}
+
+setInterval(fadeText, 2000);
+
     </script>  
   </body>  
-  
   </html>
