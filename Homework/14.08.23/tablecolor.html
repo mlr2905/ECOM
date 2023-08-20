@@ -69,7 +69,7 @@
   
        var rows = parseInt(document.getElementById('rows').value);  
        var cols =  parseInt(document.getElementById('cols').value);  
-       document.write("<h2>A random deer table that changes every 2 seconds</h2>");  
+       document.write("<h2>A random deer table that changes</h2>");  
          document.write("<div>");  
        document.write(`<table style="margin-top: 10%; margin-left: 3%;margin: 1px rgb(#CCC); border-spacing: 6px;">`);  
          document.write("<tbody>");  
@@ -107,7 +107,7 @@
            var body = document.querySelector("body");
            body.style.backgroundColor = "rgb(" + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ")";
          }
-setInterval(changeColors, 500); 
+setInterval(changeColors, 250); 
         
     </script>  
   </body>  
