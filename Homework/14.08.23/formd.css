@@ -3,7 +3,7 @@ body,h3{
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
 
 }
-         body { 
+         *body { 
    background-color: rgb(255, 0, 0); 
    -webkit-animation: change-color 2s infinite linear; 
    animation: change-color 2s infinite linear; 
