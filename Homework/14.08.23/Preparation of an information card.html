@@ -18,40 +18,35 @@
            
                <label for="name"><B>Full name</B></label> 
                <input type="text"   class="form-control" id="name"  placeholder="Jane Doe.." value=""required> 
-               <div class="invalid-feedback">Example invalid feedback text</div>
-               <div class="valid-feedback">Looks good!</div>
+             
          </div> 
          
          <div class="col-md-4 mb-3">
           <label for="Email"><B>Email address</B></label>
                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="" placeholder="Enter email"required>
-               <div class="invalid-feedback">Example invalid feedback text</div>
-               <div class="valid-feedback">Looks good!</div>
+               
           </div>
           <div class="col-md-4 mb-3">
             <label for="title"><B>Job title</B></label> 
               <input type="text" class="form-control mb-2" id="title" placeholder="Director.." required> 
-              <div class="invalid-feedback">Example invalid feedback text</div>
-              <div class="valid-feedback">Looks good!</div>  
+               
           </div>
       </div>
       <div class="form-row">
         <div class="col-md-4 mb-3">
           <label for="Phone"><B>Phone Number</B></label> 
               <input type="number" class="form-control mb-2" id="Phone" minlength="9" maxlength="10" placeholder="050-1234567.."  min="10" required> 
-              <div class="invalid-feedback">Example invalid feedback text</div>
-              <div class="valid-feedback">Looks good!</div>  
+             
           </div>
           <div class="col-md-4 mb-3">
             <label for="height"><b>What is your height</b></label>
              <input type="number" class="form-control mb-2" id="height" placeholder="1.70" required>
-             <div class="invalid-feedback">Example invalid feedback text</div>
-             <div class="valid-feedback">Looks good!</div>  
+               
         </div>
         <div class="col-md-4 mb-3">
           <label class="mr-sm-2" for="Select a city"><b>Choose a city of residence</b></label>
              <select class="custom-select mr-sm-2" id="city" required>
-               <option selected>Select a city</option>
+               <option  value="">Select a city</option>
                <option class="value" value="א ת עמק חפר" data-index="1" data-select2-id="select2-data-16-whue">
                 א ת עמק חפר                            </option>
             <option class="value" value="אבו ג`ווייעד" data-index="2" data-select2-id="select2-data-17-a2rk">
@@ -2858,16 +2853,15 @@
                 תרום                            </option>
             </select>   
              </select>
-          <div class="invalid-feedback">Example invalid feedback text</div>
-          <div class="valid-feedback">Looks good!</div>
+          
         </div>
       </div>
         <div class="form-row">
           <div class="col-md-4 mb-3">         
             <div class="custom-control custom-checkbox mr-sm-2">
                 <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="vegetarian">
-                  <label class="custom-control-label" for="vegetarian"><b>are you vegetarian</b></label>
+                  <input  type="checkbox" class="custom-control-input" name="checs" id="checs" onclick="k()">
+                  <label class="custom-control-label" for="checs"><b>are you vegetarian</b></label>
                 </div>             
              </div>
           </div>
@@ -2896,7 +2890,6 @@
           </div>
           <div class="custom-file col-md-4 mb-3">
              <div class="invalid-feedback">Example invalid feedback text</div>
-             <div class="valid-feedback">Looks good!</div>
            
            <input type="file" onchange="preview()" class="custom-file-input" id="file" required>
            <label class="custom-file-label" for="file"><b>add a picture..</b></label> </div>
@@ -2909,15 +2902,23 @@
             
             <tbody id="tableBody">
              
-                <th rowspan="8"  ><img id="frame" src="" width="300px" height="500px"/></td>
+                <th rowspan="9"  ><img id="frame" src="" width="300px" height="500px"/></th>
+                <th>vegetarian</th>
+                <td id="chec">no</td>
 
                
             
           <script> 
-          
+           
+          function k(){
+            const checked = document.querySelector('#chec:checked') !== null;
+            document.getElementById("chec").innerHTML = `yes
+                   `            
+            }
    
                 function preview() {
     frame.src=URL.createObjectURL(event.target.files[0]);
+   
 }
                 function card (){
                   const a =document.getElementById('name').value;
@@ -2927,6 +2928,8 @@
                 const e =parseFloat(document.getElementById('height').value);
                 const f =document.getElementById('city').value;
                 const h =document.getElementById('system1','system2','system3').value;
+                const checked = document.querySelector('#chec:checked') !== null;
+
       // Get the table body element in which you want to add row
       let table = document.getElementById("tableBody");
    
@@ -2997,7 +3000,7 @@
 
 
    }
-  
+
                
  </script>
  </body> 

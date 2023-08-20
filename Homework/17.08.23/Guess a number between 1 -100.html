@@ -1,0 +1,36 @@
+<html lang="en">   
+   <head>   
+       <meta charset="UTF-8">   
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+       <title>Guess a number between 1 -100</title>   
+       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+       <script src="sweetalert2.all.min.js"></script>
+
+   </head>   
+   <body>   
+       <script>   
+           var b = Math.floor ( Math.random() *100 ) + 1
+           debugger   
+     while(true){
+     
+        var a = parseInt(prompt("Enter a number: between 1 -100 "));   
+
+     if (a > 100) {  
+ 
+        continue 
+     }
+     if (a < b ||a > b) {   
+       alert(`"Your number is small/big from a= ${a} b= ${b} "`)   
+       a = parseInt(prompt("Enter a number: between 1 -100  ")); }  
+     if(a==b){
+        break;
+     }
+    }
+
+ document.write("You guessed the number:"+a,"-",+b)  ;  
+  
+  
+  
+       </script>   
+   </body>   
+   </html
