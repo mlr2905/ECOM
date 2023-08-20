@@ -69,7 +69,7 @@
  
       var rows = parseInt(document.getElementById('rows').value); 
       var cols =  parseInt(document.getElementById('cols').value); 
-      document.write("<h2>Color the cells with a mouse</h2>"); 
+      document.write("<h2>A random deer table that changes every 2 seconds</h2>"); 
         document.write("<div>"); 
       document.write(`<table style="margin-top: 10%; margin-left: 3%;margin: 1px rgb(#CCC); border-spacing: 6px;">`); 
         document.write("<tbody>"); 
@@ -85,7 +85,19 @@
     document.write("</tbody>"); 
    } 
           document.write("</div>"); 
+          
+          //שינוי צבע אקראי של התאים כל שניה 
+       function changeColor() {
+         var table = document.querySelector("table");
+         for (var i = 0; i < table.rows.length; i++) {
+           for (var j = 0; j < table.rows[i].cells.length; j++) {
+             var cell = table.rows[i].cells[j];
+             cell.style.backgroundColor = "rgb(" + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ")";
+           }
+         }
+       }
        
+       setInterval(changeColor, 2000);
    </script> 
  </body> 
   
