@@ -4,8 +4,32 @@
     <meta charset="utf-8">  
     <title>tablecolor</title>  
     <link rel="stylesheet" type="text/css" href="formd.css">  
-  </head>  
-  
+  </head>
+<style>
+  body {
+  background-color: rgb(Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255));
+  -webkit-animation: change-color 2s infinite linear;
+  animation: change-color 2s infinite linear;
+}
+
+@-webkit-keyframes change-color {
+  0% {
+    background-color: rgb(Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255));
+  }
+  100% {
+    background-color: rgb(Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255));
+  }
+}
+
+@keyframes change-color {
+  0% {
+    background-color: rgb(Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255));
+  }
+  100% {
+    background-color: rgb(Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255));
+  }
+}
+</style>
   <body>  
     <link rel="stylesheet" href="library/styles/base.css" media="screen" />  
     <div class="login-root">  
