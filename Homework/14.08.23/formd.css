@@ -20,15 +20,11 @@ input.placeholder {
   
 }
 
-body {
-      min-height: 100%;
       
 
-      ;
-  }
+   
   h1 {
       letter-spacing: -1px;
-
   }
 
   .login-root {
