@@ -14,36 +14,41 @@
     <form class=" mt-5 mx-auto col-6 col-md-4 col-lg-6 was-validated ">
         <div class="form-row">
           <div class="col">
-                 <label for="number-s"><B>Enter a starting number</B></label> 
-                 <input type="number"   class="form-control" id="number-s"  placeholder="starting number" required> 
+                 <label for="start"><B>Enter a starting number</B></label> 
+                 <input type="number"   class="form-control" id="start-s"  placeholder="starting number" required> 
            </div> 
            <div class="col">
-            <label for="number-e"><B>Enter an ending number</B></label>
-            <input type="number" class="form-control" id="number-e"   placeholder="end number"required> 
+            <label for="finish"><B>Enter an ending number</B></label>
+            <input type="number" class="form-control" id="finish"   placeholder="end number"required> 
             </div>
             <div class="col">
-              <label for="number-s"><B>Enter a sentinel number</B></label> 
-              <input type="number" class="form-control mb-2" id="number-se" placeholder="sentinel number" required> 
+              <label for="skip"><B>Enter a sentinel number</B></label> 
+              <input type="number" class="form-control mb-2" id="skip" placeholder="sentinel number" required> 
             </div>
             <div class="col">
-                <label for="number-d"><B>Enter a number to divide by skips</B></label> 
-                <input type="number" class="form-control mb-2" id="number-d" placeholder="division in skips" required>   
+                <label for="zakif"><B>Enter a number to divide by skips</B></label> 
+                <input type="number" class="form-control mb-2" id="zakif="division in skips" required>   
               </div>
-              <button onclick="numbers()" class="btn btn-primary col" type="button">Submit form</button>
+              <button onclick="raw_result()" class="btn btn-primary col" type="button">Submit form</button>
 
         </div>
     </form>
     <script>
 
-                function numbers() {
-                    
-                const a =document.getElementById('number-s').value;
-                const b =document.getElementById('number-e').value;
-            if (a > b) {
-                document.write(` ${b}`)
-            }
-            else {
-                document.write(`${a}`)
+function draw_result() {
+            const start = parseInt(document.getElementById("start_txt").value)
+            const finish = parseInt(document.getElementById("finish_txt").value)
+            const haluka = parseInt(document.getElementById("skip_txt").value) // 3
+            const zakif = parseInt(document.getElementById("zakif_txt").value)
+
+            for(let i = start; i <= finish; i++) {
+                if (i == zakif) {
+                    break;
+                }
+                if (i % haluka == 0) {
+                    continue;
+                }
+                document.write(`<p>${i}</p>`)
             }
         }
     </script>

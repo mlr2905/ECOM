@@ -9,26 +9,29 @@
    </head>   
    <body>   
        <script>   
-           var b = Math.floor ( Math.random() *100 ) + 1
-           debugger   
+           const b = Math.floor ( Math.random() *100 ) + 1
+             
      while(true){
      
-        var a = parseInt(prompt("Enter a number: between 1 -100 "));   
+        let a = parseInt(prompt("Enter a number: between 1 -100 "));   
 
-     if (a > 100) {  
+     if (a < 1 || a > 100) {  
  
         continue 
      }
-     if (a < b ||a > b) {   
-       alert(`"Your number is small/big from a= ${a} b= ${b} "`)   
-       a = parseInt(prompt("Enter a number: between 1 -100  ")); }  
      if(a==b){
         break;
      }
+     if (a > b) {   
+       alert(`"Your number is a big from random number a= ${a} random= ${b} "`)   
+    }
+    else{
+      alert(`"Your number is a small  from random number a= ${a} random= ${b} "`)   
+
+    } 
     }
 
- document.write("You guessed the number:"+a,"-",+b)  ;  
-  
+    Swal.fire("You guessed the number:"+a,"-",+b);  
   
   
        </script>   
