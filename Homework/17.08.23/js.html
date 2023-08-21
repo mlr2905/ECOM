@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="col">
+        <label for="number-d"><B>Enter a number to divide by skips</B></label> 
+        <input type="number" class="form-control mb-2" id="number-e" placeholder="division in skips" required>   
+      </div> 
+      <button onclick="change()" class="btn btn-primary col" type="button">Submit form</button>
+      <p> </p>
+    <script>
+        function change (){
+            const a =document.getElementById('number-e').value;
+            document.write(even(a)) ;
+    }
+        function even(n){
+            return n % 2 === 0;
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
