@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW sol 2</title>
+</head>
+<body>
+    <div>
+        <p>username: <input type="text" id="username_txt" ></p>
+        <p>password: <input type="password" id="password_txt" ></p>
+        <p>
+        <select id="site_drop">
+            <option value="git" default>GITHUB</option>
+            <option value="gmail">GMAIL</option>
+            <option value="facebook">FACE BOOK</option>
+          </select>        
+        </p>
+        <button onclick="login()">LOGIN</button>
+    </div>
+    <script>
+
+        const git_my_user_name = "itay"
+        const git_my_password = "1234"
+
+        function login() {
+
+            const username = document.getElementById("username_txt").value
+            const pwd = document.getElementById("password_txt").value
+            const site_selected = document.getElementById('site_drop').value
+
+            if (username === my_user_name && my_password === pwd) {
+                alert('Correct')
+                switch (site_selected) {
+                    case 'git':window.location.href = "https://github.com";
+                        break;
+                    case 'gmail':breawindow.location.href = "https://gmail.com";
+                        break;
+                    case 'facebook':window.location.href = "https://facebook.com";
+                        break;
+                }
+            }
+
+        }
+
+    </script>
+</body>
+</html>

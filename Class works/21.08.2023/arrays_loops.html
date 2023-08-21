@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW Solution 6</title>
+</head>
+<body>
+    <script>
+
+        // create an empty list
+        // fillup the list with 10 random numbers between 1-100 (using Math.random + push)
+        // print all the numbers (in a loop like we did here)
+        // print only the even (zugi) numbers
+
+        // find and print the smallest item in the array
+        // find and print the biggest item in the array
+
+        const numbers = [ ]
+        for (let i = 1; i <= 10; i++) {
+            let number = Math.floor(Math.random() * 100) + 1
+            numbers.push(number)
+        }
+        document.write(`<p>The array is: ${numbers.join(' , ')}</p>`)
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[ i ] % 2 == 0) {
+                document.write(`<p>${numbers[ i ]}</p>`)
+            }
+        }        
+        // -100
+        //[ 1, -1, -100, 1000, -200]
+        // 1
+        let min = numbers[0]
+        for (let i = 1; i < numbers.length; i++) {
+            if (numbers[ i ] < min) {
+                min = numbers[ i ]
+            }
+        }
+
+        let max = numbers[0]
+        for (let i = 1; i < numbers.length; i++) {
+            if (numbers[ i ] > max) {
+                max = numbers[ i ]
+            }
+        }    
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW sol 1</title>
+</head>
+<body>
+    <div>
+        <p>X: <input type="number" id="x_txt" value="1" min="1" max="15"></p>
+        <p>Y: <input type="number" id="y_txt" value="1" min="1" max="15"></p>
+        <p>Z: <input type="number" id="z_txt" value="1" min="1" max="15"></p>
+        <button onclick="get_values_and_check_sum()">CHECK IF X + Y == Z</button>
+    </div>
+    <script>
+        
+        // operation
+        function print_sum(a, b) {
+            console.log(a + b);
+        }
+        print_sum(1, 4);
+
+        // return value
+        function get_sum(a = 1, b = 2) {
+            let a_plus_b = a + b
+            return a_plus_b
+            // return a + b
+            
+            //return 'hello'
+
+            // return a > b
+        }
+        let sum = get_sum(1827361, 2384762)
+        let random_number = Math.random() * 10;
+
+        // 1. write function with 2 parameters default values 1, 2 
+        //    return the multiply of these numbers
+        // 2. write a function with 1 parameter default value 0
+        //    if the parameter is larger than 0 return 'positive'
+        //      less than zero 'negative' 
+        //      otherwise return 'zero'
+        // 3. write a function wich gets 2 parameters of numbers
+        //    it will return te bigger number
+
+        function multiply(a = 1, b = 2) {
+            return a * b
+            //const mul = a * b
+            //return mul;            
+        }
+        const res1 = multiply(3, 9) // 27
+        const res2 = multiply(3) // 6
+        const res3 = multiply() // 2
+        const res4 = multiply(b = 12) // 12
+
+        function positive_negative(number = 0) {
+            // solution 1
+            if (number > 0) {
+                return 'positive'
+            }
+            if (number < 0) {
+                return 'negative'
+            }
+            return 'zero'
+
+            // OR -- solution 2 -- best
+            return number > 0 ? 'positive' : number < 0 ? 'negative' : 'zero' 
+
+            // OR -- solution 3 -- not so good
+            if (number > 0) {
+                return 'positive'
+            }
+            else if (number < 0 ) {
+                return 'negative'
+            }
+            else  {
+                return 'zero'
+            }
+        }
+        let res_string1 = positive_negative(8)
+        let res_string2 = positive_negative()
+        let res_string3 = positive_negative(0)
+        let res_string4 = positive_negative(-5)
+
+        function get_bigger_equal(a, b) {
+            // solution 1
+            if (a > b) {
+                return a;
+            }
+            return b;
+
+            // OR -- solution 2 -- best
+            return a > b ? a : b
+        }
+
+        // call for operation
+        document.write('hello')
+        console.log('hello')
+
+        // call for return value
+        let x = Math.random() * 10;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW sol 4</title>
+</head>
+<body>
+    <div>
+        <button onclick="create_random()">CREATE A RANDOM NUMBER</button>
+        <p>RANDOM NUMBER 1: <input type="number" style="width:50px; text-align: end;" id="rnd1_txt" value="1" ></p>
+        <p> + </p>
+        <p>RANDOM NUMBER 2: <input type="number" style="width:50px; text-align: end;" id="rnd2_txt" value="1"></p>
+        
+        <p> = </p>
+        <p>? WHAT IS THE SUM ? <input type="number" style="width:50px; text-align: end;" id="sum_txt" value=""></p>
+        <hr>
+        <button onclick="check_answer()">CHECK MY ANSWER</button>
+    </div>
+    <div id="result">
+        <p >1</p>
+    </div>
+    <script>
+
+        function create_random() {
+            const rnd1 = Math.floor(Math.random() * 100) + 1;
+            const rnd2 = Math.floor(Math.random() * 100) + 1;
+            document.getElementById("rnd1_txt").value = rnd1
+            document.getElementById("rnd2_txt").value = rnd2
+        }
+
+        function check_answer() {
+            const rnd1 = parseInt(document.getElementById("rnd1_txt").value)
+            const rnd2 = parseInt(document.getElementById("rnd2_txt").value)
+            const user_sum = parseInt(document.getElementById("sum_txt").value)
+            const real_sum = rnd1 + rnd2
+            if (user_sum == real_sum) {
+                document.getElementById("result").innerHTML = 
+                    `<p style="color:green">CORRECT: ${rnd1} + ${rnd2} = ${user_sum}</p>`
+            }
+            else {
+                document.getElementById("result").innerHTML = 
+                    `<p style="color:red">WRONG : ${rnd1} + ${rnd2} = ${real_sum}</p>`
+            }
+        }
+
+    </script>
+</body>
+</html>

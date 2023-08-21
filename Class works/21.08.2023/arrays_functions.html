@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Arrays Functions</title>
+    <script src="utils.js"></script>
+</head>
+<body>
+    
+<script>
+
+    function populate_list_random(capacity = 10, max_random = 100) {
+        const numbers = [ ]
+        
+        for (let i = 1; i <= capacity; i++) {
+            let number = get_random(max_random)
+            numbers.push(number)
+        }
+
+        return numbers;
+    }
+
+    function print_arrays(arr1, arr2) {
+        document.write(`<p>${arr1}</p>`)
+        document.write(`<p>${arr2}</p>`)
+    }
+
+    const numbers1 = populate_list_random(10)
+
+    const numbers2 = populate_list_random(15, 200)
+
+    print_arrays(numbers1, numbers2)
+
+    // let sum = 0
+    // for (let i = 0; i < numbers.length; i++) {
+    //     sum = sum + numbers[ i ]
+    // }
+
+
+</script>
+
+</body>
+</html>

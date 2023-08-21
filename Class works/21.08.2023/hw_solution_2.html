@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW sol 1</title>
+</head>
+<body>
+    <div>
+        <p>START FROM: <input type="number" id="start_txt"></p>
+        <p>FINISH: <input type="number" id="finish_txt"></p>
+        <p>SKIP DIV: <input type="number" id="skip_txt"></p>
+        <p>ZAKIF: <input type="number" id="zakif_txt"></p>
+        <button onclick="draw_result()">DRAW RESULT</button>
+    </div>
+    <script>
+
+        function draw_result() {
+            const start = parseInt(document.getElementById("start_txt").value)
+            const finish = parseInt(document.getElementById("finish_txt").value)
+            const haluka = parseInt(document.getElementById("skip_txt").value) // 3
+            const zakif = parseInt(document.getElementById("zakif_txt").value)
+
+            for(let i = start; i <= finish; i++) {
+                if (i == zakif) {
+                    break;
+                }
+                if (i % haluka == 0) {
+                    continue;
+                }
+                document.write(`<p>${i}</p>`)
+            }
+        }
+
+    </script>
+</body>
+</html>

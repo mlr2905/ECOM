@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW sol 3</title>
+</head>
+<body>
+    <div>
+        <p>RANDOM NUMBER: <input type="number" id="rnd_txt" value="1"></p>
+        <button onclick="create_random()">CREATE A RANDOM NUMBER</button>
+    </div>
+    <script>
+
+        function create_random() {
+            const rnd = Math.floor(Math.random() * 100) + 1;
+            document.getElementById("rnd_txt").value = rnd
+        }
+
+    </script>
+</body>
+</html>

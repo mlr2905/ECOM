@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW Solution 4</title>
+</head>
+<body>
+    <p>X: <input type="number" id="x_txt"></p>
+    <p>POWER: <input type="number" id="pow_txt"></p>
+    <button onclick="draw_power()">SHOW POWER</button>
+    <script>
+
+        function draw_power() {
+            const x = parseInt(document.getElementById("x_txt").value)
+            const pow = parseInt(document.getElementById("pow_txt").value)   
+            const power_result = get_power(x, pow)
+            document.write(`<p>${x} power ${pow} is: ${power_result}`)
+        }
+
+        function get_power(number = 1, power = 0) {
+            return number ** power
+        }
+
+        //document.write(get_minimum(3, -12))
+
+    </script>
+</body>
+</html>

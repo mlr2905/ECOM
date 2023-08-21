@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>functions</title>
+</head>
+<body>
+    <script>
+
+        function print_colored() {
+            document.write(`<p style="color:red">3</p>`)
+            document.write(`<hr>`)
+        }
+
+        function print_colored_custom(number = 3, color = 'red', html_type = 'p') {
+            //let number = 3
+            //let color = 'red'
+            //let html_type = 'p'
+            document.write(`<${html_type} style="color:${color}">${number}</${html_type}>`)
+            document.write(`<hr>`)
+        }
+
+        
+        print_colored_custom();
+
+        color = 'blue'
+        print_colored_custom();
+
+        print_colored();
+
+        print_colored();
+
+        print_colored();
+
+        document.write(`<p style="color:red">4</p>`)
+        document.write(`<hr>`)        
+        print_colored_custom(number = 4)
+
+        document.write(`<p style="color:blue">3</p>`)
+        document.write(`<hr>`)                
+        print_colored_custom(color = 'blue')
+
+        document.write(`<h1 style="color:red">4</h1>`)
+        document.write(`<hr>`)   
+        print_colored_custom(number = 3, color = 'red', html_type = 'h1')
+
+        function print_colored_custom(number = 3, color = 'red', html_type = 'p') {
+            //let number = 3
+            //let color = 'red'
+            //let html_type = 'p'
+            document.write(`<${html_type} style="color:${color}">${number}</${html_type}>`)
+            document.write(`<hr>`)
+        }
+        function sum(a = 0, b = 0) {
+            //let a = 0;
+            //let b = 0;
+            document.write(`<p>${a + b}</p>`)
+        }
+        sum()
+        sum(b = 5)
+
+        function print_bigger(a = 1, b = 2) {
+            //let a = 1;
+            //let b = 2;
+            if (a > b) {
+                document.write(`${a} > ${b}`)
+            }
+            else {
+                document.write(`${b} >= ${a}`)
+            }
+        }
+        print_bigger()
+        print_bigger(5, 4)
+
+        function print_name_and_age(name = 'danny', age = 18) {
+            //let name = 'danny'
+            //let age = 18
+        }
+
+        // 1. write a function which gets a color and a name
+        //    it will print the name with the given color with document.write
+        // 2. write a function which gets a , b, c
+        //    if a + b == c it will print a b c in GREEN color
+        //    else it will print a b c in RED color
+
+        function print_name(name, color ) {
+            //let name = 'danny'
+            //let color = 'blue'
+            document.write(`<p style="color:${color}">${name}</p>`)
+        }
+
+        print_name('yossi', 'pink')
+
+        function check_sum(a, b, c) {
+            // let a, b, c
+            if (a + b === c) 
+            {
+                document.write(`<p style="color:green">${a} ${b} ${c}</p>`)
+            }
+            else {
+                document.write(`<p style="color:red">${a} ${b} ${c}</p>`)   
+            }
+            //document.write(`<p style="color:${(a+b === c ?'green':'red')}">${a} ${b} ${c}</p>`)
+        }
+        check_sum(4, 5, 9)
+        let a = 1
+        check_sum(a, a, a)
+        check_sum(4, 5, 10)
+        let x = parseInt(prompt('enter x: '))
+        let y = parseInt(prompt('enter y: '))
+        let z = parseInt(prompt('enter z: '))
+        check_sum(x, y, z)
+    </script>
+</body>
+</html>

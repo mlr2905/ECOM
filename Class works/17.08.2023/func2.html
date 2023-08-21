@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW sol 1</title>
+</head>
+<body>
+    <div>
+        <p>X: <input type="number" id="x_txt" value="1" min="1" max="15"></p>
+        <p>Y: <input type="number" id="y_txt" value="1" min="1" max="15"></p>
+        <p>Z: <input type="number" id="z_txt" value="1" min="1" max="15"></p>
+        <button onclick="get_values_and_check_sum()">CHECK IF X + Y == Z</button>
+    </div>
+    <script>
+        
+        function check_sum(a, b, c) {
+            // let a, b, c
+            if (a + b === c) 
+            {
+                document.write(`<p style="color:green">${a} + ${b} == ${c}</p>`)
+            }
+            else {
+                document.write(`<p style="color:red">${a} + ${b} !== ${c}</p>`)   
+            }
+            //document.write(`<p style="color:${(a+b === c ?'green':'red')}">${a} ${b} ${c}</p>`)
+        }
+
+        function get_values_and_check_sum() {
+            const x = parseInt(document.getElementById("x_txt").value)
+            const y = parseInt(document.getElementById("y_txt").value)
+            const z = parseInt(document.getElementById("z_txt").value)
+            check_sum(x, y, c)
+        }
+
+    </script>
+</body>
+</html>

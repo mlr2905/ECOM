@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Break continue</title>
+</head>
+<body>
+    <script>
+        // input grades from user until got -1 
+        // calc avg
+
+        let count = 0;
+        let sum = 0
+        let grade = 0
+
+        while (grade != -1 && grade !== sum) {
+            grade = parseInt(prompt('Enter grade: '))
+            // i want to skip this iteration
+            if (grade > 100) {
+                continue     
+            }
+            if (grade < -1) {
+                continue
+            }
+
+            if (grade === sum) {
+                break;
+            }
+
+            sum = sum + grade
+        }
+
+        if (count > 0) {
+            alert(`Average = ${sum / count}`)
+        }
+
+        for (let index = 0; index < 10; index++) {
+            if (index == 7) {
+                continue;
+            }
+            console.log(index);            
+        }
+
+        for (let index = 0; index < 10; index++) {
+            grade = parseInt(prompt('Enter grade: '))
+            if (grade === -1) {
+                break;
+            }
+        }
+
+        // input 2 numbers from the user  (prompt, text box)
+        // the 1st number will be the smaller
+        // run with a for loop between the small and the bigger and print the number 
+        //   using document.write
+        // if the number can be divided by 7 (hint: number % 7 == 0) skip the number
+        // if you came across a number that can be divided by 19 then stop the loop (hint: break)
+
+    </script>
+</body>
+</html>

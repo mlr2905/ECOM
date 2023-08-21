@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QUIZ</title>
+</head>
+<body>
+    <p>QUESTION: 10 + 3 * 201 = <input type="number"></p>
+    <div id="counter">0</div>
+    <script>
+        let x = 10
+        function print() {
+            x--;
+            console.log(x)
+            if (x == 0) {
+                clearInterval(my_timer)
+            }
+            document.getElementById("counter").textContent = x
+        }
+        const my_timer = setInterval(print, 1000)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW Solution 3</title>
+</head>
+<body>
+    <p>X: <input type="number" id="x_txt"></p>
+    <p>Y: <input type="number" id="y_txt"></p>
+    <button onclick="draw_minimum()">SHOW MINIMUM</button>
+    <script>
+
+        function draw_minimum() {
+            const x = parseInt(document.getElementById("x_txt").value)
+            const y = parseInt(document.getElementById("y_txt").value)   
+            const min = get_minimum(x, y)
+            document.write(`<p>The minimum is: ${min}`)
+        }
+
+        function get_minimum(a, b) {
+            if (a < b) {
+                return a;
+            }
+            return b;
+
+            //return a < b ? a : b;
+        }
+
+        //document.write(get_minimum(3, -12))
+
+    </script>
+</body>
+</html>

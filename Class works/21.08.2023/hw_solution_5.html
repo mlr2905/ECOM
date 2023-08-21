@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW Solution 5</title>
+</head>
+<body>
+    <script>
+
+        function is_zugi(number) {
+            if (number % 2 == 0) {
+                return true;
+            }
+            return false;
+
+            //return number % 2 == 0
+        }
+
+        function is_positive(number) {
+            if (number > 0) {
+                return true;
+            }
+            return false;
+
+            //return number > 0
+        }
+
+        function is_single_digit(number) {
+            if (number > -10 && number < 10) {
+                return true;
+            }
+            return false;
+
+            // if (Math.abs(number) < 10) {
+            //     return true;
+            // }
+            // return false;
+
+            // return Math.abs(number) < 10
+        }        
+
+        function get_random_true_false(number) {
+            if (Math.floor(Math.random() * 2) + 1 == 2)
+                return true;
+            return false;
+
+            //return Math.floor(Math.random() * 2) + 1 == 2
+        }
+    </script>
+</body>
+</html>

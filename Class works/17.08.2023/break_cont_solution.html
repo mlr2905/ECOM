@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Break continue</title>
+</head>
+<body>
+    <div>
+        <p>SMALLER: <input type="number" id="smaller_txt" value="1"></p>
+        <p>BIGGER: <input type="number" id="bigger_txt" value="1"></p>
+        <button onclick="draw_numbers()">DRAW NUMBERS</button>
+    </div>
+    <script>
+
+        // input 2 numbers from the user  (prompt, text box)
+        // the 1st number will be the smaller
+        // run with a for loop between the small and the bigger and print the number 
+        //   using document.write
+        // if the number can be divided by 7 (hint: number % 7 == 0) skip the number
+        // if you came across a number that can be divided by 19 then stop the loop (hint: break)
+        function draw_numbers() {
+            const user_smaller = parseInt(document.getElementById("smaller_txt").value)
+            const user_bigger = parseInt(document.getElementById("bigger_txt").value)
+
+            for (let i = user_smaller; i <= user_bigger; i++) {
+                if (i % 7 == 0) {
+                    continue;
+                }
+                if (i % 19 == 0) {
+                    break;
+                }
+                document.write(`<p>${i}</p>`)
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
