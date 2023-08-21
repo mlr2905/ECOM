@@ -49,141 +49,105 @@
    row1.appendChild(c2);
    row1.appendChild(c3);
    table.appendChild(row1)
+   let row2 = document.createElement("tr")
+   let c4 = document.createElement("th")
+   let c5 = document.createElement("td")
+   let c6 = document.createElement("th")
+   
+   row2.appendChild(c4);
+   row2.appendChild(c5);
+   row2.appendChild(c6);
+   table.appendChild(row2)
+
 
    //פונקציה שמפעילה מספר מופנקציות
         function select(){
              var option = document.getElementById('select').value;
              switch(option){
-            case "1":evens ()
+            case "1":is_even ()
             break;
-            case "2":positives()
+            case "2":is_positive()
             break;
-            case "3":Singledigits ()
+            case "3":is_single_digit ()
             break;
-            case "4":divisibles()
+            case "4":is_single_digit()
             break;
-            case "5":randoms()
+            case "5":get_random_true_false()
             break;
              }
              
         }
 //פונקציה ראשונה 
-        function even(n){
-            return n % 2 === 0;
+        function even(a){
+            return a % 2 === 0;
         }
        
-        function evens (){
-            const a =document.getElementById('number').value;
-   let row2 = document.createElement("tr")
-   let c4 = document.createElement("th")
-   let c5 = document.createElement("td")
-   let c6 = document.createElement("th")
-   b =even(a)
-   c4.innerText = "even"
-   c5.innerText =  a
-   c6.innerText =  b
+        function is_even (){
+        const a =document.getElementById('number').value;
+        
+        b =even(a)
+        c4.innerText = "is eve?"
+        c5.innerText =  a
+        c6.innerText =  b
+         } 
 
-   row2.appendChild(c4);
-   row2.appendChild(c5);
-   row2.appendChild(c6);
-   table.appendChild(row2)
-
-    } 
     //פונקציה שניה
-    function positive(x = 0){
-            return x > 0 ? 'positive' : x < 0 ? 'negative' : 'zero' 
+    function positive(a = 0){
+            return a > 0 ? 'positive' : a < 0 ? 'negative' : 'zero' 
         }
-        function positives (){
+        function is_positive (){
             const a =document.getElementById('number').value;
-   let row2 = document.createElement("tr")
-   let c4 = document.createElement("th")
-   let c5 = document.createElement("td")
-   let c6 = document.createElement("th")
-   c =positive(a)
-   c4.innerText = "positive"
-   c5.innerText =  a
-   c6.innerText =  c
-
-   row2.appendChild(c4);
-   row2.appendChild(c5);
-   row2.appendChild(c6);
-   table.appendChild(row2)
-
-    }
+  
+        c =positive(a)
+        c4.innerText = " is positive?"
+        c5.innerText =  a
+        c6.innerText =  c
+        }
 
     //פונקציה שלישית
-    function Singledigit(z){
-        return z >= 1 && z <= 9;     
+    function single_digit(a){
+        return a > -10 && a < 10;     
        }
-        function Singledigits (){
-            const i =document.getElementById('number').value;
-   let row2 = document.createElement("tr")
-   let c4 = document.createElement("th")
-   let c5 = document.createElement("td")
-   let c6 = document.createElement("th")
-   c =Singledigit(i)
-   c4.innerText = "Single-digit"
-   c5.innerText =  i
-   c6.innerText =  c
 
-   row2.appendChild(c4);
-   row2.appendChild(c5);
-   row2.appendChild(c6);
-   table.appendChild(row2)
+        function is_single_digit (){
+            const a =document.getElementById('number').value;
+   
+        c =single_digit(a)
+        c4.innerText = "Single-digit"
+        c5.innerText =  i
+        c6.innerText =  c
    }
    //פונקציה רביעית
-   function divisible(d){
+   function single_digit(d){
     return d % 11===0 ? 'true' : 'false'; 
        }
-        function divisibles (){
-            const i =document.getElementById('number').value;
-   let row2 = document.createElement("tr")
-   let c4 = document.createElement("th")
-   let c5 = document.createElement("td")
-   let c6 = document.createElement("th")
-   c =divisible(i)
-   c4.innerText = "divisible"
-   c5.innerText =  i
-   c6.innerText =  c
+        function is_single_digit (){
+            const a =document.getElementById('number').value;
+  
+        c =single_digit(a)
+        c4.innerText = "is_single_digit"
+        c5.innerText =  a
+        c6.innerText =  c
 
-   row2.appendChild(c4);
-   row2.appendChild(c5);
-   row2.appendChild(c6);
-   table.appendChild(row2)
    }
 
-// פונקציה חמישית
-let k = Math.random();
-
-    function random(k) {
-
-    return k < 0.5 ? 'true' : 'false'; 
+  // פונקציה חמישית
+  function random(a) {
+      let b = Math.random();
+    return b< 0.5 ? 'true' : 'false'; 
        }
-
-        function randoms (){
-            const i =document.getElementById('number').value;
-   let row2 = document.createElement("tr")
-   let c4 = document.createElement("th")
-   let c5 = document.createElement("td")
-   let c6 = document.createElement("th")
-   c =random(i)
-   c4.innerText = "random: true/false"
-   c5.innerText =  i
-   c6.innerText =  c
-
-   row2.appendChild(c4);
-   row2.appendChild(c5);
-   row2.appendChild(c6);
-   table.appendChild(row2)
-   }
-
-
-
-     function reset(){
-   window.setTimeout( function () {
-  window.location.reload();
-}, 1);
-     }
+        function get_random_true_false(){
+            const a =document.getElementById('number').value;
+        c =random(a)
+        c4.innerText = "random: true/false"
+        c5.innerText =  a
+        c6.innerText =  c
+        }
+    //  פונקציה שמאפסת את הדף
+    function reset(){
+      window.setTimeout( function () {
+      window.location.reload();}, 1);
+        }
     </script>
 </body>
 </html>

@@ -20,27 +20,36 @@
            <div class="col">
             <label for="number-e"><B>Enter an ending number</B></label>
             <input type="number" class="form-control" id="number-e"   placeholder="end number"required> 
-            </div>
+            </div></div><br/>
 
-              <button onclick="numbers()" class="btn btn-primary col" type="button">Submit form</button>
-
+              <button onclick="Print_the_lower_number()" class="btn btn-primary col" type="button">Submit form</button>
+              <table style="width: 40%; margin-left: 30%;"  id="myTable"class="table table-striped table-dark mt-5 table-hover table-bordered">
+            
+                <tbody id="tableBody">
+                 
         </div>
     </form>
     <script>
+function get_power(number = 1, power = 0) {
+            return number ** power
+        }
+function Print_the_lower_number() {
+    const a =parseInt(document.getElementById('number-s').value);
+    const power =parseInt(document.getElementById('number-e').value);
+    const power_result = get_power(a, power)
 
+      let table = document.getElementById("tableBody");
+      let row1 = document.createElement("tr")
+      let c1 = document.createElement("th")
+      let c2 = document.createElement("td")
+      let c = power_result
+      c1.innerText = "Result"
+      c2.innerText = c
+      row1.appendChild(c1);
+      row1.appendChild(c2);
+      table.appendChild(row1)
+    }
 
-
-const a = document.getElementById('number-s').value =1
-const b = document.getElementById('number-e').value =0
-const c =0
-         function numbers(){
-   const a =parseInt(document.getElementById('number-s').value);
-   const b =parseInt(document.getElementById('number-e').value);
-   const c = a **b
-   document.write(`<b>${a} <sup>${b}</sup>  = ${c}</b>`);
-         }
- 
-	 
     
     </script>
 </body>

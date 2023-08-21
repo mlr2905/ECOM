@@ -13,30 +13,23 @@
  <body> 
      <form class=" mt-5 mx-auto col-6 col-md-8 col-lg-6 was-validated ">
       <div class="form-row">
-
         <div class="col-md-4 mb-3">
-           
                <label for="name"><B>Full name</B></label> 
                <input type="text"   class="form-control" id="name"  placeholder="Jane Doe.." value=""required> 
-             
          </div> 
-         
          <div class="col-md-4 mb-3">
           <label for="Email"><B>Email address</B></label>
                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="" placeholder="Enter email"required>
-               
           </div>
           <div class="col-md-4 mb-3">
             <label for="title"><B>Job title</B></label> 
               <input type="text" class="form-control mb-2" id="title" placeholder="Director.." required> 
-               
           </div>
       </div>
       <div class="form-row">
         <div class="col-md-4 mb-3">
           <label for="Phone"><B>Phone Number</B></label> 
               <input type="number" class="form-control mb-2" id="Phone" minlength="9" maxlength="10" placeholder="050-1234567.."  min="10" required> 
-             
           </div>
           <div class="col-md-4 mb-3">
             <label for="height"><b>What is your height</b></label>
@@ -2917,7 +2910,7 @@
             }
    
                 function preview() {
-    frame.src=URL.createObjectURL(event.target.files[0]);
+    frame.src=URL.createObjecpreviewtURL(event.target.files[0]);
    
 }
                 function card (){
@@ -2930,7 +2923,6 @@
                 const h =document.getElementById('system1','system2','system3').value;
                 const checked = document.querySelector('#chec:checked') !== null;
 
-      // Get the table body element in which you want to add row
       let table = document.getElementById("tableBody");
    
       let row1 = document.createElement("tr")
