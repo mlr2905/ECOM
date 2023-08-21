@@ -77,38 +77,17 @@
      for(var r=0;r<rows;r++){  
        document.write("<tr>");  
   
-       for(var c=0;c<cols;c++){  
-          x = Color(); 
-         document.write(`<td onMouseEnter='colorize(this);' style=" background-color: ${x}; width:  20px; height:  20px; border: 1px solid black; cursor: pointer;"></td>`);   
-       }  
-       document.write("</tr>");  
-     }  
-     document.write("</tbody>");  
-    }  
-           document.write("</div>");  
+      for(var c=0;c<cols;c++){ 
+         x = Color();
+        document.write(`<td onMouseEnter='colorize(this);' style=" background-color: ${x}; width:  20px; height:  20px; border: 1px solid black; cursor: pointer;"></td>`);  
+      } 
+      document.write("</tr>"); 
+    } 
+    document.write("</tbody>"); 
+   } 
+          document.write("</div>"); 
+       
+   </script> 
+ </body> 
   
-           //שינוי צבע אקראי של התאים כל שניה  
-        function changeColor() { 
-          var table = document.querySelector("table"); 
-          for (var i = 0; i < table.rows.length; i++) { 
-            for (var j = 0; j < table.rows[i].cells.length; j++) { 
-              var cell = table.rows[i].cells[j]; 
-              cell.style.backgroundColor = "rgb(" + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ")"; 
-            } 
-          } 
-        } 
-  
-        setInterval(changeColor, 100); 
-          bodyColor()
-         function bodyColor() {
-           var body = document.querySelector("body");
-           body.style.backgroundColor = "rgb(" + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ")";
-         }
-setInterval(bodyColor, 250);
-
-
-
-
-    </script>  
-  </body>  
-  </html>
+ </html>
