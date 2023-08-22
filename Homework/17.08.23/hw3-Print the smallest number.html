@@ -11,18 +11,25 @@
   
 </head>
 <body>
+
     <form class=" mt-5 mx-auto col-6 col-md-4 col-lg-6 was-validated ">
+      <div class=" mt-5 mx-auto col-6 col-md-4 col-lg-12 was-validated">
+        
+        <b>Write a number in each cell, press the "Check" button and the small number will be printed</b><br/><br/>
+    </div>
         <div class="form-row">
           <div class="col">
-                 <label for="number-s"><B>Enter a starting number</B></label> 
-                 <input type="number"   class="form-control" id="number-s"  placeholder="starting number" required> 
+                 <label for="number2"><B>Enter a number 1</B></label> 
+                 <input type="number"   class="form-control" id="number1"  placeholder="2" required> 
            </div> 
            <div class="col">
-            <label for="number-e"><B>Enter an ending number</B></label>
-            <input type="number" class="form-control" id="number-e"   placeholder="end number"required> 
+            <label for="number2"><B>Enter a number 2</B></label>
+            <input type="number" class="form-control" id="number2"   placeholder="6"required> 
             </div>
-           
-              <button onclick="Print_the_lower_number()" class="btn btn-primary col" type="button">Submit form</button>
+        </div>
+        <br/>
+              <button onclick="Print_the_lower_number()" class="btn btn-primary col" type="button">Check</button>
+        </div>
 
               <table style="width: 40%; margin-left: 30%;"  id="myTable"class="table table-striped table-dark mt-5 table-hover table-bordered">
             
@@ -32,8 +39,8 @@
     </form>
     <script>
         function get_minimum() {
-         let a =document.getElementById('number-s').value;
-         let b =document.getElementById('number-e').value;  
+         let a =document.getElementById('number1').value;
+         let b =document.getElementById('number2').value;  
                 return a < b ? a : b;
                 
         }

@@ -20,10 +20,10 @@
         <label class="mr-sm-2" for="Select a city"><b>Choose a city of residence</b></label>
            <select  onchange="select()" class="custom-select mr-sm-2" id="select" required>
              <option  value="">Select a function</option>
-             <option value= 1 id="even" >is a even</option>
-             <option value= 2 id="positive" >is a positive</option>
-             <option value= 3 id="Single-digit" >is a Single-digit</option>
-             <option value= 4 id="divisible" >If divisible by 11</option>
+             <option value= 1 id="even" >Check if it is an even</option>
+             <option value= 2 id="positive" >Check if is a positive</option>
+             <option value= 3 id="Single-digit" >Check if is a Single-digit</option>
+             <option value= 4 id="divisible" >Check If divisible by 11</option>
              <option value= 5 id="random" > random: true/false</option>
 
            
@@ -118,7 +118,7 @@
             const a =document.getElementById('number').value;
                 c =single_digit(a)
                 c4.innerText = "Single-digit"
-                c5.innerText =  i
+                c5.innerText =  a
                 c6.innerText =  c
         } 
 
@@ -146,7 +146,7 @@
             const a =document.getElementById('number').value;
                 c =random(a)
                 c4.innerText = "random: true/false"
-                c5.innerText =  
+                c5.innerText =  a 
                 c6.innerText =  c
         }
         //#6  פונקציה שמאפסת את הדף
