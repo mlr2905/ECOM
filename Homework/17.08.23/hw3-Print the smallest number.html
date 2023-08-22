@@ -32,22 +32,25 @@
     </form>
     <script>
         function get_minimum() {
-         const a =document.getElementById('number-s').value;
-         const b =document.getElementById('number-e').value;  
+         let a =document.getElementById('number-s').value;
+         let b =document.getElementById('number-e').value;  
                 return a < b ? a : b;
+                
         }
-        
-                function Print_the_lower_number() {
       let table = document.getElementById("tableBody");
       let row1 = document.createElement("tr")
       let c1 = document.createElement("th")
       let c2 = document.createElement("td")
-      let c = get_minimum()
-      c1.innerText = "Result"
-      c2.innerText = c
       row1.appendChild(c1);
       row1.appendChild(c2);
       table.appendChild(row1)
+      
+                function Print_the_lower_number() {
+    
+      let c = get_minimum()
+      c1.innerText = "Result"
+      c2.innerText = c
+     
     }
 
     </script>
