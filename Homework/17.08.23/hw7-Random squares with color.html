@@ -15,15 +15,17 @@
 <script>
 function Random_squares_with_color() {
   for (var i = 0; i < 10; i++) {
-    var x = Math.random() * window.innerWidth;
-    var y = Math.random() * window.innerHeight;
-    var c = Math.random() * window.innerWidth;
-    var d = Math.random() * window.innerHeight;
-    var size1 = Math.random() * 150;
-    var size2 = Math.random() * 150;
-    var color = "rgb(" + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ")";
+    let x = Math.random() * window.innerWidth;
+    let y = Math.random() * window.innerHeight;
+    let c = Math.random() * window.innerWidth;
+    let d = Math.random() * window.innerHeight;
+    let size1 = Math.random() * 150;
+    let size2 = Math.random() * 150;
+    let size3 = Math.random() * 150;
+
+    let color = "rgb(" + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ")";
     document.body.innerHTML += "<div style='position: absolute; left: " + x + "px; top: " + y + "px; width: " + size1 + "px; height: " + size2 + "px; background-color: " + color + "'></div>";
-    document.body.innerHTML += " <div class='rounded-circle' style='position: absolute; left: " + c + "px; top: " + d + "px; width: " + size2 + "px; height: " + size1 + "px; background-color: " + color + "'></div>";
+    document.body.innerHTML += " <div class='rounded-circle' style='position: absolute; left: " + c + "px; top: " + d + "px; width: " + size3 + "px; height: " + size3 + "px; background-color: " + color + "'></div>";
 }
 setInterval(Random_squares_with_color, 1000);
 
