@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+    <button onclick="push()" class="btn btn-primary col" type="button">Enter 10 numbers</button>
+    <br/>
+    <button onclick="Order_numbers()" class="btn btn-primary col" type="button">Order numbers for average  </button>
+
+    <script>
+//פתרון שלך מהשיעור
+        const list1 = [5, 3, 1]
+        const words = ['I', 'Love','Java script']
+        const numbers = [ ]
+
+        function push(){
+        for (let i = 0; i < 10; i++) {
+            const number = parseInt(prompt(`"Enter 10 numbers one number at a time! twice the amount you entered:${i}"`));
+
+            numbers.push(number)
+        }
+        document.write(`<p>${numbers.join((" , "))}</p>`)
+    }
+        function Order_numbers () {
+            const numbers = [];
+
+while (true) {
+  const number = prompt("Enter a number: ");
+
+  if (number === "-99") {
+    break;
+  }
+
+  if (number < 1 || number > 100) {
+    continue;
+  }
+
+  numbers.push(number);
+}
+
+const total = numbers.reduce((a, b) => a + b);
+const average = total / numbers.length;
+
+document.write(`<p>The total number of numbers entered is, ${ numbers.length}</p>`);
+document.write(`The average of the numbers is, ${average}`);
+        }
+        
+    
+       
+
+
+    </script>
+</body>
+</html>
