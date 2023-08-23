@@ -311,46 +311,57 @@
                 <span class="tagnamecolor" style="color:brown">
                 <span class="tagcolor" style="color:mediumblue">&lt;</span>/p
                 <span class="tagcolor" style="color:mediumblue">&gt;</span>
-                <span class="commentcolor" style="color:green"> // = false <br/></span>
-                Sure, here is the code with each line in a paragraph:
-
-                ```
+                <span class="commentcolor" style="color:green"> // = false <br/><br/></span>
+                
                 <span class="commentcolor" style="color:green">
-
                 //#1--Give value to the variable a, b, c, d in order that the if() will be TRUE?
                 </span>
-                <p>if( a || b || c || d || false )</p>
-                <p>true || true || true || true || false = true</p>
-                <p>if( a == b || c <= d)</p>
-                <p>2 == 2 || 2  <=19 = true</p>
-                <p>if ( a <= c && c <= d || !b)</p>
-                <p>5 == 6 &&  6 <= 10 || !20/FALSE =TRUE</p>
-                <p>if ( a != b || a<c && !c )</p>
-                <p>6 != 10 || 6 < 9 && !0 = TRUE</p>
-                <p>if ( a != b ||a<= c || a<= b || true)</p>
-                <p>10 !=5 || 10 <=11 || 10 <= 5 || TRUE = false</p>
-                <p>if ( a != b ||a<= c || a< b || c==c )</p>
-                <p>10 != 15 || 10<=3 || 10 <15 || 3==3 = TRUE</p>
-                <p>if ( a%b == 0 && c%d == 1 )</p>
-                <p>20 % 2 == 0 && 11 % 2 == 1 =  TRUE</p>
-                
-                <p>//#2--Give value to the variable a, b, c, d in order that the if() will be FALSE?</p>
-                <p>if( a || b || c || d || false )</p>
-                <p>false || false || false || false || false = false</p>
-                <p>if( a == b || c <= d)</p>
-                <p>5 == 2 || 200  <=19 = false</p>
-                <p>if ( a <= c && c <= d || !b)</p>
-                <p>5 == 6 &&  60 <= 10 || !20/FALSE = false</p>
-                <p>if ( a != b || a<c && !c )</p>
-                <p>6 != 10 || 22 < 9 && !0 = false</p>
-                <p> if ( a != b ||a<= c || a<= b || true)</p>
-                <p>5 !=5 || 100 <=11 || 100 <= 5 || TRUE = false</p>
-                <p>if ( a != b ||a<= c || a< b || c==c )</p>
-                <p>15 != 15 || 15<=20 || 15 <15 || 20==20 = false</p>
-                <p>if ( a%b == 0 && c%d == 1 )</p>
-                <p>11 % 2 == 0 && 10 % 2 == 1 =  false</p>
-                ```
-                
+                <p class="jscolor" style="color:black">if( a || b || c || d || false )</p>
+                <span>true || true || true || true || false</span> 
+                <span class="commentcolor" style="color:green">= true</span><br/>
+                <p class="jscolor" style="color:black">if( a == b || c <= d)</p>
+                <span>2 == 2 || 2  <=19 </span>
+                <span class="commentcolor" style="color:green">= true</span><br/>
+                <p class="jscolor" style="color:black">if ( a <= c && c <= d || !b)</p>
+                <span>5 == 6 &&  6 <= 10 || !20/FALSE </span>
+                <span class="commentcolor" style="color:green">= true</span><br/>
+                <p class="jscolor" style="color:black">if ( a != b || a<c && !c )</p>
+                <span>6 != 10 || 6 < 9 && !0 </span>
+                <span class="commentcolor" style="color:green">= true</span><br/>
+                <p class="jscolor" style="color:black">if ( a != b ||a<= c || a<= b || true)</p>
+                <span>10 !=5 || 10 <=11 || 10 <= 5 || TRUE </span>
+                <span class="commentcolor" style="color:green">= true</span>
+                <p class="jscolor" style="color:black"if ( a != b ||a<= c || a< b || c==c )</p>
+                <span>10 != 15 || 10<=3 || 10 <15 || 3==3 = </span>
+                <span class="commentcolor" style="color:green">= true</span>
+                <p class="jscolor" style="color:black">if ( a%b == 0 && c%d == 1 )</p>
+                <span>20 % 2 == 0 && 11 % 2 == 1 = </span>
+                <span class="commentcolor" style="color:green">= true</span><br/><br/>
+
+                <span class="commentcolor" style="color:green">//#2--Give value to the variable a, b, c, d in order that the if() will be FALSE?</span>
+                <p class="jscolor" style="color:black">if( a || b || c || d || false )</p>
+                <span>false || false || false || false || false </span>
+                <span class="commentcolor" style="color:green">= false</span>
+                <p class="jscolor" style="color:black">if( a == b || c <= d)</p>
+                <span>5 == 2 || 200  <=19 </span>
+                <span class="commentcolor" style="color:green">= false</span>
+                <p class="jscolor" style="color:black">if ( a <= c && c <= d || !b)</p>
+                <span>5 == 6 &&  60 <= 10 || !20/FALSE </span>
+                <span class="commentcolor" style="color:green">= false</span>
+                <p class="jscolor" style="color:black">if ( a != b || a<c && !c )</p>
+                <span>6 != 10 || 22 < 9 && !0 </span>
+                <span class="commentcolor" style="color:green">= false</span>
+                <p class="jscolor" style="color:black"> if ( a != b ||a<= c || a<= b || true)</p>
+                <span>5 !=5 || 100 <=11 || 100 <= 5 || TRUE</span>
+                <span class="commentcolor" style="color:green">= false</span>
+                <p class="jscolor" style="color:black">if ( a != b ||a<= c || a< b || c==c )</p>
+                <span>15 != 15 || 15<=20 || 15 <15 || 20==20 </span>
+                <span class="commentcolor" style="color:green">= false</span>
+                <p class="jscolor" style="color:black">if ( a%b == 0 && c%d == 1 )</p>
+                <span>11 % 2 == 0 && 10 % 2 == 1 </span>
+                <span class="commentcolor" style="color:green">= false</span>
+
+                </span>
                 <br/></span>                
     <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/body
     <span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown">
@@ -359,47 +370,5 @@
     </div>
     <br/>
     </div>
-
-<body>
-
-    <script> 
-
-
-//Exercice 5:
-
-//#1--Give value to the variable a, b, c, d in order that the if() will be TRUE?
-//if( a || b || c || d || false )
-//  true || true || true || true || false = true 
-//if( a == b || c <= d)
-//  2 == 2 || 2  <=19 = true
-//if ( a <= c && c <= d || !b)
-// 5 == 6 &&  6 <= 10 || !20/FALSE =TRUE
-//if ( a != b || a<c && !c )
-//  6 != 10 || 6 < 9 && !0 = TRUE
-//if ( a != b ||a<= c || a<= b || true)
-//     10 !=5 || 10 <=11 || 10 <= 5 || TRUE = false
-//if ( a != b ||a<= c || a< b || c==c )
-//   10 != 15 || 10<=3 || 10 <15 || 3==3 = TRUE
-//if ( a%b == 0 && c%d == 1 )
-//  20 % 2 == 0 && 11 % 2 == 1 =  TRUE
-
-//#2--Give value to the variable a, b, c, d in order that the if() will be FALSE?
-//if( a || b || c || d || false )
-//  false || false || false || false || false = false 
-//if( a == b || c <= d)
-//  5 == 2 || 200  <=19 = false
-//if ( a <= c && c <= d || !b)
-// 5 == 6 &&  60 <= 10 || !20/FALSE = false
-//if ( a != b || a<c && !c )
-//  6 != 10 || 22 < 9 && !0 = false
-// if ( a != b ||a<= c || a<= b || true)
-//  5 !=5 || 100 <=11 || 100 <= 5 || TRUE = false
-//if ( a != b ||a<= c || a< b || c==c )
-//   15 != 15 || 15<=20 || 15 <15 || 20==20 = false
-//if ( a%b == 0 && c%d == 1 )
-//  11 % 2 == 0 && 10 % 2 == 1 =  false
-
-
-    </script>
 </body>
 </html>
