@@ -33,6 +33,7 @@ body.darkpagetheme .w3-warning .w3-codespan,body.darkpagetheme .w3-note .w3-code
 .w3-code,w3-codeline{
   font-size:15px;
 }
+.w3-code{background-color:white;color:black;}
 
 .w3-example .w3-btn, .w3-example .ws-btn {
   background-color:#04AA6D!important;
