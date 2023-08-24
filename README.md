@@ -3,7 +3,9 @@
   
 
 <h2>
- The git of: Michael Rozental
+ The git of:
+---
+ Michael Rozental
 </h2>
 </div>
 <div align="center">
