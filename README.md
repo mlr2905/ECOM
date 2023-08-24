@@ -4,7 +4,6 @@
 
 <h2>
  The git of:
----
  Michael Rozental
 </h2>
 </div>
