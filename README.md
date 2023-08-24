@@ -14,7 +14,7 @@
 :man_technologist: 
 About Me :
 ---
-I learn Full Stack Developer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="50"> from Israel.
+I learn Full Stack Developer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="100"> from Israel.
 
 
 <div>
