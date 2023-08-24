@@ -12,9 +12,9 @@
 ---
 
 :man_technologist: 
-About Me :
+About Me :<img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="100">
 ---
-I learn Full Stack Developer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="100"> from Israel.
+I learn Full Stack Developer  from Israel.
 
 
 <div>
