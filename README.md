@@ -3,7 +3,7 @@
   
 
 <h2>
- The git of:
+ The git of :
  Michael Rozental
 </h2>
 </div>
