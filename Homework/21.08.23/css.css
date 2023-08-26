@@ -1,7 +1,7 @@
 body{
   margin: auto;
 
-  width: 80%;
+  width: 90%;
 }
 
 #sidenav a.activesub:link,#sidenav a.activesub:visited {background-color:#ddd;color:#000;}
