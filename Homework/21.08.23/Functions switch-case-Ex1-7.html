@@ -19,7 +19,7 @@
     <div class=" mt-5 mx-auto col-6 col-md-4 col-lg-6 was-validated">
     <div class="col-md-4 mb-3">
         <label for="number-d"><B>Enter a number/text</B></label> 
-        <input type="number" class="form-control mb-2" id="number" placeholder="Enter a number/text" required>   
+        <input type="number/text" class="form-control mb-2" id="number" placeholder="Enter a number/text" required>   
       </div>
       <div class="col-md-4 mb-3">
         <label for="number2" ><B>Enter a number 2 and 3</B><br/>(Show only for function 7)</label> 
@@ -150,7 +150,7 @@
 
 
 
-
+        //#3  פונקציה זו מחזירה את היום הספציפי
         function days_of_week(n) {
     switch (n) {
         case "1":
@@ -176,7 +176,7 @@ function get_days_of_the_week (){
         
         const a =document.getElementById('number').value;
             c =days_of_week(a)
-            c4.innerText = " What a day ?
+            c4.innerText = " What a day"
             c5.innerText =  a
             c6.innerText =  c
     }
