@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array functions</title>
+</head>
+<body>
+    <hr />
+    <script>
+
+        const a = [1, 29, 3, 40, 5]
+        a.push(6)
+        a.push(7)
+        // a = [4,54,6] // ERROR
+        // a = 1 // ERROR
+
+        function printElement(element, index, arr) {
+            document.write(`<b>${element} index: #${index} array: ${arr}</b> <br/>`);
+        }
+        const b = [8, 9, 9, 9, 9]
+        for(let element in a) {
+            // ok to access array b
+        }
+
+         for (let i = 0; i < a.length; i++) {
+             printElement(a[ i ], i, a)
+         }
+        
+        a.forEach(printElement);
+        // **BONUS:
+        // a.forEach(function (element, index, arr) {
+        //     document.write(`<b>${element} index: #${index} array: ${arr}</b> <br/>`);
+        // });
+        // a.forEach(element, index, arr => 
+        //     document.write(`<b>${element} index: #${index} array: ${arr}</b> <br/>`));
+
+        // [1, 29, 3, 40, 5, 6, 7]
+        //  0  1   2  3  4  5  6
+
+        // read from the user 4 numbers
+        // push all of them into an array
+        // write a function called hrPrint (element, index, arr)
+        // call this function with the forEach loop
+        // inside hrPrint print  <hr> element in green, its index in blue, and the array in red
+        // *bonus: if this is the first element then print the elemnt in bold
+        //         if this is the last element then print the element in pink
+
+        const numbers = []
+        for (let i = 1; i <= 4; i++) {
+             const number = parseInt(prompt(`Please enter number #${i}`))
+             numbers.push(number)
+         }        
+        function print_hr(element, index, arr) {
+            document.write(`<hr>`)
+            if (index == 0) 
+                document.write(`<p>item = <span style="color:green"><b>${element}</b></span>
+                                index = <span style="color:blue">${index}</span>
+                                arr = <span style="color:red">${arr}</span>`)            
+            else if (index == numbers.length - 1) 
+                document.write(`<p>item = <span style="color:pink">${element}</span>
+                                index = <span style="color:blue">${index}</span>
+                                arr = <span style="color:red">${arr}</span>`)            
+            else
+                document.write(`<p>item = <span style="color:green">${element}</span>
+                                index = <span style="color:blue">${index}</span>
+                                arr = <span style="color:red">${arr}</span>`)
+        }
+        numbers.forEach(print_hr)
+
+    </script>
+
+</body>
+</html>

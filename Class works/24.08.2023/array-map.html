@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAP</title>
+</head>
+<body>
+    <script>
+
+        const x = [1, 2, 3, 4, 5] 
+        //            1  2  3   4   5
+        // objective: 1, 4, 9, 16, 25
+
+        const power1 = [ ]
+        for(let element in x) {
+            power1.push(element ** 2)
+        }
+
+        const power2 = [ ]
+        function new_element(element) {
+            return 0
+        }
+        for(let element in x) {
+            power2.push( new_element(element) )
+        }        
+
+        const power3 = x.map(new_element)
+        // [1, 2, 3, 4, 5]
+        // [1, 4, 9, 16, 25]
+
+        // **BONUS
+        //const power4 = x.map(element => element ** 2)
+        //const power5 = x.map(element => element ** 2).filter(element => element > 14)
+
+        // 1. create a list , get grades from the user until he writes -99
+        //    add all of the grades into a list
+        // 2. FILTER from the list all the grades which are not between 0-100
+        // 3. calc the average (you can use forEach if you want. not mandatory)
+        // 4. create a new list1 (with FILTER) which only contain the grades above the average
+        // 5. create a new list2 (with FILTER) which only contain the grades BELOW the average
+        // 6. use MAP, create a list3 which cotnains 1,0 . above average will have 1 else 0
+        // Example:
+        //   [80, 95, 90, 85]
+        //   avg = 87.5
+        //   list1 = [90, 95]
+        //   list2 = [80, 85]
+        //   list3 = [0, 1, 1, 0]
+
+    </script>
+</body>
+</html>

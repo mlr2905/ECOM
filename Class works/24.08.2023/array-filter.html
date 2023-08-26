@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array functions</title>
+</head>
+<body>
+    <hr />
+    <script>
+
+        const a = [-1, -29, 3, -40, 0]
+        a.push(6)
+        a.push(7)
+        // a = [4,54,6] // ERROR
+        // a = 1 // ERROR
+        
+        document.write(`${a} <br />`)
+
+        // 1
+        const only_positive1 = [ ] 
+        // 2
+        for (let i = 0; i < a.length; i++) {
+            // 3
+             if (a [ i ] > 0) {
+                // 4 if - true -> add to new array
+                only_positive1.push(a [ i ])
+             }
+         }
+
+         document.write(`Only positive #1: ${only_positive1} <br />`)
+
+        const only_positive2 = [ ] 
+        function add_positive(element) {
+            if (element > 0) {
+                only_positive2.push(element)
+            }
+        }
+        a.forEach(add_positive)
+
+        document.write(`Only positive #2: ${only_positive2} <br />`)
+
+        function does_belong_to_new_list(element) {
+            return element > 0;
+        }
+        // for (let i = 0; i < a.length; i++) {
+        //     if (does_belong_to_new_list(a[ i ])) {
+        //         only_positive2.push(element)
+        //     }
+        //  }
+
+        const only_positive3 = a.filter(does_belong_to_new_list)
+        // **Bonus:
+        //const only_positive4 = a.filter(function (element) {return element > 0; })
+        //const only_positive5 = a.filter(element => element > 0)
+
+        document.write(`Only positive #3: ${only_positive3} <br />`)
+        
+        // forEach
+        // filter
+        // for-each
+
+         // not need index   
+         // const a = [-1, -29, 3, -40, 0]
+        const only_positive4 = []
+        for (let element in a) {
+            if (element > 0) {
+                only_positive4.push(element)
+            }
+        }
+
+        for (let i = 0; i < a.length; i++) {
+            // 3
+             if (a [ i ] > 0) {
+                // 4 if - true -> add to new array
+                only_positive1.push(a [ i ])
+             }
+         }
+
+         for (let i of a) {
+            // 0 1 2 3 4 5
+         }
+
+    </script>
+
+</body>
+</html>
