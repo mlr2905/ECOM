@@ -1,4 +1,8 @@
+body{
+  margin: auto;
 
+  width: 90%;
+}
 
 #sidenav a.activesub:link,#sidenav a.activesub:visited {background-color:#ddd;color:#000;}
 #sidenav a.activesub:hover,#sidenav a.activesub:active {background-color:#ccc;color:#000;}
