@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY functions</title>
+</head>]
+<style>
+    table {
+  border-collapse: collapse;
+  width: 40%;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+</style>
+<body>
+    <table>
+      <tbody id="table"> </tbody>
+
+    <script>
+
+    document.write("<h2>Ex1</h2>");
+
+    const list_rnd = [];
+
+    for (let i = 0; i < 10; i++) {
+    list_rnd.push(Math.floor(Math.random() * 7) + 1);
+    }
+    document.write("<p><b>1 - רוץ על המערך באמצעות forEach.list_rnd והדפס את המספרים למסך</b></p>")
+
+    list_rnd.forEach((number) => {
+        document.write(`<spam>${number},</spam>`)
+    });
+    document.write("<br/>")
+    document.write("<p><b>2 - for (let number in rnd_list) מסוג לולאה באמצעות המערך </b></p>")
+
+    for (const number of list_rnd) {
+        document.write(`<spam>${number},</spam>`)
+
+    }
+    document.write("<br/>")
+
+    document.write("<p><b>3 - כדי לחשב את סכום המספרים forEach השתמש ב </b></p>")
+
+    let sum = 0;
+    list_rnd.forEach((number) => {
+    sum += number;
+    
+    });
+    document.write(`<spam>${sum},</spam>`)
+    document.write("<br/>")
+
+    document.write("<p><b>4 -  המכילה רק את המספרים הקטנים מ - 5 ,filter ייצר רשימה חדשה באמצעות </b></p>")
+
+    for (let i = 0; i < 10; i++) {
+    list_rnd.push(Math.floor(Math.random() * 7) + 1);
+    }
+
+    const o = list_rnd.filter((number) => {
+    return number < 5;
+    });
+    document.write(o)
+    document.write("<br/>")
+
+    document.write("<p><b>6- המכילה את כל אותם המספרים אבל בחזקת 2 MAP  ייצר רשימה חדשה באמצעות </b></p>")
+
+    const list_pow2 = o.map((number) => {
+    return number ** 2;
+    });
+
+    document.write(list_pow2);
+
+    document.write("<h2>Ex2</h2>");
+    document.write("<p><b> ושים בתוכו את המחזורת הבאה names ייצר מערך בשם  </b></p>")
+    document.write("<p><b>[ Emily, Liam, Sophia, Noah, Olivia, Ethan, Ava, Jackson, Isabella, Aiden]</b></p>")
+
+    
+    const names = ["Emily", "Liam", "Sophia", "Noah", "Olivia", "Ethan", "Ava", "Jackson", "Isabella", "Aiden"];
+
+    const table = document.querySelector("table");
+    function tableS(){
+    names.forEach((name) => {
+    const tr = document.createElement("tr");
+    const td = document.createElement("td");
+    td.textContent = name;
+    tr.appendChild(td);
+    table.querySelector("tbody").appendChild(tr);
+    });
+    }
+    const lNames = names.filter((name) => {
+    return name.length <= 4;
+    });
+    document.write("<p><b>  במכילה רק את השמעות באורך 4 אותיות filter ייצר רשימה חדשה בשם  </b></p>")
+
+    document.write(lNames);
+    document.write("<br/>")
+    document.write("<br/>")
+    document.write("<p><b>המכילה רק את אורכי המילים map ייצר רשימה חדשה באמצעות </b></p>")
+
+const lengths = names.map((name) => {
+  return name.length;
+});
+
+document.write(lengths);
+document.write("<br/>")
+
+document.write("<p><b>MAP ייצר רשימה חדשה  המכילה רק את האות הראשונה מכל מיליה באמצעות </b></p>")
+
+const first_letter = names.map((name) => {
+  return name[0];
+});
+
+document.write(first_letter);
+
+document.write("<p><b>filter באמצעות Eייצר רשימה חדשה   , המכילה רק את השמות המכילים בתוכם את האות </b></p>")
+
+const namesE = names.filter((name) => {
+  return name.includes("E");
+});
+document.write("<br/>")
+
+document.write(namesE);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.write("<p><b> עבור כל שם המופיעה ברשימה td  יחד עם  tr והוסף  ForEach  רוץ באמצעות לולאת  </b></p>")
+
+tableS()
+    </script>
+</body>
+</html>
