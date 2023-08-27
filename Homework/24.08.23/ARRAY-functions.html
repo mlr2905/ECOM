@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARRAY functions</title>
-</head>]
+</head>
 <style>
     table {
   border-collapse: collapse;
@@ -99,7 +99,6 @@ td {
 
     document.write(lNames);
     document.write("<br/>")
-    document.write("<br/>")
     document.write("<p><b>המכילה רק את אורכי המילים map ייצר רשימה חדשה באמצעות </b></p>")
 
 const lengths = names.map((name) => {
@@ -122,24 +121,21 @@ document.write("<p><b>filter באמצעות Eייצר רשימה חדשה   , ה
 const namesE = names.filter((name) => {
   return name.includes("E");
 });
-document.write("<br/>")
 
 document.write(namesE);
 
+document.write("<p><b> some אתגר עובר הרשימה בתרגיל 2 בדק עם קיים מילה אחת לפות באורך 8 תווים באמצעות </b></p>")
 
+const names8 = names.some((name) => {
+  return name.length >= 8;
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
+document.write(names8);
+document.write("<br/>")
+document.write("<p><b>אתגר צור בשורה אחת ,מערך בגודל 100 שכולו מספרי אקריים בין 1 -  10  </b></p>")
+const mr = Array.from(Array(100), (_, i) => Math.floor(Math.random() * 10) + 1);
+document.write(mr)
+document.write("<br/>")
 
 document.write("<p><b> עבור כל שם המופיעה ברשימה td  יחד עם  tr והוסף  ForEach  רוץ באמצעות לולאת  </b></p>")
 
