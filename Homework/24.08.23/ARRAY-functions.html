@@ -136,6 +136,16 @@ const names8 = names.some((name) => {
 document.write(names8);
 document.write("<br/>")
 document.write("<p><b>אתגר צור בשורה אחת ,מערך בגודל 100 שכולו מספרי אקריים בין 1 -  10  </b></p>")
+document.write("<b>fill</b>")
+document.write("<br/>")
+
+let rm = new Array(100)    
+      rm = rm.fill(0).map(() => Math.floor(Math.random() * 10)+ 1) ;
+      document.write(rm)
+      document.write("<br/>")
+      document.write("<b>from</b>")
+      document.write("<br/>")
+
 const mr = Array.from(Array(100), (_, i) => Math.floor(Math.random() * 10) + 1);
 document.write(mr)
 document.write("<br/>")
