@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>auto gen events2</title>
+
+</head>
+<body>
+    <h1>EVENT for button click</h1>
+    <!-- <button id="button1" onclick="alert('hi from button')">SAY HI</button> -->
+    <button id="button1">SAY HI</button>
+    <script>
+        const html_button1 = document.getElementById('button1')
+
+        function click_button() {
+            alert('hi from button')
+        }
+
+        // 1
+        //html_button1.onclick = click_button
+
+        // 2
+        //html_button1.addEventListener('click', click_button)
+
+        // 3
+        //html_button1.addEventListener('click',  () => function click_button() {
+                                  //alert('hi from button')})
+
+        // 4
+        html_button1.addEventListener('click',  () => alert('hi from button'))
+
+    </script>
+
+
+</body>
+</html>

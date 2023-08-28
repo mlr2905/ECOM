@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>auto gen events1</title>
+    <style>
+        .board {
+            display: grid;
+            grid-template-columns: repeat(10, 50px);
+            grid-gap: 2px;
+            margin-top: 20px;
+        }
+        .cell {
+            width: 50px;
+            height: 50px;
+            font-size: 12px;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+    </style>    
+</head>
+<body>
+    <h1>GAME</h1>
+    <div id="container" class="board">
+        <!--                            event     listener   -->
+        <div class="cell"  id="cell-0" onclick="cell_click(0)">0</div>
+        <div class="cell"  id="cell-1" onclick="cell_click(1)">1</div>
+        <div class="cell"  id="cell-2" onclick="cell_click(2)">2</div>
+        <div class="cell"  id="cell-3" onclick="cell_click(3)">3</div>
+        <div class="cell"  id="cell-4" onclick="cell_click(4)">4</div>
+        <div class="cell"  id="cell-5" onclick="cell_click(5)">5</div>
+        <div class="cell"  id="cell-6" onclick="cell_click(6)">6</div>
+        <div class="cell"  id="cell-7" onclick="cell_click(7)">7</div>
+        <div class="cell"  id="cell-8" onclick="cell_click(8)">8</div>
+        <div class="cell"  id="cell-9" onclick="cell_click(9)">9</div>
+    </div>
+   
+    <script>
+        const arr = (new Array(10)).fill(-1, 0, 10)
+        function cell_click(cell_number) {
+            // instead of this alert 
+            // change the text to X
+            // console.log the array after each click
+            // if the array in this index is already populate, do nothing
+            // if the array is full of 'X' -> alert('Finish')
+            //alert(cell_number)
+            if (arr[cell_number] != 'X') {
+                document.getElementById(`cell-${cell_number}`).textContent = 'X'
+                arr[cell_number] = 'X'
+                // ['X', 'X', -1]
+                //arr.filter(element => element == 'X').length == arr.length
+                // if (arr.some(element => element == -1) == false) {
+                //     alert('FINISH !')
+                // }
+                if (arr.every(element => element == 'X')) {
+                    alert('FINISH !')
+                }
+            }
+        }
+        
+        
+        // do NOT write this code:
+        // function cell_click0() {
+        //     alert(0)
+        // }
+        // function cell_click1() {
+        //     alert(1)
+        // }        
+        // function cell_click2() {
+        //     alert(2)
+        // }                
+    </script>
+
+
+</body>
+</html>

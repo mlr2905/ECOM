@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>auto gen events3</title>
+
+</head>
+<body>
+    <h1>EVENT for text box update</h1>
+    <p>ENTER your name: <input type="text" id="textInput"> </p>
+    <p id="outputText"></p>
+    <script>
+        const html_input_text = document.getElementById('textInput')
+
+        function text_changed() {
+            console.log(html_input_text.value)
+            document.getElementById('outputText').textContent = html_input_text.value
+        }
+
+        // 1
+        html_input_text.addEventListener('input',  text_changed)
+
+        // 2
+        html_input_text.addEventListener('input',  () => {
+            console.log(html_input_text.value)
+            document.getElementById('outputText').textContent = html_input_text.value
+        })
+
+    </script>
+
+
+</body>
+</html>

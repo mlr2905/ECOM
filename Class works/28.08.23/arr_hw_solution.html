@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW SOLUTION</title>
+</head>
+<body>
+    <script>
+
+        const RANDOM_ARRAY_SIZE = 10;
+        const ARRAY_NUMBER_RANGE = 7;
+
+        function get_random(range) {
+            return Math.floor(Math.random() * range) + 1
+        }
+
+        const rnd_list = [ ]
+        for (let i = 1; i <= RANDOM_ARRAY_SIZE; i++) {
+            let random_number = get_random(ARRAY_NUMBER_RANGE)
+            rnd_list.push( random_number )
+            // rnd_list.push( get_random(ARRAY_NUMBER_RANGE) )
+        }
+
+        print(`<h1>Question 1</h1>`)
+
+        function print(element, index) {
+            document.write(`${element} `)
+        }
+
+        function break_line() {
+            document.write(`<br />`)
+        }        
+
+        // rnd_list = [5, 3, 2, 4, 1]
+        rnd_list.forEach( print )
+        break_line()
+        rnd_list.forEach(element => document.write(`${element} `))
+        // break_line()
+        // in is used for the index
+        // for (const index in rnd_list) {
+        //     print( rnd_list[index] )
+        // }
+
+        // too long........
+        // for (let i = 0; i < rnd_list.length; i++) {
+        //     print( rnd_list[ i ] )
+        // }
+
+        // of is used for the element
+        break_line()
+        for (const element of rnd_list) {
+            print( element )
+        }       
+        break_line()
+        let sum = 0;
+        function add(element) {
+            sum += element
+        }
+        rnd_list.forEach(add)
+        document.write(`The sum is : ${sum}`)
+        break_line()
+        function only_smaller_than_5(element) {
+            if (element < 5) {
+                return true;
+            }
+            return false;
+            //return element < 5
+        }
+
+        const small_than_5 = rnd_list.filter(only_smaller_than_5)
+        // long way ....
+        // const new_list_small_5 =  [ ]
+        // for (const element of rnd_list) {
+        //     if (element < 5) {
+        //         new_list_small_5.push(element)
+        //     }
+        // }  
+
+        const smallthan_5 = rnd_list.filter(element => element < 5)
+
+        //const largerthan_4 = rnd_list.filter(element => element > 4)
+
+        function power2(element) {
+            return element ** 2
+        }
+        // long ....
+        // for (let i = 0; i < rnd_list.length; i++) {
+        //      rnd_list[ i ] = power2(rnd_list[ i ])
+        // }
+
+         // rnd_list = [5, 3, 2, 4, 1]
+         //            [25, 9, 4, 16, 1]
+        const list_power_2 = rnd_list.map(power2)
+
+        const list_power2 = rnd_list.map(element => element ** 2)
+        print("power 2: ")
+        list_power2.forEach( print )
+
+        function get_day(element) {
+            switch (element) {
+                case 1: return "Sunday"
+                case 2: return "Monday"
+                case 3: return "Tuesday"
+                case 4: return "Wednesday"
+                case 5: return "Thursday"
+                case 6: return "Friday"
+                case 7: return "Saturday"
+                    default: return "what ??"
+            }
+        }
+
+         // rnd_list = [5, 3, 2, 4, 1]
+         //            ["Thursday", "Tuesday", ...]
+        const days_name = rnd_list.map(get_day)
+        break_line()
+        days_name.forEach(print)
+        print("<hr />")
+        print(`<h1>Question 2</h1>`)
+        const words = ["Emily", "Liam", "Sophia", "Noah", 
+                    "Olivia", "Ethan", "Ava", "Jackson", "Isabella", "Aiden" ]
+        print("<table border=2>")
+        print("<TR>")
+        words.forEach(element => print(`<td style='padding:5px'> ${element} </td>`))
+        print("</TR>")
+        print("</table>")
+        break_line();
+        const longer_equals_4 = words.filter(word => word.length >= 4)
+        longer_equals_4.forEach(print)
+        break_line()
+        //short_equals_4.forEach(word => document.write(`${word} `))
+        const short_equals_4 = words.filter(word => word.length <= 4)
+        short_equals_4.forEach(print)
+        break_line()        
+        let shirshur = ""
+        for (const word of words) {
+            shirshur += word
+        }
+        print(shirshur)
+        break_line()
+        shirshur = ""
+        words.forEach(word => shirshur += word)
+        print(shirshur)
+        break_line()
+
+        const words_length = words.map(word => word.length)
+        print(words_length)
+        break_line()        
+        const words_length_detailed = words.map(word => `${word}[${word.length}] `)
+        print(words_length_detailed)
+        break_line()              
+
+        const first_letter = words.map(word => word[0])
+        print(first_letter)
+        break_line()                      
+
+        const e_present = words.filter(word => word.indexOf('E') >= 0)
+        print(e_present)
+        break_line()                 
+        
+        const has_8_letters = words.some(word => word.length >= 8)
+        const grades = [88, 77, 24, 0, 100]
+        const has_atleast_1_distinguish = grades.some(grade => grade == 100)
+        const has_failures = grades.some(grade => grade < 55)
+        // let has_100 = false;
+        // for (const grade of grades) {
+        //     if (grade == 100) {
+        //         has_100 = true
+        //         break
+        //     }
+        // }
+        break_line();
+
+        // BONUS
+        const arr_rnd1 = [ ]
+        const arr_rnd2 = new Array(10)
+        // 1
+        for (let i = 0; i < arr_rnd2.length; i++) {
+            arr_rnd2[ i ] = 0
+        }
+        // 2
+        arr_rnd2.fill(0, 0, arr_rnd2)
+        arr_rnd2.map(element => get_random(10))
+        const arr_rnd3 = (new Array(10)).fill(1, 0, 10).map(element => get_random(10))
+        arr_rnd3.forEach(print)
+        break_line()
+        
+        const arr_rnd4 = Array.from(Array(10), element => get_random(10))
+        arr_rnd4.forEach(print)
+        break_line()        
+    </script>
+  
+</body>
+</html>
