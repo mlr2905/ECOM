@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW SOLUTION 1</title>
+</head>
+<body>
+    <h1>Welcome to the Matrix!</h1>
+    <p>NUMBER: <input id="number_txt" type="number" min="1" max="100"></p>
+    <button id="search_btn" onclick="search_matrix()">SEARCH</button>
+    <br />
+    <div id="result"></div>
+    <script>
+        const MATRIX_SIZE = 10
+        const matrix = []
+        for (let i = 0; i < MATRIX_SIZE; i++) {
+            const arr = []
+            for (let j = 0;  j < MATRIX_SIZE; j++) {
+                const random_number = get_random_number(100)
+                arr.push(random_number)
+            }
+            matrix.push(arr)
+        }
+        function search_matrix() {
+            console.log(matrix);
+            const search_number = parseInt(document.getElementById('number_txt').value)
+            const result = []
+            for (let rows = 0; rows < MATRIX_SIZE; rows++) {
+                for (let col = 0;  col < MATRIX_SIZE; col++) {
+                    if (matrix[rows][col] == search_number) {
+                        result.push(`[${rows}, ${col}]`)
+                    }
+                }
+            }
+            // "" + "1"  ==> "1" + " " ==> "1 "
+            // "" + "[3, 5]" ==> "[3,5]" + " " + "[2,6]" ==> "[3,5] [2,6]"
+            document.getElementById('result').textContent = ""
+            if (result.length == 0) {
+                document.getElementById('result').textContent = "missing"
+            }
+            else {
+                result.forEach(item => document.getElementById('result').textContent += item + " ")
+            }
+        }
+        function get_random_number(range) {
+            return Math.floor(Math.random() * range) + 1
+        }
+
+    </script>
+</body>
+</html>

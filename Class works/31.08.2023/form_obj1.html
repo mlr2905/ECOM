@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page with object</title>
+</head>
+<body>
+    <h1>Welcome to the mobile store:</h1>   
+    <p>TYPE: <input id="type_txt" type="text"></p>
+    <p>PRICE: <input id="price_txt" type="number"></p>
+    <p>COLOR: <input id="color_txt" type="text"></p>
+    <button onclick="send_details()">SEND DETAILS</button>
+    <hr>
+    <div id="result" />
+</body>
+    <script>
+        function send_details() {
+            const mobile_type = document.getElementById('type_txt').value
+            const mobile_price = 
+                parseFloat(document.getElementById('price_txt').value)
+            const mobile_color = document.getElementById('color_txt').value
+            const mobile = {
+                'type': mobile_type,
+                price: mobile_price,
+                color: mobile_color
+            }
+            mobile_par = document.createElement('p')
+            mobile_par.textContent = JSON.stringify(mobile)
+            document.getElementById('result').appendChild( mobile_par )
+            // const my_mobile = {
+            //     mobile_type, mobile_price, mobile_color
+            // }
+        }
+    </script>
+</html>

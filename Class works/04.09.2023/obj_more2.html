@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MORE OBJECTS 2</title>
+</head>
+<body>
+    <script>
+
+        function create_student(student_name, student_grades, student_age) {
+            const obj = {
+                name: student_name,
+                grades: student_grades,
+                print_avg() {
+                    let sum = 0
+                    this.grades.forEach(grade => sum += grade)
+                    let avg = sum / this.grades.length
+                    document.write(`Student ${this.name} avg:${avg}`)
+                },
+                age: student_age,
+                say_hello() {
+                    console.log('hello');
+                }
+            }
+
+            return obj;
+        }
+        // nodejs
+        const danny = create_student('danny', [99, 100, 97, 88], 25)
+        const ronny = create_student('ronny', [79, 91, 100, 75], 28)
+        danny.print_avg()
+        document.write(`<br />`)
+        ronny.print_avg()
+        document.write(`<br />`)
+
+        // write a function that creates a point
+        // inside the point there will be x, y
+        // function called print() -- document.write the x and y 
+        // i.e. -- if the x is 1.5 and the y is 7.9 the print will look like this:
+        //   (1.5, 7.9)  
+        // *bonus: function equals(point) returns true if x and y are equal in both points
+
+        function create_point(point_x, point_y) {
+            const point = {
+                x: point_x,
+                y: point_y,
+                print() {
+                    document.write(`(${this.x}, ${this.y})`)
+                },
+                equals(another_point) {
+                    return this.x == another_point.x && this.y == another_point.y
+                }
+            }
+            return point
+        }
+        const point1 = create_point(1.5, 7.9)
+        const point2 = create_point(1.5, 7.9)
+        const point3 = create_point(8, 0)
+        point1.print()
+        console.log('equals p1 p2');
+        console.log(point1.equals(point2));
+        console.log('equals p1 p3');
+        console.log(point1.equals(point3));
+
+    </script>
+</body>
+</html>

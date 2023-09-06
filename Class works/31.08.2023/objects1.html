@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Oriented Programming</title>
+</head>
+<body>
+    <script>
+        const name = prompt("what's your name: ")
+        const age = parseInt(prompt("what's your age: "))
+        const height = parseFloat(prompt("what's your height: "))
+        const kids = ['danny','moshe','sima']
+
+        const the_object = {
+            the_name: name
+        }
+        const the_object2 = {
+            //'name': name
+            name
+        }        
+
+        function print_details(name, age, height, kids) {
+
+        }
+
+        print_details(name, age, height, kids)
+        const arr = ["a", 12, [1,2]]
+        arr[0]
+        const person = { 
+            "person_name": name, 
+            person_age: age, 
+            the_height: height, 
+            the_kids: kids }
+        // person[the_kids]
+        //document.write( JSON.stringify(person) )
+        
+        // create an object with json
+        // your first name
+        // your height
+        // your address
+        // your age
+        // fields document.write
+        const my_details = {
+            name: 'Moshe',
+            height: 1.95,
+            address: {
+               street: 'Rotshild',
+               number: {
+                house_number: 10,
+                apt: 1
+               }
+            },
+            kids: ['danny','moshe','sima'],
+            city: 'Tel aviv',
+            country: 'Israel'
+        }
+
+        console.log( my_details.height );
+        my_details.car = 'Toyota'
+        delete my_details.car
+        my_details.name = 'Yossi'
+
+        document.write(JSON.stringify(my_details))
+        
+        const details = [my_details, { name: 'itay'}]
+
+        for(let key in my_details) {
+            if (typeof(my_details[key]) == 'object') 
+                document.write(`${key} : ${JSON.stringify(my_details[key])} <br>`)
+            else 
+                document.write(`${key} : ${my_details[key]} <br>`)
+        }
+
+        // Mobile Phone
+        // create input type text for brand (i.e. iphone)
+        // create input type number for price  
+        // create input type text for color
+        // create button -> 
+        //     on click create object with these 3 fields 
+        //     and document.write the object
+        //const value_name = 
+        const mobile = { 
+            name : value_name
+        }
+
+    </script>
+</body>
+</html>

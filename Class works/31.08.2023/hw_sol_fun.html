@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+
+        function getSmallest(x1, x2, x3, x4) {
+            //if (x1 >= 1 && x1 <= 5) ...
+            for (let i = 1; i <= 5; i++) {
+                if ([x1, x2, x3, x4].indexOf(1) >= 0 )
+                return -1
+            }
+
+            return Math.min(x1, x2, x3, x4)
+            // if (x1 >= x2 && x1 >= x3 && x1 >= x4) {
+            //     return x1
+            // }
+        }
+
+        const list1 = [5, 7, 8, -2]
+        //getSmallest(list1[0], list1[1], list[3])
+        getSmallest(5, 7, 8, -2)
+        // spread operator
+        getSmallest(...list1)
+        Math.min(...list1)
+
+        /*
+            5) White a function that receives 4 parameters of type int.
+            If all the four numbers are equal, the function returns the string “all equals”.
+            If 2 of the four numbers are equals, the function returns the string “only 2 numbers
+            are equals”.
+            If none of the
+*/
+        // [4, 4, 7, 4]; => [4,4,4]
+        // [8,9,2, 9] => [9, 9] == 2
+        function getEqual(x1, x2, x3, x4) {
+            const arr = [x1, x2, x3, x4]
+            if (arr.every(x => x == arr[0])) {
+                return "all equals"
+            }
+            for (let i = 0; i < arr.length; i ++) {
+                if (arr.filter(x => x == arr[i]).length == 2) {
+                    return "only two numbers"
+                }
+            }
+            return "all numbers not equal"
+        }        
+
+        function answer_5_2(arr, index) {
+            if (index >=0 && index < arr.length) {
+                console.log(arr[index]);
+            }
+            else {
+                console.log(`Sorry, no value in the array for index number: ${index}`);
+            }
+        }
+
+        function answer_odd(arr) {
+            return arr.every(x => x % 2 == 1) ? "odds" : "not odds"
+        }
+
+        function add_5(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < 10) {
+                    arr[i] += 5
+                }
+            }
+        }
+
+        // [1, 5, 9, 9]
+        // [9, 9] -- length: 2
+        function inside_arr(arr, element) {
+            return arr.includes(element)
+            //return arr.some(x => x === element)
+            //return arr.filter(x => x === element).length > 0
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PAINTER</title>
+    <script src="Point.js"></script>
+    <script src="Colors.js"></script>
+    <script src="Painter.js"></script>
+</head>
+<body>
+    <canvas id="my_canvas" width="800" height="600"></canvas>
+    <hr>
+    <p>NEW POINT X <input type="number" id="x_txt" /></p>
+    <p>NEW POINT Y <input type="number" id="y_txt" /></p>
+    <button id="btn_create" onclick="create_new_point()">CREATE POINT</button><br /><br />
+    <button id="btn_generate" onclick="generate_random_point()">GENERATE RANDOM POINT</button>
+    <script>
+        const ctx = document.getElementById('my_canvas').getContext("2d")
+        const list_of_points = []
+        const colors = new Colors()
+        const painter = new Painter()
+
+        function create_new_point() {
+            const x = parseInt(document.getElementById('x_txt').value)
+            const y = parseInt(document.getElementById('y_txt').value)
+
+            const new_point = new Point (x, y)
+
+            painter.draw_arc(ctx, new_point)
+
+            if (list_of_points.length >= 1) {
+                const previous_point = list_of_points[list_of_points.length - 1]
+                painter.draw_line(ctx, previous_point, new_point)
+            }
+
+            list_of_points.push(new_point)
+        }
+
+        function generate_random_point() {
+            const x = Math.floor(Math.random() * 795) + 5
+            const y = Math.floor(Math.random() * 595) + 5
+            document.getElementById('x_txt').value = x
+            document.getElementById('y_txt').value = y
+            const new_point = new Point (x, y)
+
+            painter.draw_arc(ctx, new_point)
+
+            if (list_of_points.length >= 1) {
+                const previous_point = list_of_points[list_of_points.length - 1]
+                painter.draw_line(ctx, previous_point, new_point)
+            }
+
+            list_of_points.push(new_point)
+        }
+
+    </script>
+</body>
+</html>

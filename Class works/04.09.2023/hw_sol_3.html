@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page with object</title>
+</head>
+<body>
+    <h1>Welcome to the movie store:</h1>   
+    <p>TITLE: <input id="title_txt" type="text"></p>
+    <p>YEAR: <input id="year_txt" type="number"></p>
+    <p>ACTOR: <input id="actor_txt" type="text"></p>
+    <p>GENRE: <input id="genre_txt" type="text"></p>
+    <button onclick="add_movie()">ADD MOVIE</button>
+    <hr>
+    <p>FILTER BY YEAR: <input id="year_filter_txt" type="number"> 
+        <button id="btn_filter" onclick="filter_movies_by_year()">FILTER NY YEAR</button></p>
+    <p>FILTER BY TITLE: <input id="title_filter_txt" type="text"> 
+        <button id="btn_filter_name" onclick="filter_movies_by_title()">FILTER BY NAME</button></p>        
+    <hr>
+    <div>
+        <div id="result" />
+    </div>
+    <h1>filter:</h1>  
+    <div id="filter_result" />
+</body>
+    <script>
+        const list_of_movies = []
+
+        function create_movie_object(movie_title, movie_year, movie_actor, movie_genre) {
+            const movie = {
+                'title': movie_title,
+                year: movie_year,
+                actor: movie_actor,
+                genre: movie_genre
+            }
+            return movie
+        }
+
+        document.getElementById('year_filter_txt').addEventListener("input", () => {
+            filter_movies_by_year()
+        })
+
+        document.getElementById('title_filter_txt').addEventListener("input", () => {
+            filter_movies_by_title()
+        })
+
+        function filter_movies_by_title() {
+            const filter_name = !document.getElementById('title_filter_txt').value ?
+                                    "" : document.getElementById('title_filter_txt').value
+
+            const filter_div = document.getElementById('filter_result')
+            filter_div.innerHTML = ""
+            list_of_movies.filter(movie => movie.title.
+                    toUpperCase().indexOf(filter_name.toUpperCase()) >= 0).forEach(movie => {
+                movie_par = document.createElement('p')
+                movie_par.textContent = JSON.stringify(movie)
+                filter_div.appendChild( movie_par )            
+            })
+        }
+
+        function filter_movies_by_year() {
+            const filter_year = !document.getElementById('year_filter_txt').value ?
+                                    0 : parseInt(document.getElementById('year_filter_txt').value)
+
+            const filter_div = document.getElementById('filter_result')
+            filter_div.innerHTML = ""
+            list_of_movies.filter(movie => movie.year >= filter_year).forEach(movie => {
+                movie_par = document.createElement('p')
+                movie_par.textContent = JSON.stringify(movie)
+                filter_div.appendChild( movie_par )            
+            })
+        }
+        function add_movie() {
+            const movie_title = document.getElementById('title_txt').value
+            const movie_year = 
+                parseInt(document.getElementById('year_txt').value)
+            const movie_actor = document.getElementById('actor_txt').value
+            const movie_genre = document.getElementById('genre_txt').value
+           
+            const movie = create_movie_object(movie_title,
+                                movie_year, movie_actor, movie_genre)
+
+            list_of_movies.push(movie)
+
+            movie_par = document.createElement('p')
+            movie_par.textContent = JSON.stringify(movie)
+            document.getElementById('result').appendChild( movie_par )
+            // const my_mobile = {
+            //     mobile_type, mobile_price, mobile_color
+            // }
+            console.log(list_of_movies)
+
+            filter_movies_by_year()
+        }
+
+    </script>
+</html>
