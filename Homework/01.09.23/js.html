@@ -10,6 +10,8 @@
     <button id="search_btn" onclick="search_matrix()">SEARCH</button>
     <br />
     <div id="result"></div>
+    <button  type="button" onclick="print_matrix()">print matrix</button>
+    <div id="print_matrix"></div>
     <script>
         const MATRIX_SIZE = 10
         const matrix = []
@@ -32,8 +34,7 @@
                     }
                 }
             }
-            // "" + "1"  ==> "1" + " " ==> "1 "
-            // "" + "[3, 5]" ==> "[3,5]" + " " + "[2,6]" ==> "[3,5] [2,6]"
+          
             document.getElementById('result').textContent = ""
             if (result.length == 0) {
                 document.getElementById('result').textContent = "missing"
@@ -46,6 +47,10 @@
             return Math.floor(Math.random() * range) + 1
         }
 
+        function print_matrix(){
+            document.getElementById('print_matrix').textContent =JSON.stringify(matrix)
+
+        }
     </script>
 </body>
 </html>
