@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div> a number between 1 -100<input id="number" type="number" value="">
+        <button type="button" onclick=" Equal_matrix()">בדוק</button>
+    </div>
+    <div id="Equal"></div>
+   
+
+    <script>
+
+        const matrix_SIZE = 10
+        const matrix = []
+        for (let i = 0; i < matrix_SIZE; i++) {
+            const arr = []
+            for (let j = 0;  j < matrix_SIZE; j++) {
+                const random_number = Math.floor(Math.random() * 100) + 1
+                arr.push(random_number)
+            }
+            matrix.push(arr)
+        }    
+        function Equal_matrix(){
+            const a = parseInt(document.getElementById('number').value)
+            const equal = []
+
+        for (let i = 0; i < matrix_SIZE; i++) {
+
+            for (let j = 0;  j < matrix_SIZE; j++) {
+                if(matrix[i][j] == a){
+                    equal.push(`[${i}, ${j}]`)
+                    document.getElementById('Equal').textContent = equal
+
+
+                }
+            }
+        }
+        document.getElementById('Equal').textContent = ""
+            if (equal.length == 0) {
+                document.getElementById('Equal').textContent = "missing"
+            }
+            else {
+                equal.forEach(item => document.getElementById('Equal').textContent += item + " ")
+            }
+    }
+
+    print_matrix()
+    function print_matrix(){
+        const print_matrix =matrix
+        const button = document.createElement("button");
+        button.textContent = "print matrix"
+
+        button.addEventListener("click", () => {
+            for (const i of print_matrix) {
+               
+                const div = document.createElement("div");
+                div.textContent = i;
+                document.body.appendChild(div);
+                
+            }
+        });
+
+            document.body.appendChild(button);}
+        
+        </script>
+
+
+
+</body>
+</html>
