@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,35 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        const array= []
+        const seen = new Set();
+        let b= parseInt(prompt("Please enter a number:" ))
+
+
+            do {
+          
+                array.push(b)
+
+            for (const value of array) {
+
+                if (seen.has(value)) {
+                     alert("The last number is the same as the previous one");
+                     
+                      break;
+
+                } 
+                else {
+                    seen.add(value);
+                    let c= parseInt(prompt("Please enter a number:" ))
+                    array.push(c)
+
+                }
+            }
+
+                        }
+        while (b !==99) 
+     
+    </script>
 </body>
 </html>

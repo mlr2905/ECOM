@@ -6,12 +6,21 @@
     <title>Document</title>
 </head>
 <body>
+  <div id="matrix" ></div>
+
+  <div><input type="number"> הזן מספר בין 1 ל100     </div>
     <script>
-        const matrix = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
-];
+      const max = 10
+        const matrix = []
+        for (let i = 0; i < max; i++) {
+            const arr = []
+            for (let j = 0;  j < max; j++) {
+                const random_number =Math.floor(Math.random() * 100) + 1
+
+                arr.push(random_number)
+            }
+            matrix.push(arr)
+        }
 
 const button = document.createElement("button");
 button.textContent = "הצג מטריצה";
@@ -19,7 +28,7 @@ button.textContent = "הצג מטריצה";
 button.addEventListener("click", () => {
   for (const row of matrix) {
     for (const cell of row) {
-      const div = document.createElement("div");
+      const div = document.createElement("matrix");
       div.textContent = cell;
 
       document.body.appendChild(div);
@@ -29,6 +38,8 @@ button.addEventListener("click", () => {
 
 document.body.appendChild(button);
 
+
+const a= parseInt(prompt( a))
     </script>
 </body>
 </html>
