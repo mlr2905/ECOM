@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><input type="text" id="text">הזן כתובת API <Samp><button type="button" onclick="button1()">לחץ כדי להפעל כתובת שהזנת </button></Samp></div>
+    <br/><br/>
+    <div><button type="button" onclick="button()">לחץ כדי לקבל כתובת שמורה</button></div>
+    <script>
+        function button(){
+            let a = new XMLHttpRequest();
+            a.open('GET', "https://randomuser.me/api/");
+            a.onload = function() {
+                document.write(a.responseText);
+            }
+
+            a.send();
+
+        }
+
+        function button1(){
+            const c = document.getElementById('text').value
+            let b = new XMLHttpRequest();
+            b.open('GET', `${c}`);
+            b.onload = function() {
+                document.write(b.responseText);
+
+            }
+
+            b.send();
+
+        }
+
+
+    </script>
+</body>
+</html>
