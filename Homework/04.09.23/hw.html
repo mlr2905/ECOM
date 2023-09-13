@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="car.js"></script>
+
+  <title>Document</title>
 </head>
 <body>
-  <div id="matrix" ></div>
+   <div>brand<input type="text" id="brand" placeholder="Toyota"></div>
+   <div>model<input type="text" id="model" placeholder="Land Rover"></div>
+   <div>price<input type="number" id="price" placeholder="280,799"></div>
+   <div>license<input type="number" id="license" placeholder="80-188-100"></div>
+   <div>year<input type="number" id="year" placeholder="2018"></div>
+   <div>color<input type="text" id="color" placeholder="white"></div>
+   <div>maintenance<input type="text" id="maintenance" placeholder="2018, 2019, 2021, 2023"></div>
+   <button type="button" id="maintenance" onclick="cars()">לחץ</button>
+   <div id="result" ></div>
+   <div id="result2" ></div>
 
-  <div><input type="number"> הזן מספר בין 1 ל100     </div>
-    <script>
-      const max = 10
-        const matrix = []
-        for (let i = 0; i < max; i++) {
-            const arr = []
-            for (let j = 0;  j < max; j++) {
-                const random_number =Math.floor(Math.random() * 100) + 1
 
-                arr.push(random_number)
-            }
-            matrix.push(arr)
-        }
+  <script>
+let object= "0" 
+   function cars(){
+             let _brand =document.getElementById('brand').value;
+             let _model =document.getElementById('model').value;
+             let _price =document.getElementById('price').value;
+             let _license =document.getElementById('license').value;
+             let _year =document.getElementById('year').value;
+             let _color =document.getElementById('color').value;
+             let _maintenance =document.getElementById('maintenance').value;
+             const car1 = new car(_brand,_model,_price,_license,_year,_color,_maintenance)
+             document.getElementById('result').innerHTML = JSON.stringify( car1) + '<br />'
 
-const button = document.createElement("button");
-button.textContent = "הצג מטריצה";
-
-button.addEventListener("click", () => {
-  for (const row of matrix) {
-    for (const cell of row) {
-      const div = document.createElement("matrix");
-      div.textContent = cell;
-
-      document.body.appendChild(div);
+             return objects(_brand,_model,_price,_license,_year,_color,_maintenance)
     }
+    
+    function objects(_brand,_model,_price,_license,_year,_color,_maintenance){
+    const object1 ={     
+    brand:_brand,
+    model:_model, 
+    price:_price,
+    license:_license,
+    year:_year,
+    color:_color,
+    maintenance: [_maintenance,],
+    }
+
+    return object=object1,document.getElementById('result2').innerHTML += JSON.stringify(object) 
+
+
+
   }
-});
-
-document.body.appendChild(button);
 
 
-const a= parseInt(prompt( a))
-    </script>
+  </script>
 </body>
 </html>
