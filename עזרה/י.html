@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media only screen and (max-width: 650px){
+h3{
+    width: 250px;
+    }
+body{
+    background-size:  300%; 
+    width: 100%;
+    }
+.board {
+    border: 10px solid rgb(26, 67, 162);
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgba(20, 189, 172, 0.855);
+    border-radius: 15px;
+    width: 95%;
+    padding: 10%;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 8%;
+    }
+.cell {
+    border: 6px solid rgb(15, 106, 138);
+    width: 85px;
+    height: 85px;
+    font-size: 14px;
+    }
+}
+        body{
+    background-image: url(imgs/xo.jpg);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: auto;
+    }
+        .board{
+    border: 10px solid rgb(26, 67, 162);
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(20,189,172,255);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 30px;
+    margin: auto;
+    width: 21%;
+    padding: 17px;
+    }
+    
+.cell{
+    border: 5px solid  rgb(15, 106, 138);
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border-radius: 10px;
+    }
+    </style>
+<body>
+<h1>משחק איקס עיגול</h1>
+
+
+    <button onclick="switchToPlayerVsPlayer()">איקס עיגול מול שחקן</button>
+    <button onclick="switchToPlayerVsComputer()"> איקס עיגול מול המחשב</button>
+
+<br>
+<br>
+<br>
+
+    <div class="board">
+        <div class="form-row body ">
+        <div id="cell-0"class="cell" ></div>
+        <div id="cell-1" class="cell" ></div>
+        <div id="cell-2"class="cell" ></div>
+
+        </div>
+        <div class="form-row body ">
+        <div id="cell-3" class="cell"></div>
+        <div id="cell-4" class="cell"  ></div>
+        <div  id="cell-5"class="cell"  ></div>
+        </div>
+        <div class="form-row body ">
+        <div id="cell-6" class="cell"  ></div>
+        <div id="cell-7" class="cell"></div>
+        <div id="cell-8" class="cell" ></div>
+    </div>
+
+        
+    <script>
+        let game_type=0 //  סוגי משחק
+
+        var currentPlayer = 'X'
+        var currentPlayer2 = 'o';
+        let arr=[0,0,0,0,0,0,0,0,0]
+;
+var boardCells = document.getElementsByClassName('cell');
+
+for (var i = 0; i < boardCells.length; i++) {
+    boardCells[i].addEventListener('click', cellClicked);
+    
+}
+
+
+function cellClicked() {
+   
+    this.textContent = currentPlayer;
+     this.style.cursor = 'default';
+
+
+    if (checkWin()) {
+        setTimeout(() => {
+            alert('שחקן ' + currentPlayer + ' ניצח!');
+        }, 100)
+        setTimeout(() => {
+            resetBoard()
+        }, 100)
+        return;
+
+    }
+
+    if (checkTie()) {
+        setTimeout(() => {
+            alert('המשחק נגמר בתיקו');;
+        }, 100)
+        setTimeout(() => {
+            resetBoard()
+        }, 100)
+        return;
+    }
+   
+    
+    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+    if(game_type == 1  && currentPlayer !=="X" ){
+        return default1()
+    }
+    }
+   
+    
+    
+    
+    function cell_click(cell_number){ //  פוקציה אשר בודקת תורמי ואם יש בחירה כפולה על תא
+  
+       
+  // Get the `div` element with the given ID.
+  const div = document.getElementById(`cell-${cell_number}`);
+
+  // Get the current value of the `div` element.
+  const currentValue = div.getAttribute(null);
+
+  // If the current value is different from the new value, change it.
+    div.setAttribute("value", "o");
+  
+}
+ 
+   
+
+function default1(){ //פונקציה שנתונת תא אקראי
+    while (true) {
+        const cell_number = Math.floor(Math.random() * 9);
+
+            return  cell_click(cell_number)
+        
+    }
+}
+
+function checkWin() {
+    var board = [];
+    for (var i = 0; i < boardCells.length; i++) {
+        board.push(boardCells[i].textContent);
+       
+    }
+
+    var lines = [
+        // תרשימים אופקיים
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        // תרשימים אנכיים
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        // תרשימים אלכסוניים
+        [0, 4, 8],
+        [2, 4, 6]
+    ];
+
+    for (var i = 0; i < lines.length; i++) {
+        var [a, b, c] = lines[i];
+        if (board[a] !== '' && board[a] === board[b] && board[a] === board[c]) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+function checkTie() {
+   
+    for (var i = 0; i < boardCells.length; i++) {
+        if (boardCells[i].textContent === '') {
+            return false;
+        }
+    }
+    return true;
+}
+
+function resetBoard() {
+    for (var i = 0; i < boardCells.length; i++) {
+        boardCells[i].textContent = '';
+        boardCells[i].style.cursor = 'pointer';
+    }
+    currentPlayer = 'X';
+}
+
+function switchToPlayerVsPlayer() {
+    for (var i = 0; i < boardCells.length; i++) {
+        boardCells[i].addEventListener('click', cellClicked);
+    }
+    return   
+}
+
+function switchToPlayerVsComputer() {
+    for (var i = 0; i < boardCells.length; i++) {
+        boardCells[i].addEventListener('click', cellClicked);
+    }
+    return game_type =1
+
+}
+    </script>
+</body>
+</html>
