@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="phone.js"></script>
+
+  <title>Document</title>
+</head>
+<body>
+   <div>brand<input type="text" id="brand" placeholder="Apple"></div>
+   <div>model<input type="text" id="model" placeholder="iPhone 14 pro"></div>
+   <div>color<input type="text" id="color" placeholder="blue"></div>
+   <div>storageCapacity<input type="number" id="storageCapacity" placeholder="128"></div>
+   <div>batteryLife<input type="number" id="batteryLife" placeholder="40"></div>
+   <div>poweredOn<input type="text" id="poweredOn" placeholder="no or off"></div>
+   <button type="button" id="maintenance" onclick="phones()">לחץ</button>
+   <div id="result" ></div>
+
+
+  <script>
+        function phones(){
+            let _brand =document.getElementById('brand').value;
+            let _model =document.getElementById('model').value;
+            let _color =document.getElementById('color').value;
+            let _storageCapacity =document.getElementById('storageCapacity').value;
+            let _batteryLife =document.getElementById('batteryLife').value;
+            let _poweredOn =document.getElementById('poweredOn').value;
+             const phone1 = new phone(_brand,_model,_color,_storageCapacity,_batteryLife,_poweredOn)
+             document.getElementById('result').innerHTML = JSON.stringify( phone1) + '<br />'
+        }
+        
+
+  </script>
+</body>
+</html>
