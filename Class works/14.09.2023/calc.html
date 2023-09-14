@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<script src="calc.js"></script>
+<body>
+    <h1>Simple Calculator</h1>
+    <input type="number" id="num1" value="0" placeholder="Enter a number">
+    <select id="operator" >
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" id="num2" value="0" placeholder="Enter another number">
+    <p>Result: <span id="result">0</span></p>
+
+    <script>
+        //
+        // create an object which conatins num1, num2, operator inside
+        // create a function which creates this object
+        // use the object num1 num2 operator, instead of the fields
+        // and/ or
+        // create class with constructor + set_ methods 
+        // and use it in the code
+
+
+        // Get references to the input elements and result span
+        const calc = new Calc(0,0,"+",0)
+        const _num1Input = document.getElementById('num1');
+        const _num2Input = document.getElementById('num2');
+        const _operatorSelect = document.getElementById('operator');
+        const _resultSpan = document.getElementById('result');
+
+        // Function to calculate and update the result
+        function calculate() {
+            calc.set_num1(parseFloat(_num1Input.value));
+            calc.set_num2 (parseFloat(_num2Input.value));
+            calc.set_operator( _operatorSelect.value);
+
+
+            switch (calc.operatorSelect) {
+                case '+':
+                    calc.set_result(calc.num1Input + calc.num2Input)
+                    break;
+                case '-':
+                calc.set_result(calc.num1Input - calc.num2Input)
+                    break;
+                case '*':
+                calc.set_result(calc.num1Input * calc.num2Input)
+                    break;
+                case '/':
+                if (calc.num2Input !== 0) {
+                        calc.set_result(calc.num1Input / calc.num2Input)
+                    } else {
+                        calc.set_result ('Cannot divide by zero');
+                    }
+                    break;
+                default:
+                calc.set_result ('Invalid operator');
+            }
+
+            _resultSpan.textContent = calc.result;
+        }
+
+        // Add event listeners to the input elements and dropdown
+        _num1Input.addEventListener('input', calculate);
+        _num2Input.addEventListener('input', calculate);
+        _operatorSelect.addEventListener('change', calculate);
+
+        // Initial calculation
+        calculate();
+    </script>
+</body>
+</html>
