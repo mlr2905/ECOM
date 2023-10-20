@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>posts Get</title>
+    <style>
+        /* Add border styles to the table */
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        th,
+        td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>posts</h1>
+    <label for="postsId">Enter posts ID: </label><input type="number" id="postsId"><br />
+    <button id="get-button" onclick="fetch_data()">GET posts</button> <br />
+    <button id="get-button" onclick="fetch_data_async()">GET posts ASYNC</button>
+    <table id="posts-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>body</th>
+            </tr>
+        </thead>
+        <tbody id="posts-list" style="display: visible;"></tbody>
+    </table>
+    <script>
+        function fetch_data() {
+            const postsList = document.getElementById('posts-list')
+            console.log(postsList);
+            postsList.innerHTML = ""
+            const postsId = document.getElementById('postsId').value
+
+            const url = `http://localhost:3000/posts/${postsId}`
+
+            fetch(url).then(response => {
+                if (!response.ok) {
+                    alert('failure') // 1 -- failure
+                }
+                else {
+                    return response.json() // 2 -- success
+                }
+            }).then(posts => {
+                console.log(posts);
+                const row = document.createElement('tr')
+                row.innerHTML = `<td>${posts.id}</td>
+                                     <td>${posts.title}</td>
+                                     <td>${posts.body}</td>`
+                console.log(row);
+                postsList.appendChild(row)
+            })
+        }
+
+        async function fetch_data_async() {
+            const postsList = document.getElementById('posts-list')
+            console.log(postsList);
+            postsList.innerHTML = ""
+            const postsId = document.getElementById('postsId').value
+
+            const url = `http://localhost:3000/posts/${postsId}`
+
+            const response = await fetch(url)
+            if (!response.ok) {
+                alert('not found!') // 1 -- failure
+                return
+            }
+            const posts = await response.json() // 2 -- success
+            console.log(posts);
+            const row = document.createElement('tr')
+            row.innerHTML = `<td>${posts.id}</td>
+                                     <td>${posts.title}</td>
+                                     <td>${posts.body}</td>`
+            console.log(row);
+            postsList.appendChild(row)
+        }
+    </script>
+</body>
+
+</html>
