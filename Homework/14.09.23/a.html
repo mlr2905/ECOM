@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Person  Info</title>
+</head>
+
+<body>
+
+<h1>Person Information</h1>
+
+<script>
+   
+class Person {
+    constructor(_name, _age, _gender, _address) {
+
+      this.name = _name
+      this.age = _age
+      this.gender = _gender
+      this.address = _address
+
+
+    }
+    set_brand(_name) {
+        this.name = _name;
+    }
+
+    // Setter for model
+    set_model(_age) {
+        this.age = _age;
+    }
+
+    // Setter for screen_size
+    set_screen_size(_gender) {
+        this.gender = _gender;
+    }
+
+    // Setter for storage_capacity
+    set_storage_capacity(_address) {
+        this.address = _address;
+    }
+  
+    }
+
+    // Prompt the user to enter mobile phone information
+    const name = prompt("Enter name (e.g., ):");
+    const model = prompt("Enter model (e.g., ):");
+    const gender = prompt("Enter gender (e.g., ):");
+    const address = prompt("Enter address (e.g., ):");
+
+    // Create a new Person instance
+    const Person = new Person(name, model, gender, address);
+    
+    console.log("name:", Person.name);
+    console.log("Model:", Person.model);
+    console.log("gender:", Person.gender);
+    console.log("address:", Person.address);
+
+    // Prompt the user to update Person information
+    const updatedBrand = prompt("Update name (e.g., ):");
+    const updatedModel = prompt("Update model (e.g.,):");
+    const updatedgender = prompt("Update gender size (e.g.,):");
+    const updatedaddress = prompt("Update address (e.g., ):");
+
+    // Update the Person instance using setters
+    Person.set_brand(updatedBrand);
+    Person.set_model(updatedModel);
+    Person.set_gender(updatedgender);
+    Person.set_address(updatedaddress);
+
+    // Display the updated Person information in the console
+    console.log("Updated Person Information:");
+    console.log("Brand:", Person.brand);
+    console.log("Model:", Person.model);
+    console.log("gender:", Person.gender);
+    console.log("address:", Person.address);
+</script>
+
+</body>
+</html>
