@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+         fetch("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=649") // 208 cards
+   .then(res => res.json())
+   .then(data => {
+     // Save the data in localStorage
+     localStorage.setItem("data11", JSON.stringify(data.results));
+   })
+
+   let d = JSON.parse(localStorage.getItem("data11"))
+
+
+
+
+ 
+        for (let i = 1; i < 649; i++) {
+
+            let a = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${i}.svg`
+
+            document.write(`{`)
+                document.write("</br>")
+
+                document.write(`"id" :${i},`)
+                document.write("</br>")
+
+            document.write(`"name" : ${JSON.stringify(d[i-1].name)},`) 
+            document.write("</br>")
+
+            document.write(`"url" : "${a}" `)
+            document.write("</br>")
+
+
+            document.write(`},`)
+            document.write("</br>")
+
+        }
+    </script>
+</body>
+</html>
